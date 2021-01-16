@@ -1,0 +1,28 @@
+@import '../../vars.scss';
+
+.textfield {
+   &__form {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid;
+      border-radius: 4px;
+      border-color: $dark25;
+      width: $def-block-width;
+      height: $btn-height;
+      &:hover {
+         border-color: $dark50;
+      }
+
+   }
+   &__input {
+      width: 100%;
+      &:hover, :focus {
+         color: $dark75;
+      }
+      padding: 12px 100px 12px 15px;
+      &::placeholder {
+         color: $dark25;
+      }
+   }
+
+}

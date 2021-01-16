@@ -1,0 +1,66 @@
+@import '../../vars.scss';
+
+.radio {
+   margin-bottom: 10px;
+   margin-right: 20px;
+}
+.radio__box:checked, 
+.radio__box:not(:checked)
+{
+    position: absolute;
+    left: -9999px;
+}
+
+.radio__box:checked + .radio__content, 
+.radio__box:not(:checked) + .radio__content {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    line-height: 20px;
+    color: $dark50;
+    cursor: pointer;
+}
+
+.radio__box:checked + .radio__content:before,
+.radio__box:not(:checked) + .radio__content:before {
+   content: "";
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 20px;
+   height: 20px;
+   border: 1px solid $primary-color;
+   border-radius: 50%;
+   background-color: #ffffff;
+} 
+.radio__box:not(:checked) + .radio__content:before {
+   border-color: $dark25;
+}
+
+.radio__box:checked + .radio__content:after, 
+.radio__box:not(:checked) + .radio__content:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.radio__box:checked + .radio__content:after, 
+.radio__box:not(:checked) + .radio__content:after {
+   position: absolute;
+   left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $primary-color;
+}
+
+
+
+.radio__box:not(:checked) + .radio__content:after {
+    opacity: 0;
+}
+
+.radio__box:checked + .radio__content:after {
+    opacity: 1;
+}

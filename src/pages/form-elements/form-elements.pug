@@ -1,0 +1,160 @@
+include ../../blocks/textfield/textfield
+include ../../blocks/dropdown/dropdown
+include ../../blocks/checkbox/checkbox
+include ../../blocks/radio/radio
+include ../../blocks/toggle/toggle
+include ../../blocks/likeBtn/likeBtn
+include ../../blocks/rateStars/rateStars
+include ../../blocks/rangeSlider/rangeSlider
+include ../../blocks/button/button
+
+
+
+-const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
+-const guests = ['Взрослые', 'Дети', 'Младенцы']
+-const chBtns = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+
+mixin form-elements()
+   section.form-elements
+      .form-elements__row
+         .form-elements__column
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title text field
+               span.form-elements__sub-title default
+            +textfield({ type: 'email', placeholder: "Email", width: "def"})
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title text field
+               span.form-elements__sub-title Hover / Focus
+            +textfield({ type: 'text', placeholder: "This is pretty awesome", width: "def"})
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title 
+            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title masked text field
+               span.form-elements__sub-title 
+            +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "def"})
+            section(style='display: flex; justify-content: space-between;')
+               span
+                  .form-elements__element-title(class=`xsm-block`)
+                     span.form-elements__main-title date Dropdown
+                     span.form-elements__sub-title 
+                  +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm"})
+               span
+                  .form-elements__element-title(class=`xsm-block`)
+                     span.form-elements__main-title date Dropdown
+                     span.form-elements__sub-title 
+                  +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm"})
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title filter date dropdown
+               span.form-elements__sub-title 
+            +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm"})
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title subscription text field
+               span.form-elements__sub-title 
+            +textfield({ type: 'email', placeholder: "Email", width: "sm"})
+
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title Checkbox Buttons
+               span.form-elements__sub-title 
+            +checkbox({list: chBtns})
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title Radio Buttons
+               span.form-elements__sub-title 
+            +radio()
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title toggle
+               span.form-elements__sub-title 
+            +toggle(1)
+            +toggle(2)
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title like Button
+               span.form-elements__sub-title 
+            section(style='display: flex; ')
+               +likeBtn(2)
+               +likeBtn(11)
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title rate Button
+               span.form-elements__sub-title 
+            section(style='display: flex; margin-right: 20px;')
+               span(style='margin-right: 20px;') 
+                  +rateStars(4)
+               span
+                  +rateStars(5)
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title Range Slider(non func)
+               span.form-elements__sub-title 
+            +rangeSlider({title: 'диапазон цены', description: 'Стоимость за сутки пребывания в номере', width: 'sm'})
+            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               span.form-elements__main-title buttons
+               span.form-elements__sub-title 
+            p
+               +button({ active: 'yes', title: "click me", style: "fill" })
+               +button({ active: 'no', title: "click me", style: "fill"})
+            p
+               +button({ active: 'yes', title: "click me", style: "void"})
+               +button({ active: 'no', title: "click me", style: "void"})
+            p
+               +button({ active: 'yes', title: "click me", style: "text"})
+               +button({ active: 'no', title: "click me", style: "text"})
+            p
+               +button({ active: 'yes', title: "перейти к оплате", style: "fillArrow"})
+            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title pagination
+               span.form-elements__sub-title 
+            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+      .form-elements__row
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title default
+            +dropdown({ itemList: apartment, 
+               width: 'sm',
+               type: 'each' })
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title expanded
+            +dropdown({ itemList: apartment, 
+               width: 'sm',
+               type: 'each' })
+         .form-elements__column
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title 
+            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
+
+         .form-elements__column
+            .form-elements__element-title(class=`def-block`)
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title 
+            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
+      .form-elements__row
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title expandable checkbox list
+               span.form-elements__sub-title 
+            //- + ЗДЕСЬ МИКСИН ДЛЯ ЧЕКБОКСЛИСТА
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title expandable checkbox list
+               span.form-elements__sub-title 
+            //- + ЗДЕСЬ МИКСИН ДЛЯ ЧЕКБОКСЛИСТА
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title rich Checkbox Buttons
+               span.form-elements__sub-title 
+            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+         .form-elements__column
+            .form-elements__element-title(class=`sm-block`)
+               span.form-elements__main-title bullet list
+               span.form-elements__sub-title 
+            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+      .form-elements__row
+         .form-elements__column
+
+         .form-elements__column
+
+         .form-elements__column

@@ -1,0 +1,66 @@
+@import "../../vars.scss";
+
+@mixin spaceAroundBtn {
+   margin-bottom: 30px;
+   margin-right: 20px;
+}
+
+@mixin ovalBtn {
+   @extend .font-label;
+   @include spaceAroundBtn;
+   padding: 14px 20px 15px 20px;
+   border-radius: 22px;
+}
+
+.btnStyleFill {
+   &:disabled {
+      cursor: default;
+      opacity: 0.5;
+   }
+   @include ovalBtn;
+   background: $primary-gradient;
+   color: $white-text;
+}
+.btnStyleVoid {
+   &:disabled {
+      cursor: default;
+      border-color: transparentize($color: $primary-color, $amount: 0.5);
+   }
+   @include ovalBtn;
+   background: transparent;
+   border: 2px solid $primary-color;
+   color: $primary-color;
+}
+.btnStyleText {
+   &:disabled {
+      cursor: default;
+      color: $dark50;
+   }
+   @extend .font-label;
+   @include spaceAroundBtn;
+   background: transparent;
+   color: $primary-color;
+}
+.btnStyleFillArrow {
+   &:disabled {
+      cursor: default;
+      opacity: 0.5;
+   }
+   &__arrow {
+      font-size: 24px;
+      line-height: 24px;
+      display: flex;
+      position: relative;
+      left: 95%;
+      bottom: 19px;
+      // justify-content: center;
+      
+      }
+   width: 100%;
+   height: 44px;
+   @include ovalBtn;
+   color: $white-text;
+   background: $primary-gradient;
+   // display: flex;
+   // justify-content: space-between;
+}

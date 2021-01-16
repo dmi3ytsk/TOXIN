@@ -1,0 +1,8 @@
+mixin news(content)
+  - const { title, date, text, image } = content
+  .news
+    img.news__image(src=image, alt="")
+    .news__block
+      h2.news__title= title
+      p.news__date= date
+      p.news__text= text

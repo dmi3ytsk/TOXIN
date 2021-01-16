@@ -1,0 +1,6 @@
+mixin search(options)
+  - const { action, searchValue, placeholder, emptyResult } = options;
+  - const classes = emptyResult ? "search__input search__input_empty" : "search__input"
+  form.search(action=action)
+    input(class=classes, type="search", placeholder=placeholder, value=searchValue)
+    button.search__submit(type="submit")

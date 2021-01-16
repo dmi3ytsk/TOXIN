@@ -1,0 +1,7 @@
+mixin type-block(content)
+  - const { tag, usefor } = content
+
+  .type-block
+    .type-block__tag(class=`type-block__tag_${tag.toLowerCase()}`)= tag
+    .type-block__element(class=`type-block__element_${tag.toLowerCase()}`)= usefor
+

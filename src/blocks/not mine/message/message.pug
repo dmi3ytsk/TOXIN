@@ -1,0 +1,20 @@
+include ../user-photo/user-photo
+include ../standard-button/standard-button
+
+mixin message(content)
+  - const { title, image, income, form } = content;
+  - const { name, action, message } = form;
+  .message
+    .message__header
+      h2.message__title= title
+      .message__user-profile
+        +user-photo({ image: image, imageAlt: "Sarah Brown" })
+    .message__body
+      .message__icons
+        button.message__bubble
+        button.message__camera
+      .message__income= income
+      form.message__form(name=name, action=action)
+        textarea.message__textarea= message
+        .message__button
+          +standard-button({ color: "primarySolid", size: "wide", type: "button", title: "Reply" })

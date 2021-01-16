@@ -1,0 +1,25 @@
+
+mixin button(attr)
+   - let classStyle, arrow
+   - const { active, title, style } = attr
+      case style
+         when "fill"
+            - classStyle = 'btnStyleFill'
+         when "fillArrow"
+            - classStyle = 'btnStyleFillArrow'
+            - arrow = 'arrow_forward'
+         when "void"
+            - classStyle = 'btnStyleVoid'
+         when "text"
+            - classStyle = 'btnStyleText'
+         default 
+            p chose button style
+            p=title
+      case active
+         when 'yes'
+               button(name=`${title}` class=`${classStyle}` )=title
+                  i.btnStyleFillArrow__arrow.material-icons=arrow
+         when  'no'
+               button(name=`${title}` class=`${classStyle}` disabled)=title
+         default
+            p Chose active or not

@@ -1,0 +1,12 @@
+@import '../../vars.scss';
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  letter-spacing: 0.08rem;
+  text-align: center;
+  color: $text-primary;
+  text-transform: uppercase;
+}

@@ -1,0 +1,12 @@
+include ../calendar/calendar
+include ../messaging/messaging
+
+mixin widget()
+  .widget
+    .widget__item
+      +calendar()
+    .widget__item
+      +messaging()
+
+
+

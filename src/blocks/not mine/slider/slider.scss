@@ -1,0 +1,110 @@
+@import '../../vars.scss';
+
+.slider {
+  height: 0.42rem;
+  background: $background-primary;
+
+  &.ui-widget.ui-widget-content {
+    border: 0;
+  }
+
+  & .ui-slider-handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1.63rem;
+    height: 1.63rem;
+    padding: 0;
+    line-height: 1.6;
+    border-radius: 50%;
+    border: none;
+    transform: translateY(-15%);
+    cursor: pointer;
+    outline: 0;
+
+    &:focus {
+      outline: 2px solid $gray-darker;
+    }
+  }
+
+  &__handle {
+    &_color {
+      &_secondary,
+      &_secondary:active {
+        background: $secondary;
+      }
+
+      &_primary,
+      &_primary:active {
+        background: $primary;
+      }
+    }
+  }
+
+  &__scale {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.4rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 0.92rem;
+    line-height: 1;
+    color: $gray-lightest;
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__bubble {
+    position: absolute;
+    bottom: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem 0.67rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.08rem;
+    line-height: 1.2;
+    color: $white;
+    border-radius: 0.33rem;
+    text-align: center;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &_color{
+      &_secondary {
+        background: $secondary;
+        border-color: $secondary;
+      }
+
+      &_primary {
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.25rem;
+      border-width: 0.33rem;
+      border-style: solid;
+      border-color: inherit;
+      transform: rotate(45deg);
+    }
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  & .ui-slider-range {
+    &_primary {
+      background: $primary;
+    }
+  }
+}

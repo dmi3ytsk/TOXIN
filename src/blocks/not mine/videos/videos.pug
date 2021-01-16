@@ -1,0 +1,13 @@
+include ../title/title
+include ../player/player
+
+mixin videos()
+  section.videos
+    +title("Video")
+    .videos__wrapper
+      +player({
+        src: "http://rkomrakov.ru/video.mp4",
+        poster: 'images/poster.jpg',
+        title: 'New Zealand Landscapes Timelapse',
+        subtitle: 'from bevan percival'
+      })

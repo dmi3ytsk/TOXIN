@@ -1,0 +1,10 @@
+mixin input(options)
+  - const { type, name, placeholder, pattern } = options;
+  -
+    const types = {
+      text: 'text',
+      email: 'email'
+    };
+  .input
+    input.input__item(type=`${types[type] || types.text}`, name=name, placeholder=placeholder, pattern=pattern)
+    .input__result

@@ -1,0 +1,6 @@
+mixin pie-chart(value)
+  .pie-chart
+    svg.pie-chart__chart(viewBox="0 0 32 32" stroke-dasharray=`${value} 100`)
+      circle.pie-chart__scale(r="16" cx="16" cy="16")
+      circle.pie-chart__background(r="14" cx="16" cy="16")
+    .pie-chart__number= value

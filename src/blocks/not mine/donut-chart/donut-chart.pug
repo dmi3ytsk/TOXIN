@@ -1,0 +1,14 @@
+mixin donut-chart(options)
+  -
+    const colors = {
+      primary: 'primary',
+      secondary: 'secondary',
+      default: 'chartdefault'
+    };
+  svg.donut-chart(viewBox="0 0 32 32")
+    circle.donut-chart__scale.donut-chart__scale_color_background(r="16" cx="16" cy="16" stroke-width="32" stroke-dasharray="100 100")
+    each option in options
+      - const { value, color } = option
+      - const classes = `donut-chart__scale donut-chart__scale_color_${colors[color] || colors.default}`
+      circle(class=classes r="16" cx="16" cy="16" stroke-width="32" stroke-dasharray=`${value} 100`)
+    circle.donut-chart__background(r="10" cx="16" cy="16")

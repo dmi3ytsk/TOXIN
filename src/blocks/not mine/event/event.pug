@@ -1,0 +1,19 @@
+include ../standard-button/standard-button
+
+mixin event(content)
+  - const { color, day, month, title, text, image } = content
+  -
+    const colors = {
+      primary: 'primary',
+      secondary: 'secondary',
+      default: 'default'
+    }
+  .event
+    img.event__image(src=image, alt="")
+    div(class=`event__block event__block_color_${colors[color] || colors.default}`)
+      p.event__date= day
+        span.event__month= month
+      h2.event__title= title
+      p.event__text= text
+      .event__button
+        +standard-button({ color: "primaryDarkest", size: "medium", type: "button", title: "Add to calendar" })

@@ -1,0 +1,14 @@
+@import '../../vars.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    margin-bottom: 1.1rem;
+  }
+
+  &__button {
+    margin: 0.83rem 0 0 auto;
+  }
+}

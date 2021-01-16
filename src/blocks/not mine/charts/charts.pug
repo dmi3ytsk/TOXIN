@@ -1,0 +1,24 @@
+include ../title/title
+include ../pie-chart/pie-chart
+include ../donut-chart/donut-chart
+
+mixin charts()
+  section.charts
+    +title("Percentages / Pie chart")
+    .charts__row
+      +pie-chart("0")
+      +pie-chart("38")
+      +pie-chart("62")
+      +pie-chart("89")
+      +donut-chart([{
+        value: "65",
+        color: "primary"
+      },
+      {
+        value: "35",
+        color: "secondary"
+      },
+      {
+        value: "10",
+        color: "default"
+      }])

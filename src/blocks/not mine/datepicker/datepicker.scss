@@ -1,0 +1,201 @@
+@import '../../vars.scss';
+
+.datepicker {
+  width: 23.25rem;
+
+  &__date {
+    width: inherit;
+    padding: 0.66rem 0 0.5rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 6.67rem;
+    line-height: 0.325;
+    color: $white;
+    background: $secondary;
+    border: none;
+    border-radius: 0.25rem 0.25rem 0 0;
+    text-align: center;
+  }
+
+  &__calendar {
+    .ui-datepicker {
+      width: 100%;
+      padding: 0;
+
+      & .ui-datepicker {
+        &-title {
+          font-family: 'Lato', Arial, sans-serif;
+          font-weight: 300;
+          font-size: 2rem;
+          line-height: 1.08;
+          color: $white;
+          background: $secondary-dark;
+          border: none;
+          border-radius: 0;
+        }
+
+        &-header {
+          padding: 0.4em 0 0.73em;
+        }
+
+      &-prev {
+          margin-top: 0.7rem;
+          margin-left: 0.7rem;
+          width: 2.8em;
+          cursor: pointer;
+
+          &-hover {
+            top: 2px;
+            left: 2px;
+          }
+
+          & span {
+            margin-top: -0.5rem;
+          }
+        }
+
+        &-next {
+          margin-top: 0.7rem;
+          width: 2.8em;
+          right: 0.5rem;
+          cursor: pointer;
+
+          &-hover {
+            top: 2px;
+            right: 0.5rem;
+            cursor: pointer;
+          }
+
+          & span {
+            margin-top: -6px;
+          }
+        }
+      }
+
+      &-header {
+        background: $secondary-dark;
+        border: none;
+        border-radius: 0;
+      }
+
+      &-prev .ui-corner-all {
+        background-image: none;
+      }
+
+      &-year {
+        display: none;
+      }
+
+      &-calendar {
+        margin: 0;
+
+        & thead {
+          font-family: 'Lato', Arial, sans-serif;
+          font-weight: 900;
+          font-size: 0.75rem;
+          color: $white;
+          background: $secondary;
+          text-transform: uppercase;
+        }
+      }
+
+      & th {
+        padding: 0.9rem 0 0.6rem;
+      }
+
+      & td {
+        padding: 0;
+        border: 0.17rem solid $white;
+      }
+
+      & td:first-child {
+        border-left: 0;
+      }
+
+      & td:last-child {
+        border-right: 0;
+      }
+    }
+
+    .ui-widget.ui-widget-content {
+      border: 0;
+    }
+
+    .ui-icon {
+      width: 0.8rem;
+      height: 0.8rem;
+      background-image: none;
+      cursor: pointer;
+
+      &-circle-triangle-w {
+        border-top: 0.25rem solid $white;
+        border-left: 0.25rem solid $white;
+        transform: rotate(-45deg);
+      }
+
+      &-circle-triangle-e {
+        border-top: 0.25rem solid $white;
+        border-left: 0.25rem solid $white;
+        transform: rotate(135deg);
+      }
+    }
+
+    .ui-widget-content {
+      .ui-state {
+        &-default {
+          padding: 0.17rem 0 0.08rem;
+          font-family: 'SourceSansPro';
+          font-size: 1.7rem;
+          line-height: 1.75;
+          color: $gray-light;
+          background: $background-secondary;
+          border: 0;
+          text-align: center;
+
+          & .ui-state-hover {
+            border: 0;
+            background: $secondary;
+            color: $white;
+          }
+        }
+
+        &-highlight {
+          background: $background-secondary;
+          color: $gray-light;
+        }
+
+        &-active {
+          background: $secondary;
+          color: $white;
+        }
+
+        &-disabled {
+          opacity: 1;
+
+          & .ui-state-default {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .ui-widget-header .ui-state-hover {
+      border: none;
+      background: none;
+    }
+  }
+
+  &__button {
+    margin: 0;
+    padding: 1.3rem 1.7rem;
+    font-family: 'Lato', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: $text-secondary;
+    background: $background-primary;
+    border-radius: 0 0 0.25rem 0.25rem;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../vars.scss';
+
+.textarea {
+  height: 7.38rem;
+  padding: 0.83rem 1.08rem 0.92rem;
+  font-family: 'SourceSansPro', Arial, sans-serif;
+  font-size: 1.17rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: $background-primary;
+  resize: none;
+
+  &::-webkit-input-placeholder {
+    color: $text-secondary;
+  }
+}

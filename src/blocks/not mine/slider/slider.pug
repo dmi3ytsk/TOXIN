@@ -1,0 +1,18 @@
+mixin slider(options)
+  - const { value, min, max, stepsNumber, isBubbleVisible, isScaleVisible, color } = options;
+  -
+    const colors = {
+      secondary: "secondary",
+      primary: "primary"
+    };
+  - let i = 0;
+  - let stepRange = max / (stepsNumber - 1)
+
+  .slider.js-slider(data-value=value data-min=min data-max=max data-step=stepsNumber data-color=color)
+    div(class=`ui-slider-handle slider__handle_color_${colors[color] || colors.secondary}`)
+      if isBubbleVisible
+        div(class=`slider__bubble js-slider__bubble slider__bubble_color_${colors[color] || colors.secondary}`)
+    if isScaleVisible
+    div(class=`slider__scale`)
+      while i < stepsNumber
+        span= i++ * stepRange

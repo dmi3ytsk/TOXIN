@@ -1,0 +1,24 @@
+include blocks/main/main
+include pages/colors-type/colors-type
+include pages/form-elements/form-elements
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    title UI-kit
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    //- link(rel="mask-icon" href="favicon/favicon.svg" color="#0270ba")
+    //- link(rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png")
+    //- link(rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png")
+    //- link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
+    //- link(rel="manifest" href="favicon/site.webmanifest")
+    //- link(rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#ff0000")
+    //- link(rel="shortcut icon" href="favicon/favicon.ico")
+  body
+    //- +main()
+    //- +colors-type()
+    +form-elements()
+    script(src='/index.js')

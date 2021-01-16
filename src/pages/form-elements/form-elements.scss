@@ -1,0 +1,44 @@
+@import '../../vars.scss';
+
+.form-elements {
+   max-width: 1110px;
+   min-width: 675px;
+   margin: 145px auto;
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 100px;
+      :last-child {
+         margin-bottom: 0px;
+      }
+   }
+   &__column {
+      min-width: 320px;
+   }
+   &__element-title {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      :first-child {
+         margin-top: 0px;
+      }
+   }
+   &__main-title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $dark100;
+   }
+   &__sub-title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $dark50;
+   }
+
+}

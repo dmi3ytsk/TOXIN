@@ -1,0 +1,11 @@
+@mixin font-face($font, $weight, $style, $file) {
+  @font-face {
+    font-family: $font;
+    font-weight: $weight;
+    font-style: $style;
+    src:
+      url('#{$file}.woff') format('woff'),
+      url('#{$file}.woff') format('truetype'),
+      url('#{$file}.svg') format('svg');
+  }
+}

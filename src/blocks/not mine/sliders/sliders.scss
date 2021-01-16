@@ -1,0 +1,18 @@
+.sliders {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__left-column {
+    width: 44%;
+    margin-top: 3rem;
+  }
+
+  &__right-column {
+    width: 43.5%;
+    margin-top: 3rem;
+    margin-right: 0.42rem;
+  }
+}

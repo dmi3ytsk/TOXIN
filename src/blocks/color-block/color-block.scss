@@ -1,0 +1,47 @@
+@import '../../vars.scss';
+
+.color-block {
+   display: flex;
+   margin-bottom: 20px;
+   &__sqr {
+      width: 70px;
+      height: 70px;
+      border-radius: 6px;
+      background: $primary-color;
+      &_dark100 {
+         background-color: $dark100;
+      }
+      &_dark75 {
+         background-color: $dark75;
+      }
+      &_dark50 {
+         background-color: $dark50;
+      }
+      &_dark25 {
+         background-color: $dark25;
+      }
+      &_dark5 {
+         background-color: $dark25;
+      }
+      &_purple {
+         background-color: $primary-color;
+      }
+      &_green {
+         background-color: $secondary-color;
+      }
+   }
+   &__title-hash {
+      margin: auto 0px;
+      margin-left: 40px;
+      font-family: "Quicksand";
+      font-size: 19px;
+      line-height: 28.5px;
+      color: $dark100;
+      }
+   &__title {
+      font-weight: 700;
+   }
+   &__hash {
+      font-weight: 400;
+   }
+}

@@ -1,0 +1,13 @@
+mixin arrow-button(options)
+  - const { direction, color, isDisabled } = options;
+  -
+    const directions = {
+      left: "left",
+      right: "right"
+    };
+  -
+    const colors = {
+      primary: "primary",
+      primarySolid: "primarysolid"
+    };
+  button(class=`arrow-button arrow-button_direction_${directions[direction] || directions.right} arrow-button_color_${colors[color] || colors.primary}`, type="button", disabled=isDisabled)

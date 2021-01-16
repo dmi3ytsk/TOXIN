@@ -1,0 +1,8 @@
+mixin color-block(content)
+  - const { title, hash, color } = content
+
+  .color-block
+    .color-block__sqr(class=`color-block__sqr_${color}`)
+    .color-block__title-hash
+      .color-block__title= title
+      .color-block__hash= hash

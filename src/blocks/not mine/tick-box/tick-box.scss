@@ -1,0 +1,24 @@
+@import '../../vars.scss';
+
+.tick-box {
+  display: inline-block;
+  height: 1.92rem;
+  width: 1.92rem;
+  cursor: pointer;
+
+  &__input {
+    display: none;
+
+    &:checked + .tick-box__circle {
+      background: $primary url('images/checked.svg') center center no-repeat;
+    }
+  }
+
+  &__circle {
+    display: inline-block;
+    background: $background-primary url('images/unchecked.svg') center center no-repeat;
+    height: 1.92rem;
+    width: 1.92rem;
+    border-radius: 50%;
+  }
+}

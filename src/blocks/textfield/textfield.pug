@@ -1,0 +1,11 @@
+mixin textfield(options)
+   - const { type, placeholder, width, calendar } = options
+   .textfield
+      form(action="").textfield__form(class=`${width}-block`)
+         case calendar
+            when 'on'
+               input(type=type, placeholder=placeholder, class="datepicker-here").textfield__input
+            when 'on+range'
+               input(type=type, placeholder=placeholder, data-range="true", data-multiple-dates-separator=" - ", class="datepicker-here").textfield__input
+            default
+               input(type=type, placeholder=placeholder).textfield__input

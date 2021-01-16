@@ -1,0 +1,89 @@
+@import '../../vars.scss';
+
+.drop-down {
+  .ui-selectmenu-button {
+    padding: 0;
+    font-family: "SourceSansPro", Arial, sans-serif;
+    font-size: 1.17rem;
+    font-weight: 400;
+    background: $background-primary;
+    color: $text-secondary;
+    border: none;
+    border-radius: 0.25rem;
+    
+    &:hover {
+      background: $primary;
+      border: none;
+    }
+
+    &:focus,
+    &:active {
+      border: none;
+    }
+
+    & .ui-selectmenu-icon {
+      padding: 1.25rem 1.4rem;
+      background: $primary url("images/drop-down-arrow.svg") center center no-repeat;
+      border-radius: 0 0.33rem 0.33rem 0;
+    }
+
+    &-open {
+      & .ui-selectmenu-icon {
+        border-radius: 0 0.33rem 0 0;
+      }
+    }
+
+    &.ui-button {
+      padding: 0;
+      margin: 0;
+      border: none;
+      outline: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: none;
+      }
+    }
+
+    & .ui-selectmenu-text {
+      padding: 0.4rem 1.1rem 0.6rem;
+    }
+  }
+}
+
+.ui-selectmenu-menu_ui {
+  & .ui-menu {
+    padding: 0 0 0.83rem;
+    font-family: "SourceSansPro", Arial, sans-serif;
+    font-size: 1.16rem;
+    font-weight: 400;
+    background-color: $primary;
+    border: 0.08rem solid $primary;
+    color: $white;
+    border-radius: 0 0 0.33rem 0.33rem;
+
+    & .ui-menu-item-wrapper {
+      padding: 0.58rem 1.08rem;
+    }
+  }
+
+  & .ui-menu-item:first-child {
+    display: none;
+  }
+
+  & .ui-widget.ui-widget-content {
+    border: none;
+  }
+
+  & .ui-widget-content .ui-state-active {
+    background: $background-primary;
+    color: $text-secondary;
+    border: none;
+  }
+
+  & .ui-menu .ui-state-focus, 
+  & .ui-menu .ui-state-active {
+    margin: 0;
+  }
+}

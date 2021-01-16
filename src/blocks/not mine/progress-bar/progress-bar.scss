@@ -1,0 +1,51 @@
+@import '../../vars.scss';
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:before {
+      content: '';
+      flex-grow: 1;
+      flex-shrink: 0;
+      height: 0.42rem;
+      background: $background-primary;
+    }
+
+    &:first-child{
+      flex-grow: 0;
+    }
+
+    &:first-child:before{
+      content: none;
+    }
+
+    &_active::before{
+      background: $secondary;
+    }
+  }
+
+  &__step {
+    width: 2.33rem;
+    height: 2.33rem;
+    font-weight: bold;
+    font-size: 1.167rem;
+    line-height: 1.9;
+    color: $text-secondary;
+    background: $background-primary;
+    border-radius: 50%;
+    text-align: center;
+
+    &_active {
+      background: $secondary;
+      color: $white;
+    }
+  }
+}

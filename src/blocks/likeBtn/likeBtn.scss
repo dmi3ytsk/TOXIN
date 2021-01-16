@@ -1,0 +1,57 @@
+@import "../../vars.scss";
+
+.likeBtn {
+   margin-bottom: 10px;
+   margin-right: 10px;
+   &__design {
+      display: flex;
+      justify-content: space-evenly;
+      width: 40px;
+      height: 20px;
+      border: 1px solid $dark25;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      background-color: #ffffff;
+   }
+   &__heart {
+      font-size: 10px;
+      line-height: 12px;
+      color: $dark25;
+   }
+   &__likes {
+      font-size: 10px;
+      line-height: 12px;
+      color: $dark25;
+   }
+}
+.liked {
+   color: $primary-color;
+   border-color: $primary-color;
+}
+.likeBtn__box:checked + .likeBtn__content:before,
+.likeBtn__box:not(:checked) + .likeBtn__content:before {
+   content: "";
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 40px;
+   height: 20px;
+   border: 1px solid $primary-color;
+   border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+   background-color: #ffffff;
+}
+.likeBtn__box:not(:checked) + .likeBtn__content:before {
+   border-color: $primary-color;
+}
+
+.likeBtn__box:checked + .likeBtn__content:after,
+.likeBtn__box:not(:checked) + .likeBtn__content:after {
+   content: "";
+   position: absolute;
+   transition: all 0.2s ease;
+}

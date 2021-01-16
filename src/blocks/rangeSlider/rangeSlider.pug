@@ -1,0 +1,11 @@
+mixin rangeSlider(attr)
+   - const { title, description, width } = attr
+
+      .rangeSlider(class=`${width}-block`)
+         .rangeSlider__header
+            span.rangeSlider__title=title
+            span.rangeSlider__rangeValue 5 000₽ - 10 000₽
+         .rangeSlider__actionBar
+         .rangeSlider__description=description
+
+

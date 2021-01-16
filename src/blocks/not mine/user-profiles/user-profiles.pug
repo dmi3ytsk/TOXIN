@@ -1,0 +1,33 @@
+include ../title/title
+include ../user-profile/user-profile
+
+mixin user-profiles()
+  section.user-profiles
+    +title("User profile")
+    .user-profiles__items
+      .user-profiles__item
+        +user-profile({
+          image: "images/user.jpg",
+          imageAlt: "John Smith's photo",
+          name: "John Smith",
+          job: "Ux designer",
+          theme: "",
+          links: {
+            facebook: "user-link.html",
+            twitter: "user-link.html",
+            dribble: "user-link.html",
+          }
+        })
+      .user-profiles__item
+        +user-profile({
+          image: "images/user-1.jpg",
+          imageAlt: "Sarah Brown's photo",
+          name: "Sarah Brown",
+          job: "Developer",
+          theme: "primary",
+          links: {
+            facebook: "user-link.html",
+            twitter: "user-link.html",
+            dribble: "user-link.html",
+          }
+        })

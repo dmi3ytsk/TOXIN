@@ -1,0 +1,12 @@
+.toggles {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  &__item {
+    margin: 0 0.42rem;
+  }
+}
