@@ -1,10 +1,8 @@
-import "../dist/import-jquery";
-
+// Turn on jQuery
+import "../node_modules/jquery/dist/import-jquery";
+// Import JS from each item of page
 import './blocks/blocks.js';
 
-import './nullstyle.scss';
-import './vars.scss';
-import './mixins.scss';
-import './base.scss';
-import './blocks/blocks.scss';
-import "./pages/pages.scss"
+import './base.scss'; // Nullstyle + Variables + Mixins + Fonts
+import './blocks/blocks.scss'; // Style for each item of page
+import "./pages/pages.scss" // Style of page

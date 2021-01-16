@@ -1,0 +1,24 @@
+{
+  "name": "TOXIN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.pug --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmi3ytsk/TOXIN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmi3ytsk/TOXIN/issues"
+  },
+  "homepage": "https://github.com/dmi3ytsk/TOXIN#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

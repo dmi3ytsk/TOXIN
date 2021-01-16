@@ -1,0 +1,2314 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.font-body, html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 700;
+  font-style: "normal";
+  src: url("/Quicksand-Bold.9d6d9460.woff") format("woff"), url("/Quicksand-Bold.9d6d9460.woff") format("truetype"), url("/Quicksand-Bold.e7597636.svg") format("svg");
+}
+@font-face {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-style: "normal";
+  src: url("/Quicksand-Regular.802b5f30.woff") format("woff"), url("/Quicksand-Regular.802b5f30.woff") format("truetype"), url("/Quicksand-Regular.d6fe3367.svg") format("svg");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: "normal";
+  src: url("/Montserrat-Bold.73e94c2c.woff") format("woff"), url("/Montserrat-Bold.73e94c2c.woff") format("truetype"), url("/Montserrat-Bold.0fff2121.svg") format("svg");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: "normal";
+  src: url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.1b35f2ae.woff") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
+}
+html {
+  background: #ffffff;
+}
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.main {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.color-block {
+  display: flex;
+  margin-bottom: 20px;
+}
+.color-block__sqr {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background: #bc9cff;
+}
+.color-block__sqr_dark100 {
+  background-color: #1f2041;
+}
+.color-block__sqr_dark75 {
+  background-color: rgba(31, 32, 65, 0.75);
+}
+.color-block__sqr_dark50 {
+  background-color: rgba(31, 32, 65, 0.5);
+}
+.color-block__sqr_dark25 {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+.color-block__sqr_dark5 {
+  background-color: rgba(31, 32, 65, 0.25);
+}
+.color-block__sqr_purple {
+  background-color: #bc9cff;
+}
+.color-block__sqr_green {
+  background-color: #6fcf97;
+}
+.color-block__title-hash {
+  margin: auto 0px;
+  margin-left: 40px;
+  font-family: "Quicksand";
+  font-size: 19px;
+  line-height: 28.5px;
+  color: #1f2041;
+}
+.color-block__title {
+  font-weight: 700;
+}
+.color-block__hash {
+  font-weight: 400;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.type-block {
+  display: flex;
+  margin-bottom: 50px;
+}
+.type-block__tag {
+  width: 37px;
+  margin-right: 30px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+}
+.type-block__tag_h1 {
+  font-size: 24px;
+  line-height: 29.26px;
+}
+.type-block__tag_h2 {
+  font-size: 19px;
+  line-height: 23.16px;
+}
+.type-block__tag_h3 {
+  font-size: 12px;
+  line-height: 14.63px;
+}
+.type-block__tag_body {
+  font-size: 14px;
+  line-height: 24px;
+}
+.type-block__element {
+  max-width: 337px;
+  color: #1f2041;
+  font-weight: 700;
+}
+.type-block__element_h1 {
+  font-family: "Quicksand";
+  font-size: 24px;
+  line-height: 30px;
+}
+.type-block__element_h2 {
+  font-family: "Quicksand";
+  font-size: 19px;
+  line-height: 24px;
+}
+.type-block__element_h3 {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.type-block__element_body {
+  max-width: 310px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  font-weight: 400;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.textfield__form {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: rgba(31, 32, 65, 0.25);
+  width: 320px;
+  height: 44px;
+}
+.textfield__form:hover {
+  border-color: rgba(31, 32, 65, 0.5);
+}
+.textfield__input {
+  width: 100%;
+  padding: 12px 100px 12px 15px;
+}
+.textfield__input:hover, .textfield__input :focus {
+  color: rgba(31, 32, 65, 0.75);
+}
+.textfield__input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: #ffffff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+
+/* -------------------------------------------------
+     Datepicker cells
+    ------------------------------------------------- */
+.datepicker--cells {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.datepicker--cell {
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  z-index: 1;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.datepicker--cell.-focus- {
+  background: #f0f0f0;
+}
+
+.datepicker--cell.-current- {
+  color: #ffffff;
+  background: linear-gradient(#6fcf97, #66d2ea);
+  font-weight: 700;
+}
+
+.datepicker--cell.-current-.-focus- {
+  background: #6fcf97;
+}
+
+.datepicker--cell.-current-.-in-range- {
+  color: #ffffff;
+  background: #6fcf97;
+  border-radius: 50%;
+}
+.datepicker--cell.-current-.-in-range-:hover {
+  background: #6fcf97;
+}
+
+.datepicker--cell.-in-range- {
+  color: rgba(31, 32, 65, 0.5);
+  border-radius: 0;
+}
+.datepicker--cell.-in-range-::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  opacity: 0.25;
+  z-index: -999;
+}
+
+.datepicker--cell.-in-range-.-focus- {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.datepicker--cell.-disabled- {
+  cursor: default;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell.-disabled-.-focus- {
+  color: #aeaeae;
+}
+
+.datepicker--cell.-disabled-.-in-range- {
+  color: #a1a1a1;
+}
+
+.datepicker--cell.-disabled-.-current-.-focus- {
+  color: #aeaeae;
+}
+
+.datepicker--cell.-range-from- {
+  border-radius: 50%;
+  font-weight: 700;
+}
+.datepicker--cell.-range-from-:hover {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  color: #ffffff;
+}
+.datepicker--cell.-range-from-::after {
+  position: absolute;
+  left: 20px;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  opacity: 0.25;
+  z-index: -999;
+}
+
+.datepicker--cell.-range-to- {
+  border-radius: 50%;
+  font-weight: 700;
+}
+.datepicker--cell.-range-to-:hover {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  color: #ffffff;
+}
+.datepicker--cell.-range-to-::after {
+  position: absolute;
+  right: 20px;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  opacity: 0.25;
+  z-index: -999;
+}
+
+.datepicker--cell.-range-from-.-range-to- {
+  border-radius: 4px;
+}
+
+.datepicker--cell.-selected- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.datepicker--cell.-selected-.-current- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.datepicker--cell.-selected-.-focus- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.datepicker--cell:empty {
+  cursor: default;
+}
+
+.datepicker--days-names {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 8px 0 3px;
+}
+
+.datepicker--day-name {
+  color: #bc9cff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.datepicker--cell-day {
+  width: 14.28571%;
+}
+
+.datepicker--cells-months {
+  height: 170px;
+}
+
+.datepicker--cell-month {
+  width: 33.33%;
+  height: 25%;
+}
+
+.datepicker--years {
+  height: 170px;
+}
+
+.datepicker--cells-years {
+  height: 170px;
+}
+
+.datepicker--cell-year {
+  width: 25%;
+  height: 33.33%;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+
+/* -------------------------------------------------
+     Datepicker
+    ------------------------------------------------- */
+.datepickers-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media print {
+  .datepickers-container {
+    display: none;
+  }
+}
+.datepicker {
+  background: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  box-sizing: content-box;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4a4a4a;
+  width: 318px;
+  position: absolute;
+  left: -100000px;
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
+  z-index: 100;
+}
+
+.datepicker.-from-top- {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.datepicker.-from-right- {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+.datepicker.-from-bottom- {
+  -webkit-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+.datepicker.-from-left- {
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+.datepicker.active {
+  opacity: 1;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s;
+  transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;
+}
+
+.datepicker-inline .datepicker {
+  border-color: #d7d7d7;
+  box-shadow: none;
+  position: static;
+  left: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.datepicker-inline {
+  display: none;
+}
+
+.datepicker--content {
+  box-sizing: content-box;
+  padding: 4px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.-only-timepicker- .datepicker--content {
+  display: none;
+}
+
+.datepicker--body {
+  display: none;
+}
+
+.datepicker--body.active {
+  display: block;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+
+/* -------------------------------------------------
+     Navigation
+    ------------------------------------------------- */
+.datepicker--nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 32px;
+  width: 280px;
+  margin: 20px auto;
+}
+
+.-only-timepicker- .datepicker--nav {
+  display: none;
+}
+
+.datepicker--nav-title,
+.datepicker--nav-action {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.datepicker--nav-action {
+  width: 32px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rightArrow,
+.leftArrow {
+  position: relative;
+  bottom: 4px;
+  left: 10px;
+  width: 15px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-color: #bc9cff;
+}
+.rightArrow:after,
+.leftArrow:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-color: #bc9cff;
+  color: #bc9cff;
+}
+
+.rightArrow {
+  left: 4px;
+}
+.rightArrow:after {
+  top: 4px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.leftArrow {
+  left: -4px;
+}
+.leftArrow:after {
+  top: 4.4px;
+  left: 0px;
+  transform: rotate(225deg);
+}
+
+.datepicker--nav-action:hover {
+  background: #f0f0f0;
+}
+
+.datepicker--nav-action.-disabled- {
+  visibility: hidden;
+}
+
+.datepicker--nav-action svg {
+  width: 32px;
+  height: 32px;
+}
+
+.datepicker--nav-action path {
+  fill: none;
+  stroke: #9c9c9c;
+  stroke-width: 2px;
+}
+
+.datepicker--nav-title {
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.datepicker--nav-title i {
+  font-style: normal;
+  margin-left: 5px;
+}
+
+.datepicker--nav-title:hover {
+  background: #f0f0f0;
+}
+
+.datepicker--nav-title.-disabled- {
+  cursor: default;
+  background: none;
+}
+
+.datepicker--buttons {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.datepicker--button {
+  cursor: pointer;
+  border-radius: 4px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  color: #bc9cff;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.datepicker--button:hover {
+  background: #f0f0f0;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: #fff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background-color: rgba(92, 196, 239, 0.2);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .ezdropdown__row, .ezdropdown__buttons, .datepicker--buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.ezdropdown {
+  align-items: center;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  padding: 0 15px;
+  position: relative;
+}
+.ezdropdown-open {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.ezdropdown__selection {
+  line-height: 18px;
+  flex: 1;
+  position: relative;
+}
+.ezdropdown__selection:after {
+  right: 0;
+  top: 20%;
+}
+.ezdropdown__menu {
+  background-color: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  cursor: default;
+  display: none;
+  left: 0;
+  margin: -2px -1px -1px;
+  position: absolute;
+  right: 0;
+  top: 44px;
+  transition: all 0.2s ease-in-out;
+  z-index: 99999;
+}
+.ezdropdown__menu-open {
+  display: block;
+}
+.ezdropdown__row, .ezdropdown__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding: 0px 7px 0px 15px;
+}
+.ezdropdown__rowAction {
+  display: flex;
+  width: 92px;
+  justify-content: space-between;
+  align-items: center;
+}
+.ezdropdown__button {
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  color: #bc9cff;
+  font-size: 12px;
+  line-height: 15px;
+}
+.ezdropdown__button:hover {
+  background: #f0f0f0;
+}
+
+.counterBtn {
+  background: #ffffff;
+  align-items: center;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  transition: all 0.2s ease-in-out;
+  padding-left: 10.5px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.counterBtn:hover {
+  background: #f0f0f0;
+}
+
+.disable {
+  opacity: 0.35;
+  cursor: default;
+}
+.disable:hover {
+  background: none;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.checkbox {
+  margin-bottom: 10px;
+  width: 230px;
+}
+
+.checkbox__box:checked,
+.checkbox__box:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox__box:checked + .checkbox__content,
+.checkbox__box:not(:checked) + .checkbox__content {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  line-height: 20px;
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+
+.checkbox__box:checked + .checkbox__content:before,
+.checkbox__box:not(:checked) + .checkbox__content:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bc9cff;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.checkbox__box:not(:checked) + .checkbox__content:before {
+  border-color: rgba(31, 32, 65, 0.25);
+}
+
+.checkbox__box:checked + .checkbox__content:after,
+.checkbox__box:not(:checked) + .checkbox__content:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.checkbox__box:checked + .checkbox__content:after,
+.checkbox__box:not(:checked) + .checkbox__content:after {
+  left: 6px;
+  top: 5.5px;
+  width: 8px;
+  height: 6px;
+  border-left: 2px solid #bc9cff;
+  border-bottom: 2px solid #bc9cff;
+  transform: rotate(-45deg);
+}
+
+.checkbox__box:not(:checked) + .checkbox__content:after {
+  opacity: 0;
+}
+
+.checkbox__box:checked + .checkbox__content:after {
+  opacity: 1;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.radio {
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.radio__box:checked,
+.radio__box:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.radio__box:checked + .radio__content,
+.radio__box:not(:checked) + .radio__content {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  line-height: 20px;
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+
+.radio__box:checked + .radio__content:before,
+.radio__box:not(:checked) + .radio__content:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bc9cff;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.radio__box:not(:checked) + .radio__content:before {
+  border-color: rgba(31, 32, 65, 0.25);
+}
+
+.radio__box:checked + .radio__content:after,
+.radio__box:not(:checked) + .radio__content:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.radio__box:checked + .radio__content:after,
+.radio__box:not(:checked) + .radio__content:after {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bc9cff;
+}
+
+.radio__box:not(:checked) + .radio__content:after {
+  opacity: 0;
+}
+
+.radio__box:checked + .radio__content:after {
+  opacity: 1;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.toggle {
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.toggle__box:checked,
+.toggle__box:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.toggle__box:checked + .toggle__content,
+.toggle__box:not(:checked) + .toggle__content {
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+  line-height: 20px;
+  color: rgba(31, 32, 65, 0.5);
+  cursor: pointer;
+}
+
+.toggle__box:checked + .toggle__content:before,
+.toggle__box:not(:checked) + .toggle__content:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid #bc9cff;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #ffffff;
+}
+
+.toggle__box:not(:checked) + .toggle__content:before {
+  border-color: rgba(31, 32, 65, 0.25);
+}
+
+.toggle__box:checked + .toggle__content:after,
+.toggle__box:not(:checked) + .toggle__content:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.toggle__box:checked + .toggle__content:after,
+.toggle__box:not(:checked) + .toggle__content:after {
+  position: absolute;
+  left: 24px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #bc9cff;
+}
+
+.toggle__box:not(:checked) + .toggle__content:after {
+  left: 4px;
+  background: rgba(31, 32, 65, 0.25);
+}
+
+.toggle__box:checked + .toggle__content:after {
+  opacity: 1;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.likeBtn {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.likeBtn__design {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #ffffff;
+}
+.likeBtn__heart {
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.likeBtn__likes {
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.liked {
+  color: #bc9cff;
+  border-color: #bc9cff;
+}
+
+.likeBtn__box:checked + .likeBtn__content:before,
+.likeBtn__box:not(:checked) + .likeBtn__content:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid #bc9cff;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #ffffff;
+}
+
+.likeBtn__box:not(:checked) + .likeBtn__content:before {
+  border-color: #bc9cff;
+}
+
+.likeBtn__box:checked + .likeBtn__content:after,
+.likeBtn__box:not(:checked) + .likeBtn__content:after {
+  content: "";
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.rateStars__star {
+  font-size: 24px;
+  line-height: 20px;
+  color: #bc9cff;
+  cursor: pointer;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .rangeSlider__title, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.rangeSlider__header {
+  display: flex;
+  justify-content: space-between;
+}
+.rangeSlider__rangeValue {
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.rangeSlider__actionBar {
+  content: "";
+  width: 100%;
+  height: 6px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.rangeSlider__description {
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label, .btnStyleFillArrow, .btnStyleText, .btnStyleVoid, .btnStyleFill, .datepicker--buttons, .ezdropdown__row, .ezdropdown__buttons, .rangeSlider__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle, .datepicker--nav-title,
+.datepicker--nav-action {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow, .ezdropdown__selection:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.btnStyleFill {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+  color: #ffffff;
+}
+.btnStyleFill:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.btnStyleVoid {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  background: transparent;
+  border: 2px solid #bc9cff;
+  color: #bc9cff;
+}
+.btnStyleVoid:disabled {
+  cursor: default;
+  border-color: rgba(188, 156, 255, 0.5);
+}
+
+.btnStyleText {
+  margin-bottom: 30px;
+  margin-right: 20px;
+  background: transparent;
+  color: #bc9cff;
+}
+.btnStyleText:disabled {
+  cursor: default;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.btnStyleFillArrow {
+  width: 100%;
+  height: 44px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  color: #ffffff;
+  background: linear-gradient(#bc9cff, #8ba4f9);
+}
+.btnStyleFillArrow:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.btnStyleFillArrow__arrow {
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  position: relative;
+  left: 95%;
+  bottom: 19px;
+}
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.colors-type {
+  max-width: 1110px;
+  min-width: 675px;
+  margin: 145px auto;
+}
+.colors-type__row {
+  display: flex;
+  justify-content: space-between;
+}
+.colors-type__colors-column {
+  min-width: 270px;
+}
+.colors-type__type-column {
+  min-width: 403px;
+}
+
+.font-body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.font-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+
+.font-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1f2041;
+}
+
+.font-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1f2041;
+}
+
+.def-block {
+  width: 320px;
+}
+
+.sm-block {
+  width: 266px;
+}
+
+.xsm-block {
+  width: 150px;
+}
+
+.down-arrow {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
+}
+
+.form-elements {
+  max-width: 1110px;
+  min-width: 675px;
+  margin: 145px auto;
+}
+.form-elements__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.form-elements__row :last-child {
+  margin-bottom: 0px;
+}
+.form-elements__column {
+  min-width: 320px;
+}
+.form-elements__element-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.form-elements__element-title :first-child {
+  margin-top: 0px;
+}
+.form-elements__main-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+}
+.form-elements__sub-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */
