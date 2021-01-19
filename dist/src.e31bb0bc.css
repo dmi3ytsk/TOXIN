@@ -2094,6 +2094,9 @@ html {
   cursor: default;
   opacity: 0.5;
 }
+.btnStyleFill:active {
+  opacity: 0.85;
+}
 
 .btnStyleVoid {
   margin-bottom: 30px;
@@ -2108,6 +2111,9 @@ html {
   cursor: default;
   border-color: rgba(188, 156, 255, 0.5);
 }
+.btnStyleVoid:active {
+  opacity: 0.85;
+}
 
 .btnStyleText {
   margin-bottom: 30px;
@@ -2118,6 +2124,9 @@ html {
 .btnStyleText:disabled {
   cursor: default;
   color: rgba(31, 32, 65, 0.5);
+}
+.btnStyleText:active {
+  opacity: 0.85;
 }
 
 .btnStyleFillArrow {
@@ -2141,6 +2150,9 @@ html {
   position: relative;
   left: 95%;
   bottom: 19px;
+}
+.btnStyleFillArrow:active {
+  opacity: 0.85;
 }
 .font-body {
   font-family: "Montserrat", sans-serif;
