@@ -2,7 +2,7 @@
 
 .ezdropdown {
    align-items: center;
-   border: 1px solid $dark50;
+   border: 1px solid $dark25;
    border-radius: 4px;
    margin-top: 5px;
    margin-bottom: 10px;
@@ -12,10 +12,14 @@
    justify-content: space-between;
    padding: 0 15px;
    position: relative;
+   &:hover {
+      border-color: $dark50;
+   }
    &-open {
-         border-bottom-left-radius: 0px;
-         border-bottom-right-radius: 0px;
-      }
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-color: $dark50;
+   }
 
    &__selection {
       line-height: 18px;
@@ -97,10 +101,6 @@
    &:hover {
       background: #f0f0f0;
    }
-}
-.counter {
-}
-.open {
 }
 .disable {
    opacity: 0.35;

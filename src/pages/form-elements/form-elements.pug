@@ -33,26 +33,26 @@ mixin form-elements()
             .form-elements__element-title(class=`def-block`)
                span.form-elements__main-title masked text field
                span.form-elements__sub-title 
-            +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "def"})
+            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
             section(style='display: flex; justify-content: space-between;')
                span
                   .form-elements__element-title(class=`xsm-block`)
                      span.form-elements__main-title date Dropdown
                      span.form-elements__sub-title 
-                  +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm"})
+                  +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
                span
                   .form-elements__element-title(class=`xsm-block`)
                      span.form-elements__main-title date Dropdown
                      span.form-elements__sub-title 
-                  +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm"})
+                  +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
             .form-elements__element-title(class=`sm-block`)
                span.form-elements__main-title filter date dropdown
                span.form-elements__sub-title 
-            +textfield({ type: 'text', placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm"})
+            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm", dropdown: 1})
             .form-elements__element-title(class=`sm-block`)
                span.form-elements__main-title subscription text field
                span.form-elements__sub-title 
-            +textfield({ type: 'email', placeholder: "Email", width: "sm"})
+            +textfield({ type: 'email', placeholder: "Email", width: "sm", subscribe: 1})
 
          .form-elements__column
             .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
