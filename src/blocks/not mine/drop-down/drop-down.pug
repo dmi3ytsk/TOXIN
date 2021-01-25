@@ -1,7 +1,0 @@
-mixin drop-down(options)
-  - const { placeholder, items } = options;
-  .drop-down.js-drop-down
-    select.drop-down__select.js-drop-down__select
-      option.drop-down__item(disabled, selected)= placeholder
-      each item in items
-        option.drop-down__item= item

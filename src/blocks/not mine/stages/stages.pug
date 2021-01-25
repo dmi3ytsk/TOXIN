@@ -1,8 +1,0 @@
-include ../title/title
-include ../progress-bar/progress-bar
-
-mixin stages()
-  section.stages
-    +title("Stages")
-    .stages__item
-      +progress-bar({ steps: "5", activeStep: "3" })
