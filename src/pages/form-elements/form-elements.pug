@@ -7,6 +7,7 @@ include ../../blocks/likeBtn/likeBtn
 include ../../blocks/rateStars/rateStars
 include ../../blocks/rangeSlider/rangeSlider
 include ../../blocks/button/button
+include ../../blocks/pagination/pagination
 
 
 
@@ -102,11 +103,14 @@ mixin form-elements()
                +button({ active: 'no', title: "click me", style: "text"})
             p
                +button({ active: 'yes', title: "перейти к оплате", style: "fillArrow"})
-            //- + ЗДЕСЬ МИКСИН ДЛЯ 
-            .form-elements__element-title(class=`sm-block`)
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
                span.form-elements__main-title pagination
                span.form-elements__sub-title 
-            //- + ЗДЕСЬ МИКСИН ДЛЯ 
+            +pagination({
+              source: JSON.stringify([...Array(180).keys()]),
+              pageSize: 12,
+              pageRange: 1,
+            })
       .form-elements__row
          .form-elements__column
             .form-elements__element-title(class=`sm-block`)
