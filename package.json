@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dmi3ytsk/TOXIN#readme",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "paginationjs": "^2.1.5"
   }
 }
