@@ -5,14 +5,8 @@
       margin-top: 5px;
       margin-bottom: 10px;
       height: $btn-height;
-      //This create down arrow
       position: relative;
       display: flex;
-      // &:after {
-      //    @extend .down-arrow;
-      //    right: 15px;
-      //    top: 35%;
-      // }
    }
    &__input {
       width: 100%;
@@ -43,8 +37,7 @@
    }
    &__forwardArrow {
       @extend .textfield__downArrow;
-      background: none;
       pointer-events: auto;
-      color: $primary-color;
+      @include gradientText;
    }
 }

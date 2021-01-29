@@ -46,13 +46,17 @@
 
 .checkbox__box:checked + .checkbox__content:after, 
 .checkbox__box:not(:checked) + .checkbox__content:after {
+    content: "L";
+    font-weight: bold;
+    font-size: 12px;
+    @include gradientText;
     left: 6px;
-    top: 5.5px;
-    width: 8px;
-    height: 6px;
-    border-left: 2px solid $primary-color;
-    border-bottom: 2px solid $primary-color;
-    transform: rotate(-45deg);
+    top: -1px;
+    // width: 8px;
+    // height: 6px;
+    // border-left: 2px solid $primary-color;
+    // border-bottom: 2px solid $primary-color;
+    transform: rotate(45deg) scale(-1, 1);
 }
 
 

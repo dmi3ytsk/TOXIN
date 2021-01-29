@@ -35,9 +35,12 @@
    }
    @include ovalBtn;
    @include byClick;
-   background: transparent;
-   border: 2px solid $primary-color;
-   color: $primary-color;
+   @include gradientBorder;
+   $border: 2px;
+   border: solid $border transparent;  
+   &:before {
+      margin: -$border;  
+   }
 }
 .btnStyleText {
    &:disabled {

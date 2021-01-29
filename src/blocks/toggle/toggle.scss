@@ -56,7 +56,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: $primary-color;
+    background: $primary-gradient;
 }
 .toggle__box:not(:checked) + .toggle__content:after {
    left: 4px;

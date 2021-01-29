@@ -28,7 +28,12 @@
 }
 .liked {
    color: $primary-color;
-   border-color: $primary-color;
+   @include gradientBorder;
+   $border: 1px;
+   border: solid $border transparent;  
+   &:before {
+      margin: -$border;  
+   }
 }
 .likeBtn__box:checked + .likeBtn__content:before,
 .likeBtn__box:not(:checked) + .likeBtn__content:before {
