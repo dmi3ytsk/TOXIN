@@ -1,0 +1,9 @@
+include ../checkbox/checkbox
+
+mixin checkboxExpandList(options)
+   - const { title, expandList = [], width } = options
+      .checkboxExpandList(class=`${width}-block`)
+         .checkboxExpandList__title=title
+            i.material-icons.checkboxExpandList__icon expand_more
+         .checkboxExpandList__content
+            +checkbox({list: expandList})

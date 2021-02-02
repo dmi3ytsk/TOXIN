@@ -8,12 +8,12 @@ include ../../blocks/rateStars/rateStars
 include ../../blocks/rangeSlider/rangeSlider
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
-
-
+include ../../blocks/checkboxExpandList/checkboxExpandList
 
 -const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
 -const guests = ['Взрослые', 'Дети', 'Младенцы']
 -const chBtns = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+-const expandableList = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор?', 'Шампунь??']
 
 mixin form-elements()
    section.form-elements
@@ -138,14 +138,8 @@ mixin form-elements()
             +dropdown({ itemList: guests, width: 'def', type: 'sum' })
       .form-elements__row
          .form-elements__column
-            .form-elements__element-title(class=`sm-block`)
-               span.form-elements__main-title expandable checkbox list
-               span.form-elements__sub-title 
-            //- + ЗДЕСЬ МИКСИН ДЛЯ ЧЕКБОКСЛИСТА
-            .form-elements__element-title(class=`sm-block`)
-               span.form-elements__main-title expandable checkbox list
-               span.form-elements__sub-title 
-            //- + ЗДЕСЬ МИКСИН ДЛЯ ЧЕКБОКСЛИСТА
+            +checkboxExpandList({title: "expandable checkbox list", width: 'sm'})
+            +checkboxExpandList({title: "expandable checkbox list", expandList: expandableList, width: 'sm'})
          .form-elements__column
             .form-elements__element-title(class=`sm-block`)
                span.form-elements__main-title rich Checkbox Buttons
