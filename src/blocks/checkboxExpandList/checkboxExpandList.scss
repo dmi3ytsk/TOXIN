@@ -1,6 +1,8 @@
 @import "../../vars.scss";
 
 .checkboxExpandList {
+   margin-top: 25px;
+   margin-bottom: 49px;
    &__title {
       position: relative;
       @extend .font-label;
