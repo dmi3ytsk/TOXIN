@@ -9,11 +9,14 @@ include ../../blocks/rangeSlider/rangeSlider
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
 include ../../blocks/checkboxExpandList/checkboxExpandList
+include ../../blocks/richCheckbox/richCheckbox
+
 
 -const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
 -const guests = ['Взрослые', 'Дети', 'Младенцы']
--const chBtns = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+-const checkboxList = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
 -const expandableList = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор?', 'Шампунь??']
+-const richList = [{title: 'Широкий коридор', subtitle:'Ширина коридоров в номере <br>не менее 91 см.'}, {title: 'Помощник для инвалидов', subtitle:'На 1 этаже вас встретит специалист  и проводит до номера.'}]
 
 mixin form-elements()
    section.form-elements
@@ -59,7 +62,7 @@ mixin form-elements()
             .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
                span.form-elements__main-title Checkbox Buttons
                span.form-elements__sub-title 
-            +checkbox({list: chBtns})
+            +checkbox({list: checkboxList})
             .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
                span.form-elements__main-title Radio Buttons
                span.form-elements__sub-title 
@@ -141,9 +144,10 @@ mixin form-elements()
             +checkboxExpandList({title: "expandable checkbox list", width: 'sm'})
             +checkboxExpandList({title: "expandable checkbox list", expandList: expandableList, width: 'sm'})
          .form-elements__column
-            .form-elements__element-title(class=`sm-block`)
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
                span.form-elements__main-title rich Checkbox Buttons
                span.form-elements__sub-title 
+            +richCheckbox({list: richList})
             //- + ЗДЕСЬ МИКСИН ДЛЯ 
          .form-elements__column
             .form-elements__element-title(class=`sm-block`)

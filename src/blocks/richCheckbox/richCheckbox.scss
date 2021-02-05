@@ -1,0 +1,77 @@
+@import '../../vars.scss';
+
+.richCheckbox {
+   margin-bottom: 10px;
+   width: 266px;
+}
+.richCheckbox__box:checked, 
+.richCheckbox__box:not(:checked)
+{
+    position: absolute;
+    left: -9999px;
+}
+
+.richCheckbox__box:checked + .richCheckbox__title, 
+.richCheckbox__box:not(:checked) + .richCheckbox__title {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: $dark75;
+    cursor: pointer;
+}
+
+.richCheckbox__box:checked + .richCheckbox__title:before,
+.richCheckbox__box:not(:checked) + .richCheckbox__title:before {
+   content: "";
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 20px;
+   height: 20px;
+   border: 1px solid $primary-color;
+   border-radius: 4px;
+   background-color: #ffffff;
+} 
+.richCheckbox__box:not(:checked) + .richCheckbox__title:before {
+   border-color: $dark25;
+}
+
+.richCheckbox__box:checked + .richCheckbox__title:after, 
+.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.richCheckbox__box:checked + .richCheckbox__title:after, 
+.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+    content: "L";
+    font-weight: bold;
+    font-size: 12px;
+    @include gradientText;
+    left: 6px;
+    top: -1px;
+    transform: rotate(45deg) scale(-1, 1);
+}
+
+
+
+.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+    opacity: 0;
+}
+
+.richCheckbox__box:checked + .richCheckbox__title:after {
+    opacity: 1;
+}
+.richCheckbox__subtitle {
+   margin-left: 30px;
+   margin-right: 5px;
+   color: $dark50;
+   font-size: 12px;
+   line-height: 14px;
+}
