@@ -1,0 +1,19 @@
+@import "../../vars.scss";
+
+.bulletList {
+   margin-bottom: 10px;
+   &__dot {
+      display: inline-flex;
+      width: 10.43px;
+      height: 10px;
+      border-radius: 50%;
+      background: $dark25;
+   }
+   &__content {
+      display: inline-flex;
+      margin-left: 10px;
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark75;
+   }
+}

@@ -1,0 +1,6 @@
+mixin bulletList(options)
+   - const { list } = options
+      each content in list
+       ul.bulletList
+         .bulletList__dot
+         li.bulletList__content!=content

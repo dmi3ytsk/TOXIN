@@ -10,6 +10,7 @@ include ../../blocks/button/button
 include ../../blocks/pagination/pagination
 include ../../blocks/checkboxExpandList/checkboxExpandList
 include ../../blocks/richCheckbox/richCheckbox
+include ../../blocks/bulletList/bulletList
 
 
 -const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
@@ -17,6 +18,7 @@ include ../../blocks/richCheckbox/richCheckbox
 -const checkboxList = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
 -const expandableList = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор?', 'Шампунь??']
 -const richList = [{title: 'Широкий коридор', subtitle:'Ширина коридоров в номере <br>не менее 91 см.'}, {title: 'Помощник для инвалидов', subtitle:'На 1 этаже вас встретит специалист  и проводит до номера.'}]
+-const bullet = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, <br>а выезд до 12:00']
 
 mixin form-elements()
    section.form-elements
@@ -150,9 +152,10 @@ mixin form-elements()
             +richCheckbox({list: richList})
             //- + ЗДЕСЬ МИКСИН ДЛЯ 
          .form-elements__column
-            .form-elements__element-title(class=`sm-block`)
+            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 13px;')
                span.form-elements__main-title bullet list
                span.form-elements__sub-title 
+            +bulletList({list: bullet})
             //- + ЗДЕСЬ МИКСИН ДЛЯ 
       .form-elements__row
          .form-elements__column
