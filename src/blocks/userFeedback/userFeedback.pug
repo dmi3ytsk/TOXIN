@@ -1,0 +1,13 @@
+include ../likeBtn/likeBtn
+
+mixin userFeedback(attr)
+   - const { user } = attr
+      -const {username, avatar, lastActivity, feedback, likes} = user
+         .userFeedback
+            .userFeedback__left 
+               img(src=`${avatar}`).userFeedback__avatar 
+               +likeBtn(`${likes}`)
+            .userFeedback__right 
+               .userFeedback__username=username
+                  .userFeedback__lastActivity=lastActivity
+               .userFeedback__feedback=feedback   
