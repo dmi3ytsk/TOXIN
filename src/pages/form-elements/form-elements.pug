@@ -11,6 +11,8 @@ include ../../blocks/pagination/pagination
 include ../../blocks/checkboxExpandList/checkboxExpandList
 include ../../blocks/richCheckbox/richCheckbox
 include ../../blocks/bulletList/bulletList
+include ../../blocks/aboutRoom/aboutRoom
+
 
 
 -const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
@@ -159,7 +161,8 @@ mixin form-elements()
             //- + ЗДЕСЬ МИКСИН ДЛЯ 
       .form-elements__row
          .form-elements__column
-
+            +aboutRoom({title: 'Комфорт', subtitle: 'Шумопоглощающие стены', icon: 'insert_emoticon'})
+            +aboutRoom({title: 'Удобство', subtitle: 'Окно в каждой из спален', icon: 'location_city'})
          .form-elements__column
 
          .form-elements__column
