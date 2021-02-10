@@ -1,0 +1,15 @@
+@import '../../vars.scss';
+
+.cards {
+   background: #e5e5e5;
+   max-width: 1110px;
+   min-width: 675px;
+   margin: 145px auto;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__column {
+
+   }
+}

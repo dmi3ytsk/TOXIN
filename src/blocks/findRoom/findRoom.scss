@@ -1,0 +1,23 @@
+@import '../../vars.scss';
+
+.findRoom {
+   width: 380px;
+   background: #ffffff;
+   border: 1px solid rgba(0, 0, 0, 0.12);
+   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
+   &__body {
+      padding: 40px 30px 30px 30px;
+   }
+   &__inOut {
+      margin-top: 21px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__guests {
+      margin-top: 21px;
+   }
+   &__button {
+      margin-top: 31px;
+   }
+}

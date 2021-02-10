@@ -1,0 +1,14 @@
+include ../../blocks/findRoom/findRoom
+
+
+mixin cards()
+   section.cards   
+      .cards__body 
+         .cards__column
+            +findRoom()
+         .cards__column
+            h1 column 2
+         .cards__column
+            h1 column 3
+
+         

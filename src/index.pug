@@ -1,6 +1,7 @@
 include blocks/main/main
 include pages/colors-type/colors-type
 include pages/form-elements/form-elements
+include pages/cards/cards
 
 
 doctype html
@@ -20,5 +21,6 @@ html(lang="ru")
   body
     //- +main()
     //- +colors-type()
-    +form-elements()
+    //- +form-elements()
+    +cards()
     script(src='/index.js')
