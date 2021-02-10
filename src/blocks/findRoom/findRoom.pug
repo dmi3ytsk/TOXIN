@@ -13,7 +13,7 @@ mixin findRoom ()
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
          .findRoom__guests 
             h3.font-label гости
-               +dropdown({ itemList: guests, width: "def", type: "sum" })
+            +dropdown({ itemList: guests, width: "def", type: "sum" })
          .findRoom__button
             +button({ active: "yes", title: "подобрать номер", style: "fillArrow"})
 
