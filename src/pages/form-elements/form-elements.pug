@@ -31,27 +31,27 @@ mixin form-elements()
 
          .form-elements__column
 
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block
                span.form-elements__main-title text field
                span.form-elements__sub-title default
             +textfield({ type: 'email', placeholder: "Email", width: "def"})
             
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block
                span.form-elements__main-title text field
                span.form-elements__sub-title Hover / Focus
             +textfield({ type: 'text', placeholder: "This is pretty awesome", width: "def"})
             
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title 
             +dropdown({ itemList: guests, width: 'def', type: 'sum' })
             
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block(style='margin-top: 23px;')
                span.form-elements__main-title masked text field
                span.form-elements__sub-title 
             +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
             
-            section(style='display: flex; justify-content: space-between;')
+            section(style='display: flex; justify-content: space-between; margin-top: 20px;')
                span
                   .form-elements__element-title(class=`xsm-block`)
                      span.form-elements__main-title date Dropdown
@@ -158,14 +158,14 @@ mixin form-elements()
          
          .form-elements__column
 
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title 
             +dropdown({ itemList: guests, width: 'def', type: 'sum' })
 
          .form-elements__column
 
-            .form-elements__element-title(class=`def-block`)
+            .form-elements__element-title.def-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title 
             +dropdown({ itemList: guests, width: 'def', type: 'sum' })
