@@ -17,9 +17,13 @@ mixin button(attr)
             p=title
       case active
          when 'yes'
-               button(name=`${title}` class=`${classStyle}` )=title
-                  i.btnStyleFillArrow__arrow.material-icons=arrow
+            button(name=`${title}` class=`${classStyle}` )
+               wrap(class=`${classStyle}__body`)
+                  wrap(class=`${classStyle}__title`)=title
+               i.btnStyleFillArrow__arrow.material-icons=arrow
          when  'no'
-               button(name=`${title}` class=`${classStyle}` disabled)=title
+            button(name=`${title}` class=`${classStyle}` disabled)
+               wrap(class=`${classStyle}__body`)
+                  wrap(class=`${classStyle}__title` disabled)=title
          default
             p Chose active or not
