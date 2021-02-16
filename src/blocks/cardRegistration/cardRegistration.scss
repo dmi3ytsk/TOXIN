@@ -8,18 +8,27 @@
    border-radius: 4px;
    margin-top: 19px;
    margin-bottom: 19px;
+   &__title {
+      margin-bottom: 20px;
+   }
+   &__labelBirth {
+      margin-top: 24px;
+   }
+   &__labelLogin {
+      margin-top: 22px;
+   }
+   &__choseRoomBtn {
+      margin-top: 24px;
+      margin-bottom: 30px;
+   }
    &__body {
       padding: 40px 30px 30px 30px;
    }
-   &__inOut {
-      margin-top: 21px;
+   &__footer {
       display: flex;
       justify-content: space-between;
+      align-items: center;
    }
-   &__guests {
-      margin-top: 21px;
-   }
-   &__button {
-      margin-top: 31px;
+   &__loginBtn {
    }
 }

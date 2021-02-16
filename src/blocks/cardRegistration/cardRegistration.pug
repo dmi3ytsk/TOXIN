@@ -1,6 +1,3 @@
-include ../textfield/textfield
-include ../button/button
-include ../dropdown/dropdown
 
 mixin registration ()
    .registration
@@ -9,15 +6,18 @@ mixin registration ()
          +textfield({ type: 'text', placeholder: "Имя", width: "def"})
          +textfield({ type: 'text', placeholder: "Фамилия", width: "def"})
          +radio()
-         h3.font-label дата рождения
+         h3.registration__labelBirth.font-label дата рождения
          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
-         h3.font-label данные для входа в сервис
+         h3.registration__labelLogin.font-label данные для входа в сервис
          +textfield({ type: 'email', placeholder: "Email", width: "def"})
          +textfield({ type: 'text', placeholder: "Пароль", width: "def"})
          +toggle(0)
-         +button({ active: "yes", title: "подобрать номер", style: "fillArrow"})
-         span.font-body Уже есть аккаунт на Toxin
-         +button({ active: 'yes', title: "войти", style: "void"})
+         .registration__choseRoomBtn
+            +button({ active: "yes", title: "перейти к оплате", style: "fillArrow"})
+         .registration__footer
+            span.font-body Уже есть аккаунт на Toxin
+            .registration__loginBtn
+               +button({ active: 'yes', title: "войти", style: "void"})
  
 
 
