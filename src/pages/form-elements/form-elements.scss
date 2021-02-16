@@ -40,5 +40,11 @@
       text-transform: uppercase;
       color: $dark50;
    }
-
+   &__buttonRow {
+      margin-bottom: 30px;
+      margin-right: 20px;
+   }
+   &__buttonBig {
+      margin-bottom: 40px;
+   }
 }

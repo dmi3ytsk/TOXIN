@@ -1,13 +1,7 @@
 @import "../../vars.scss";
 
-@mixin spaceAroundBtn {
-   margin-bottom: 30px;
-   // margin-right: 20px;
-}
-
 @mixin ovalBtn {
    @extend .font-label;
-   @include spaceAroundBtn;
    padding: 14px 20px 15px 20px;
    border-radius: 22px;
 }
@@ -79,7 +73,7 @@
       }
    }
    @extend .font-label;
-   @include spaceAroundBtn;
+  
    @include byClick;
    background: transparent;
    color: $primary-color;

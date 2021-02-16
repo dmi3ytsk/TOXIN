@@ -117,16 +117,19 @@ mixin form-elements()
             .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
                span.form-elements__main-title buttons
                span.form-elements__sub-title 
-            p
-               +button({ active: 'yes', title: "click me", style: "fill" })
+            p.form-elements__buttonRow
+               span.form-elements__buttonRow
+                  +button({ active: 'yes', title: "click me", style: "fill" })
                +button({ active: 'no', title: "click me", style: "fill"})
-            p
-               +button({ active: 'yes', title: "click me", style: "void"})
+            p.form-elements__buttonRow
+               span.form-elements__buttonRow
+                  +button({ active: 'yes', title: "click me", style: "void"})
                +button({ active: 'no', title: "click me", style: "void"})
-            p
-               +button({ active: 'yes', title: "click me", style: "text"})
+            p.form-elements__buttonRow
+               span.form-elements__buttonRow
+                  +button({ active: 'yes', title: "click me", style: "text"})
                +button({ active: 'no', title: "click me", style: "text"})
-            p
+            p.form-elements__buttonBig
                +button({ active: 'yes', title: "перейти к оплате", style: "fillArrow"})
             
             .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
