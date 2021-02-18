@@ -1,0 +1,112 @@
+@import "../../vars.scss";
+
+.buyRoom {
+   width: 380px;
+   background: #ffffff;
+   border: 1px solid rgba(0, 0, 0, 0.12);
+   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
+   margin-top: 19px;
+   margin-bottom: 19px;
+   &__body {
+      padding: 40px 30px 30px 30px;
+   }
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+   }
+   &__roomNumber {
+      @extend .font-title;
+      position: relative;
+
+      &::before {
+         content: "№ ";
+         position: relative;
+         font-size: 14px;
+         line-height: 17px;
+      }
+   }
+   &__luxeRoom {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: $primary-color;
+   }
+   &__cost {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark50;
+   }
+   &__period {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $dark50;
+   }
+   &__inOut {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__guests {
+      margin-bottom: 18px;
+   }
+   &__costList {
+      color: $dark75;
+      margin-bottom: 34px;
+      &-row {
+         line-height: 24px;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+         &-ultraItem {
+            position: relative;
+            top: 3px;
+            line-height: 18px;
+            width: 214px;
+         }
+      }
+      &-item {
+         width: 36px;
+         position: relative;
+         left: 18px;
+      }
+      &-infoButton {
+         cursor: pointer;
+         color: $dark25;
+         position: relative;
+         width: 20px;
+         height: 20px;
+         top: 1px;
+         left: -18px;
+         border: 1px solid $dark25;
+         border-radius: 50%;
+         &::after {
+            content: "i";
+            position: relative;
+            top: -3px;
+            left: 7px;
+         }
+      }
+   }
+   &__resultRow {
+      @extend .font-subtitle;
+      margin-bottom: 22px;
+   }
+   &__dashLine {
+      position: relative;
+      top: -5px;
+      margin-left: 4px;
+      margin-right: 5px;
+      padding-right: 182px;
+      border-bottom: 1px dashed $dark25;
+   }
+   &__ultraSum {
+      position: absolute;
+      width: 77px;
+   }
+}
