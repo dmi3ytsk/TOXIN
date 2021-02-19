@@ -1,7 +1,7 @@
 include ../../blocks/cardFindRoom/findRoom
 include ../../blocks/cardRegistration/cardRegistration
 include ../../blocks/cardBuyRoom/cardBuyRoom
-
+include ../../blocks/cardLogin/cardLogin
 
 
 
@@ -16,6 +16,8 @@ mixin cards()
          .cards__column
             .cards__card
                +buyRoom()
+            .cards__card
+               +login()
          .cards__column
             h1 column 3
 
