@@ -2,6 +2,7 @@ include ../../blocks/cardFindRoom/findRoom
 include ../../blocks/cardRegistration/cardRegistration
 include ../../blocks/cardBuyRoom/cardBuyRoom
 include ../../blocks/cardLogin/cardLogin
+include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
 
 
 
@@ -22,3 +23,9 @@ mixin cards()
             .cards__card
                .datepicker-here
             .cards__card
+               +roomThumbnail({roomNumber: 888, isLuxe: true, isCarousel: true, cost: "9 990", rating:"5", feedbacks:"145"})
+            .cards__card
+               +roomThumbnail({roomNumber: 840, isLuxe: false, isCarousel: false, cost: "9 990", rating:"4", feedbacks:"65"})
+
+
+
