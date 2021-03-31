@@ -1,0 +1,7 @@
+include ../../blocks/header/header
+
+
+mixin headers-footers()
+   section.headers-footers
+      +header({isAuth: false})
+      +header({isAuth: true, username: "Юлий Цезарь"})
