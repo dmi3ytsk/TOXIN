@@ -7,14 +7,14 @@ mixin header(options)
             nav.header__nav 
                ul.header__nav-list
                   li.header__nav-list-item_active
-                     a(href="") О нас
+                     a(href="#") О нас
                   li.header__nav-list-item
                      span Услуги
                      span.material-icons expand_more
                   li.header__nav-list-item
-                     a(href="") Вакансии
+                     a(href="#") Вакансии
                   li.header__nav-list-item
-                     a(href="") Новости
+                     a(href="#") Новости
                   li.header__nav-list-item
                      span Соглашения
                      span.material-icons expand_more
@@ -24,10 +24,10 @@ mixin header(options)
                      .header__auth-block-username=username
                   -else
                      .header__auth-block-button
-                        +button({ active:"yes", title:"войти", style:"void"})
-                        button(name=`войти` class=`${classStyle}` ) 
-                           wrap(class=`${classStyle}__body`)
-                              wrap(class=`${classStyle}__title`) войти
-
+                        button(name=`войти`).loginBtn
+                           wrap.loginBtn__body
+                              wrap.loginBtn__title войти
                      .header__auth-block-button
-                        +button({ active:"yes", title:"зарегистрироваться", style:"fill"})
+                        button(name=`зарегистрироваться`).regBtn
+                           wrap.regBtn__body
+                              wrap.regBtn__title зарегистрироваться
