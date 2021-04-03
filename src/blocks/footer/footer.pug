@@ -1,0 +1,26 @@
+-const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Связь с нами"]]
+
+mixin footer()
+   footer.footer 
+      .footer__full 
+         .footer__body
+            .footer__full-company
+               img(src="" alt="").footer__full-company-logo
+               .footer__full-company-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            each block in footerFullBlocksData
+               .footer__full-block 
+                  ul 
+                     each item in block 
+                        li.footer__full-block-item= item
+            .footer__full-block 
+               ul
+                  li.footer__full-block-item Подписка
+                  li.footer__full-block-item Получайте специальные предложения и новости сервиса
+                  li.footer__full-block-item
+                     +textfield({ type: 'email', placeholder: "Email", width: "sm", subscribe: 1})
+      
+      .footer__copyright
+         .footer__body
+            img(src="" alt="").footer__copyright-logo   
+            .footer__copyright-text
+            .footer__copyright-socials

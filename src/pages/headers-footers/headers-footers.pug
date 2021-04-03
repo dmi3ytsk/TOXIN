@@ -1,7 +1,8 @@
 include ../../blocks/header/header
-
+include ../../blocks/footer/footer
 
 mixin headers-footers()
    section.headers-footers
       +header({isAuth: false})
       +header({isAuth: true, username: "Юлий Цезарь"})
+      +footer()
