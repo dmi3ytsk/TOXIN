@@ -1,12 +1,12 @@
--const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Связь с нами"]]
+-const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]]
 
 mixin footer()
    footer.footer 
       .footer__full 
          .footer__body
-            .footer__full-company
-               img(src="" alt="").footer__full-company-logo
-               .footer__full-company-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            .footer__full-block
+               img(src=`img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
+               .footer__full-block-item Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             each block in footerFullBlocksData
                .footer__full-block 
                   ul 
@@ -17,7 +17,7 @@ mixin footer()
                   li.footer__full-block-item Подписка
                   li.footer__full-block-item Получайте специальные предложения и новости сервиса
                   li.footer__full-block-item
-                     +textfield({ type: 'email', placeholder: "Email", width: "sm", subscribe: 1})
+                     +textfield({ type: 'email', placeholder: "Email", subscribe: 1})
       
       .footer__copyright
          .footer__body
