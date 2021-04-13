@@ -1,6 +1,5 @@
 .footer {
    background: #ffffff;
-   box-shadow: 0px 1px 0px $dark10;
    &__body {
       max-width: 1160px;
       margin: 0 auto;
@@ -8,6 +7,8 @@
       justify-content: space-between;
    }
    &__full {
+      border-bottom: 1px solid #e5e5e5;
+      box-shadow: 0px 1px 0px $dark10;
       & .footer__body {
          padding: 100px 0;
       }
@@ -42,6 +43,32 @@
                @extend .font-label;
                margin-bottom: 21px;
             }
+            &:last-child {
+               margin-bottom: 0px;
+            }
+         }
+      }
+   }
+   &__copyright {
+      height: 70px;
+      font-size: 14px;
+      line-height: 22px;
+      box-shadow: 0px 1px 0px $dark10;
+      & .footer__body {
+         padding: 23px 0;
+      }
+      &-logo {
+         display: none;
+      }
+      &-socials {
+         & a {
+            font-size: 24px;
+            line-height: 23px;
+            background: $primary-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: $primary-color;
+            margin-left: 23px;
          }
       }
    }
