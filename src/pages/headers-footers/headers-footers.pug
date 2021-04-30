@@ -5,4 +5,5 @@ mixin headers-footers()
    section.headers-footers
       +header({isAuth: false})
       +header({isAuth: true, username: "Юлий Цезарь"})
-      +footer()
+      +footer({})
+      +footer({isMobile: true})

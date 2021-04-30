@@ -1,8 +1,11 @@
 
 .headers-footers{
-   & header {
+   & header, footer {
       margin-bottom: 40px;
    }
    background: #e5e5e5;
    padding: 140px 0;
+   & .small-footer {
+      width: 768px;
+   }
 }
