@@ -1,6 +1,6 @@
 @import "./nullstyle.scss";
-@import "./vars";
-@import "./mixins";
+@import "./vars.scss";
+@import "./mixins.scss";
 
 //-Fonts
 @include font-face("Quicksand", 700, "normal","fonts/Quicksand-Bold");
@@ -11,4 +11,9 @@
 html {
   @extend .font-body;
   background: #ffffff;
+}
+.global-menu-button {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
