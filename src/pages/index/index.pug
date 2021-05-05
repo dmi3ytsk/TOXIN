@@ -1,0 +1,20 @@
+
+extends ../../layouts/base
+
+block vars
+   - const title = 'GLOBAL PROJECT NAV';
+block content
+   .root
+      .root__header=title 
+      .root__nav 
+         .root__nav-column 
+            a(href="./../colors-type/colors-type.pug").root__nav-element Colors&Type
+            a(href="").root__nav-element Form elements    
+            a(href="").root__nav-element Cards
+            a(href="").root__nav-element Headers&Footers
+         .root__nav-column 
+            a(href="").root__nav-element Landing page
+            a(href="").root__nav-element Search room
+            a(href="").root__nav-element Room details
+            a(href="").root__nav-element Registration
+            a(href="").root__nav-element Sign in
