@@ -24,7 +24,8 @@ mixin footer(options)
             
             div(class=`footer__copyright${smallFooter}`)
                .footer__body
-                  img(src=`img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
+                  a(href="pages/index/index.pug") 
+                   img(src=`img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
                   .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
                   .footer__copyright-socials
                      a(href="https://twitter.com/" target="_blank" class="fab fa-twitter")
