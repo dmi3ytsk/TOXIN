@@ -1,3 +1,5 @@
+extends ../../layouts/base
+
 include ../../blocks/textfield/textfield
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox/checkbox
@@ -14,191 +16,196 @@ include ../../blocks/bulletList/bulletList
 include ../../blocks/aboutRoom/aboutRoom
 include ../../blocks/userFeedback/userFeedback
 
-//- Elements data 
--const apartment = ['Спальни', 'Кровати', 'Ванные комнаты']
--const guests = ['Взрослые', 'Дети', 'Младенцы']
--const checkboxList = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
--const expandableList = ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор?', 'Шампунь??']
--const richList = [{title: 'Широкий коридор', subtitle:'Ширина коридоров в номере <br>не менее 91 см.'}, {title: 'Помощник для инвалидов', subtitle:'На 1 этаже вас встретит специалист  и проводит до номера.'}]
--const bullet = ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, <br>а выезд до 12:00']
--const user_murad = {username: 'Мурад Сарафанов', avatar: 'img/user_murad.png', lastActivity: '5 дней назад', likes: 11, feedback: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'}
--const user_patricia = {username: 'Патрисия Стёклышкова', avatar: 'img/user_patricia.png', lastActivity: 'Неделю назад', likes: 2, feedback: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'}
 
-mixin form-elements()
+block vars
+   -const title = "UI-Kit Form elements";
+   -const apartment = ["Спальни", "Кровати", "Ванные комнаты"]
+   -const guests = ["Взрослые", "Дети", "Младенцы"]
+   -const checkboxList = ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"]
+   -const expandableList = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор?", "Шампунь??"]
+   -const richList = [{title: "Широкий коридор", subtitle:"Ширина коридоров в номере <br>не менее 91 см."}, {title: "Помощник для инвалидов", subtitle:"На 1 этаже вас встретит специалист  и проводит до номера."}]
+   -const bullet = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, <br>а выезд до 12:00"]
+   -const user_murad = {username: "Мурад Сарафанов", avatar: "../../img/user_murad.png", lastActivity: "5 дней назад", likes: 11, feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."}
+   -const user_patricia = {username: "Патрисия Стёклышкова", avatar: "../../img/user_patricia.png", lastActivity: "Неделю назад", likes: 2, feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"}
+block content
+   a(href="../index/index.pug").global-menu-button
+      img(src="../../img/watermark-logo.png" alt="global menu") 
+
    section.form-elements
 
       .form-elements__row
 
          .form-elements__column
+            wrap
+               .form-elements__element-title.def-block
+                  span.form-elements__main-title text field
+                  span.form-elements__sub-title default
+               +textfield({ type: "email", placeholder: "Email", width: "def"})
 
-            .form-elements__element-title.def-block
-               span.form-elements__main-title text field
-               span.form-elements__sub-title default
-            +textfield({ type: 'email', placeholder: "Email", width: "def"})
-            
-            .form-elements__element-title.def-block
-               span.form-elements__main-title text field
-               span.form-elements__sub-title Hover / Focus
-            +textfield({ type: 'text', placeholder: "This is pretty awesome", width: "def"})
-            
-            .form-elements__element-title.def-block
-               span.form-elements__main-title dropdown
-               span.form-elements__sub-title 
-            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
-            
-            .form-elements__element-title.def-block(style='margin-top: 23px;')
-               span.form-elements__main-title masked text field
-               span.form-elements__sub-title 
-            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
-            
-            section(style='display: flex; justify-content: space-between; margin-top: 20px;')
-               span
-                  .form-elements__element-title(class=`xsm-block`)
-                     span.form-elements__main-title date Dropdown
-                     span.form-elements__sub-title 
-                  +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
-               span
-                  .form-elements__element-title(class=`xsm-block`)
-                     span.form-elements__main-title date Dropdown
-                     span.form-elements__sub-title 
-                  +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
-            
-            .form-elements__element-title(class=`sm-block`)
-               span.form-elements__main-title filter date dropdown
-               span.form-elements__sub-title 
-            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm", dropdown: 1})
-            
+               .form-elements__element-title.def-block
+                  span.form-elements__main-title text field
+                  span.form-elements__sub-title Hover / Focus
+               +textfield({ type: "text", placeholder: "This is pretty awesome", width: "def"})
+
+               .form-elements__element-title.def-block
+                  span.form-elements__main-title dropdown
+                  span.form-elements__sub-title 
+               +dropdown({ itemList: guests, width: "def", type: "sum" })
+
+               .form-elements__element-title.def-block
+                  span.form-elements__main-title masked text field
+                  span.form-elements__sub-title 
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
+
+            .form-elements__column-block
+               section.form-elements__element-content
+                  span
+                     .xsm-block.form-elements__element-content-stars
+                        span.form-elements__main-title date Dropdown
+                        span.form-elements__sub-title 
+                     +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+                  span
+                     .xsm-block
+                        span.form-elements__main-title date Dropdown
+                        span.form-elements__sub-title 
+                     +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+            .form-elements__column-block
+               .form-elements__element-title(class=`sm-block`)
+                  span.form-elements__main-title filter date dropdown
+                  span.form-elements__sub-title 
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm", dropdown: 1})
+
             .form-elements__element-title(class=`sm-block`)
                span.form-elements__main-title subscription text field
                span.form-elements__sub-title 
-            +textfield({ type: 'email', placeholder: "Email", width: "sm", subscribe: 1})
+            +textfield({ type: "email", placeholder: "Email", width: "sm", subscribe: 1})
 
          .form-elements__column
 
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title Checkbox Buttons
                span.form-elements__sub-title 
             +checkbox({list: checkboxList})
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title Radio Buttons
                span.form-elements__sub-title 
             +radio()
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title toggle
                span.form-elements__sub-title 
             +toggle(1)
             +toggle(2)
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title like Button
                span.form-elements__sub-title 
-            section(style='display: flex; ')
+            section.form-elements__element-content
                +likeBtn(2)
                +likeBtn(11)
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title rate Button
                span.form-elements__sub-title 
-            section(style='display: flex; margin-right: 20px;')
-               span(style='margin-right: 20px;') 
+            section.form-elements__element-content
+               span.form-elements__element-content-stars 
                   +rateStars(4)
                span
                   +rateStars(5)
-         
+
          .form-elements__column
 
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title Range Slider(non func)
                span.form-elements__sub-title 
-            +rangeSlider({title: 'диапазон цены', description: 'Стоимость за сутки пребывания в номере', width: 'sm'})
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+            +rangeSlider({title: "диапазон цены", description: "Стоимость за сутки пребывания в номере", width: "sm"})
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title buttons
                span.form-elements__sub-title 
             p.form-elements__buttonRow
                span.form-elements__buttonRow
-                  +button({ active: 'yes', title: "click me", style: "fill" })
-               +button({ active: 'no', title: "click me", style: "fill"})
+                  +button({ active: "yes", title: "click me", style: "fill" })
+               +button({ active: "no", title: "click me", style: "fill"})
             p.form-elements__buttonRow
                span.form-elements__buttonRow
-                  +button({ active: 'yes', title: "click me", style: "void"})
-               +button({ active: 'no', title: "click me", style: "void"})
+                  +button({ active: "yes", title: "click me", style: "void"})
+               +button({ active: "no", title: "click me", style: "void"})
             p.form-elements__buttonRow
                span.form-elements__buttonRow
-                  +button({ active: 'yes', title: "click me", style: "text"})
-               +button({ active: 'no', title: "click me", style: "text"})
+                  +button({ active: "yes", title: "click me", style: "text"})
+               +button({ active: "no", title: "click me", style: "text"})
             p.form-elements__buttonBig
-               +button({ active: 'yes', title: "перейти к оплате", style: "fillArrow"})
-            
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+               +button({ active: "yes", title: "перейти к оплате", style: "fillArrow"})
+
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title pagination
                span.form-elements__sub-title 
             +pagination({
-              source: JSON.stringify([...Array(180).keys()]),
-              pageSize: 12,
-              pageRange: 1,
+               source: JSON.stringify([...Array(180).keys()]),
+               pageSize: 12,
+               pageRange: 1,
             })
-      
+
       .form-elements__row
 
          .form-elements__column
 
-            .form-elements__element-title(class=`sm-block`)
+            .form-elements__element-title
                span.form-elements__main-title dropdown
                span.form-elements__sub-title default
             +dropdown({ itemList: apartment, 
-               width: 'sm',
-               type: 'each' })
-            
-            .form-elements__element-title(class=`sm-block`)
+               width: "sm",
+               type: "each" })
+
+            .form-elements__element-title
                span.form-elements__main-title dropdown
                span.form-elements__sub-title expanded
             +dropdown({ itemList: apartment, 
-               width: 'sm',
-               type: 'each' })
-         
-         .form-elements__column
-
-            .form-elements__element-title.def-block
-               span.form-elements__main-title dropdown
-               span.form-elements__sub-title 
-            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
+               width: "sm",
+               type: "each" })
 
          .form-elements__column
 
             .form-elements__element-title.def-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title 
-            +dropdown({ itemList: guests, width: 'def', type: 'sum' })
-      
+            +dropdown({ itemList: guests, width: "def", type: "sum" })
+
+         .form-elements__column
+
+            .form-elements__element-title.def-block
+               span.form-elements__main-title dropdown
+               span.form-elements__sub-title 
+            +dropdown({ itemList: guests, width: "def", type: "sum" })
+
       .form-elements__row
 
          .form-elements__column
 
-            +checkboxExpandList({title: "expandable checkbox list", width: 'sm'})
-            +checkboxExpandList({title: "expandable checkbox list", expandList: expandableList, width: 'sm'})
-         
+            +checkboxExpandList({title: "expandable checkbox list", width: "sm"})
+            +checkboxExpandList({title: "expandable checkbox list", expandList: expandableList, width: "sm"})
+
          .form-elements__column
 
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 15px;')
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title rich Checkbox Buttons
                span.form-elements__sub-title 
             +richCheckbox({list: richList})
-         
+
          .form-elements__column
 
-            .form-elements__element-title(class=`sm-block`)(style='margin-bottom: 13px;')
+            .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title bullet list
                span.form-elements__sub-title 
             +bulletList({list: bullet})
-      
+
       .form-elements__row
 
          .form-elements__column
 
-            +aboutRoom({title: 'Комфорт', subtitle: 'Шумопоглощающие стены', icon: 'insert_emoticon'})
-            +aboutRoom({title: 'Удобство', subtitle: 'Окно в каждой из спален', icon: 'location_city'})
-         
+            +aboutRoom({title: "Комфорт", subtitle: "Шумопоглощающие стены", icon: "insert_emoticon"})
+            +aboutRoom({title: "Удобство", subtitle: "Окно в каждой из спален", icon: "location_city"})
+
          +userFeedback({user: user_murad})
