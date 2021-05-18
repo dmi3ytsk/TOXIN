@@ -15,6 +15,16 @@
    }
    &__column {
       min-width: 320px;
+      & .mt24 {
+         margin-top: 24px;
+      }
+      & .mt32 {
+         margin-top: 32px;
+      }
+      & .mt40 {
+         margin-top: 40px;
+      }
+
       &-block {
          margin-top: 40px;
          margin-bottom: 40px;

@@ -37,22 +37,22 @@ block content
 
          .form-elements__column
             wrap
-               .form-elements__element-title.def-block
+               .form-elements__element-title
                   span.form-elements__main-title text field
                   span.form-elements__sub-title default
                +textfield({ type: "email", placeholder: "Email", width: "def"})
 
-               .form-elements__element-title.def-block
+               .form-elements__element-title
                   span.form-elements__main-title text field
                   span.form-elements__sub-title Hover / Focus
                +textfield({ type: "text", placeholder: "This is pretty awesome", width: "def"})
 
-               .form-elements__element-title.def-block
+               .form-elements__element-title
                   span.form-elements__main-title dropdown
                   span.form-elements__sub-title 
                +dropdown({ itemList: guests, width: "def", type: "sum" })
 
-               .form-elements__element-title.def-block
+               .form-elements__element-title.mt24
                   span.form-elements__main-title masked text field
                   span.form-elements__sub-title 
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
@@ -70,12 +70,12 @@ block content
                         span.form-elements__sub-title 
                      +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
             .form-elements__column-block
-               .form-elements__element-title(class=`sm-block`)
+               .form-elements__element-title.sm-block
                   span.form-elements__main-title filter date dropdown
                   span.form-elements__sub-title 
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm", dropdown: 1})
 
-            .form-elements__element-title(class=`sm-block`)
+            .form-elements__element-title.sm-block
                span.form-elements__main-title subscription text field
                span.form-elements__sub-title 
             +textfield({ type: "email", placeholder: "Email", width: "sm", subscribe: 1})
@@ -87,25 +87,25 @@ block content
                span.form-elements__sub-title 
             +checkbox({list: checkboxList})
 
-            .form-elements__element-title.form-elements__element-title_title-margin
+            .form-elements__element-title.form-elements__element-title_title-margin.mt40
                span.form-elements__main-title Radio Buttons
                span.form-elements__sub-title 
             +radio()
 
-            .form-elements__element-title.form-elements__element-title_title-margin
+            .form-elements__element-title.form-elements__element-title_title-margin.mt40
                span.form-elements__main-title toggle
                span.form-elements__sub-title 
             +toggle(1)
             +toggle(2)
 
-            .form-elements__element-title.form-elements__element-title_title-margin
+            .form-elements__element-title.form-elements__element-title_title-margin.mt40
                span.form-elements__main-title like Button
                span.form-elements__sub-title 
             section.form-elements__element-content
                +likeBtn(2)
                +likeBtn(11)
 
-            .form-elements__element-title.form-elements__element-title_title-margin
+            .form-elements__element-title.form-elements__element-title_title-margin.mt32
                span.form-elements__main-title rate Button
                span.form-elements__sub-title 
             section.form-elements__element-content
@@ -152,14 +152,14 @@ block content
 
          .form-elements__column
 
-            .form-elements__element-title
+            .form-elements__element-title.sm-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title default
             +dropdown({ itemList: apartment, 
                width: "sm",
                type: "each" })
 
-            .form-elements__element-title
+            .form-elements__element-title.sm-block
                span.form-elements__main-title dropdown
                span.form-elements__sub-title expanded
             +dropdown({ itemList: apartment, 
