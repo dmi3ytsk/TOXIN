@@ -2,10 +2,10 @@
   "name": "TOXIN",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel ./src/index.pug --open"
+    "dev": "parcel ./src/pages/index/index.pug --open"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/dmi3ytsk/TOXIN#readme",
   "dependencies": {
     "jquery": "^3.5.1",
-    "paginationjs": "^2.1.5"
+    "paginationjs": "^2.1.5",
+    "v": "^0.3.0"
   }
 }
