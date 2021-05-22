@@ -10,7 +10,7 @@ class CheckboxExpandList {
       dropdownIcon = doc.querySelector(".checkboxExpandList__icon"),
       listContent = doc.querySelector(".checkboxExpandList__content");
 
-    let isClose = true;
+    let isClose = (dropdownIcon.innerHTML = "expand_more") ? true : false;
 
     listTitle.addEventListener("click", () => {
       isClose
