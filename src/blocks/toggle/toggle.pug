@@ -1,4 +1,5 @@
-mixin toggle(number)
+mixin toggle(options)
+   - const { number, isTurn } = options
        .toggle
-         input(type='checkbox' id=`toggle${number}` checked).toggle__box
+         input(type='checkbox' id=`toggle${number}` checked=isTurn).toggle__box
          label(for=`toggle${number}`).toggle__content.font-body Получать спецпредложения
