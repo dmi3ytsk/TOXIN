@@ -1,7 +1,15 @@
+extends ../../layouts/base
+
 include ../../blocks/header/header
 include ../../blocks/footer/footer
 
-mixin headers-footers()
+block vars
+   - const title = 'UI-Kit Headers-Footers';
+   -const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]]
+
+block content
+   a(href="../index/index.pug").global-menu-button
+      img(src="../../img/watermark-logo.png", alt="global menu") 
    section.headers-footers
       +header({isAuth: false})
       +header({isAuth: true, username: "Юлий Цезарь"})
