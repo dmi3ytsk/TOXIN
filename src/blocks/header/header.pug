@@ -25,10 +25,12 @@ mixin header(options)
                      .header__auth-block-username=username
                   -else
                      .header__auth-block-button
+                      a(href="../../pages/login/login.pug") 
                         button(name=`войти`).loginBtn
                            wrap.loginBtn__body
                               wrap.loginBtn__title войти
                      .header__auth-block-button
+                      a(href="../../pages/registration/registration.pug") 
                         button(name=`зарегистрироваться`).regBtn
                            wrap.regBtn__body
                               wrap.regBtn__title зарегистрироваться

@@ -1,27 +1,29 @@
 
 mixin button(attr)
    - let classStyle, arrow
-   - const { active, title, style } = attr
+   - const { active, title, style, page } = attr
       case style
          when "fill"
-            - classStyle = 'btnStyleFill'
+            - classStyle = "btnStyleFill"
          when "fillArrow"
-            - classStyle = 'btnStyleFillArrow'
-            - arrow = 'arrow_forward'
+            - classStyle = "btnStyleFillArrow"
+            - arrow = "arrow_forward"
          when "void"
-            - classStyle = 'btnStyleVoid'
+            - classStyle = "btnStyleVoid"
          when "text"
-            - classStyle = 'btnStyleText'
+            - classStyle = "btnStyleText"
          default 
             p chose button style
             p=title
       case active
-         when 'yes'
+         when "yes"
+          a(href=`${page}`) 
             button(name=`${title}` class=`${classStyle}` )
                wrap(class=`${classStyle}__body`)
                   wrap(class=`${classStyle}__title`)=title
                i.btnStyleFillArrow__arrow.material-icons=arrow
-         when  'no'
+         when  "no"
+          a(href=`${page}`) 
             button(name=`${title}` class=`${classStyle}` disabled)
                wrap(class=`${classStyle}__body`)
                   wrap(class=`${classStyle}__title` disabled)=title
