@@ -7,7 +7,8 @@ mixin footer(options)
             div(class=`footer__full${smallFooter}`)
                .footer__body
                   .footer__full-block
-                     img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
+                     a(href="../index/index.pug")
+                        img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
                      .footer__full-block-item Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                   each block in footerFullBlocksData
                      .footer__full-block 
