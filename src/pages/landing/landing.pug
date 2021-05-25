@@ -1,0 +1,15 @@
+extends ../../layouts/page
+
+include ../../blocks/cardFindRoom/findRoom
+
+block vars
+   - const title = "Главная"
+   -const guests = ["Взрослые", "Дети", "Младенцы"]
+   -const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]]
+
+block main
+  main.landing
+    .landing__body
+      section.landing__find-room
+        +findRoom()
+      p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения

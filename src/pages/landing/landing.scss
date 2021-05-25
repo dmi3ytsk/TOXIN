@@ -1,0 +1,21 @@
+.landing {
+   width: 100%;
+   background: url(./img/landing.png) no-repeat center bottom/cover;
+   &__body {
+      padding: 70px 134px 18px 140px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__find-room {
+      // margin: 70px;
+   }
+
+   &__slogan {
+      margin-top: 320px;
+      width: 300px;
+      text-align: right;
+      line-height: 24px;
+      align-self: flex-end;
+   }
+}
