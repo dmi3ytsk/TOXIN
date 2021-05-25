@@ -1,0 +1,13 @@
+extends ../../layouts/page
+
+include ../../blocks/cardRegistration/cardRegistration
+
+block vars
+   - const title = "Регистрация"
+   -const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]]
+
+block main
+  main.registration-page
+    .registration-page__body
+      section.registration-page__card
+        +registration()
