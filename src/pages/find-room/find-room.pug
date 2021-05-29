@@ -1,0 +1,141 @@
+extends ../../layouts/page
+
+include ../../blocks/textfield/textfield
+include ../../blocks/dropdown/dropdown
+include ../../blocks/checkbox/checkbox
+include ../../blocks/rangeSlider/rangeSlider
+include ../../blocks/pagination/pagination
+include ../../blocks/checkboxExpandList/checkboxExpandList
+include ../../blocks/richCheckbox/richCheckbox
+include ../../blocks/bulletList/bulletList
+include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
+
+
+
+block vars
+   -const title = "Подобрали лучший номер для вас";
+   -const apartment = ["Спальни", "Кровати", "Ванные комнаты"]
+   -const guests = ["Взрослые", "Дети", "Младенцы"]
+   -const checkboxList = [{title: "Можно курить"}, {title: "Можно с питомцами", isChecked: true}, {title:"Можно пригласить гостей (до 10 человек)", isChecked: true}]
+   -const expandableList = [{title:"Завтрак"}, {title:"Письменный стол", isChecked: true}, {title:"Стул для кормления", isChecked: true}, {title:"Кроватка", isChecked: true}, {title:"Телевизор"}, {title:"Шампунь"}, {title:"Телевизор"}, {title:"Шампунь"}]
+   -const richList = [{title: "Широкий коридор", subtitle:"Ширина коридоров в номере <br>не менее 91 см."}, {title: "Помощник для инвалидов", subtitle:"На 1 этаже вас встретит специалист  и проводит до номера."}]
+   -const footerFullBlocksData = [["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]]
+   -
+      const roomList = [
+         {
+         roomNumber: 888, 
+         isLuxe: true, 
+         isCarousel: true,
+         cost: "9 990", 
+         rating:"5", 
+         feedbacks:"145"
+         },
+         {
+         roomNumber: 840, 
+         isCarousel: true,
+         cost: "9 990", 
+         rating:"4", 
+         feedbacks:"65"
+         },
+         {
+         roomNumber: 980, 
+         isLuxe: true, 
+         isCarousel: true,
+         cost: "8 500", 
+         rating:"3", 
+         feedbacks:"35"
+         },
+         {
+         roomNumber: 856, 
+         isCarousel: true,
+         cost: "7 300", 
+         rating:"5", 
+         feedbacks:"19"
+         },
+         {
+         roomNumber: 740, 
+         isCarousel: true,
+         cost: "6 000", 
+         rating:"4", 
+         feedbacks:"44"
+         },
+         {
+         roomNumber: 982, 
+         isCarousel: true,
+         cost: "5 800", 
+         rating:"3", 
+         feedbacks:"56"
+         },
+         {
+         roomNumber: 678, 
+         isCarousel: true,
+         cost: "5 500", 
+         rating:"5", 
+         feedbacks:"45"
+         },
+         {
+         roomNumber: 450, 
+         isCarousel: true,
+         cost: "5 300", 
+         rating:"4", 
+         feedbacks:"39"
+         },
+         {
+         roomNumber: 350, 
+         isCarousel: true,
+         cost: "5 000", 
+         rating:"3", 
+         feedbacks:"77"
+         },
+         {
+         roomNumber: 666, 
+         isCarousel: true,
+         cost: "5 000", 
+         rating:"5", 
+         feedbacks:"25"
+         },
+         {
+         roomNumber: 444, 
+         isCarousel: true,
+         cost: "5 000", 
+         rating:"3", 
+         feedbacks:"15"
+         },
+         {
+         roomNumber: 352, 
+         isCarousel: true,
+         cost: "5 000", 
+         rating:"3", 
+         feedbacks:"55"
+         },
+      ]
+
+
+block main
+   main.room-search-page
+      .room-search-page__body
+         section.room-search-page__filters
+            .room-search-page__filter-header даты пребывания в отеле
+            +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", width: "sm", dropdown: 1})
+            .room-search-page__filter-header.mt21 гости
+            +dropdown({ itemList: guests, width: "sm", type: "sum" })
+            +rangeSlider({title: "диапазон цены", description: "Стоимость за сутки пребывания в номере", width: "sm"})
+            .room-search-page__filter-header правила дома
+            +checkbox({list: checkboxList})
+            .room-search-page__filter-header доступность
+            +richCheckbox({list: richList})
+            .room-search-page__filter-header удобства номера
+            +dropdown({ itemList: apartment, width: "sm", type: "each" })
+            +checkboxExpandList({title: "дополнительные удобства", expandList: expandableList, width: "sm"})
+
+         section.room-search-page__rooms
+            h1.room-search-page__rooms-header Номера, которые мы для вас подобрали
+            .room-search-page__rooms-thumbnails
+               each room in roomList
+                  +roomThumbnail(room)
+            .room-search-page__rooms-pagination 
+               +pagination({
+                  source: JSON.stringify([...Array(180).keys()]),
+                  pageSize: 12,
+                  pageRange: 1,
+               })
