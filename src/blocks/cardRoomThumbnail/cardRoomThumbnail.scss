@@ -10,6 +10,12 @@
    &__roomPhotos {
       margin-bottom: 20px;
       height: 151.44px;
+         &:hover {
+            .roomThumbnail__roomPhotos-carousel-left,
+            .roomThumbnail__roomPhotos-carousel-right {
+               visibility: visible;
+            }
+         }
       &-photo {
          border-top-left-radius: 4px;
          border-top-right-radius: 4px;
@@ -21,6 +27,7 @@
          top: -99px;
          color: #ffffff;
          &-left {
+            visibility: hidden;
             position: absolute;
             display: flex;
             justify-content: space-around;
@@ -34,6 +41,7 @@
             border-bottom-left-radius: 4px;
          }
          &-right {
+            visibility: hidden;
             position: absolute;
             display: flex;
             justify-content: space-around;
