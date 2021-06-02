@@ -3,8 +3,24 @@ mixin header(options)
    -const { isAuth, username } = options
       header.header 
          .header__body 
-            a(href="../index/index.pug")
-               img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo`).header__logo
+            a(href="../index/index.pug").header__logo
+               img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo`)
+            .hamburger-menu
+               input(id="menu__toggle" type="checkbox")
+               label(class="menu__btn" for="menu__toggle")
+                  span
+
+               ul.menu__box
+                  li
+                     a(class="menu__item" href="#") О нас
+                  li
+                     a(class="menu__item" href="#") Услуги
+                  li
+                     a(class="menu__item" href="#") Вакансии
+                  li
+                     a(class="menu__item" href="#") Новости
+                  li
+                     a(class="menu__item" href="#") Соглашения
             nav.header__nav 
                ul.header__nav-list
                   li.header__nav-list-item
@@ -25,12 +41,12 @@ mixin header(options)
                      .header__auth-block-username=username
                   -else
                      .header__auth-block-button
-                      a(href="../../pages/login/login.pug") 
-                        button(name=`войти`).loginBtn
-                           wrap.loginBtn__body
-                              wrap.loginBtn__title войти
+                        a(href="../../pages/login/login.pug") 
+                           button(name=`войти`).loginBtn
+                              wrap.loginBtn__body
+                                 wrap.loginBtn__title войти
                      .header__auth-block-button
-                      a(href="../../pages/registration/registration.pug") 
-                        button(name=`зарегистрироваться`).regBtn
-                           wrap.regBtn__body
-                              wrap.regBtn__title зарегистрироваться
+                        a(href="../../pages/registration/registration.pug") 
+                           button(name=`зарегистрироваться`).regBtn
+                              wrap.regBtn__body
+                                 wrap.regBtn__title зарегистрироваться
