@@ -5,5 +5,8 @@
       padding: 163px 0;
       display: flex;
       justify-content: space-around;
+      @media (max-width: 1200px) {
+         padding: 20px 10px 30px 10px;
+      }
    }
 }
