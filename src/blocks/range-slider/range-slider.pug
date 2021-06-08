@@ -1,0 +1,31 @@
+mixin range-slider(options)
+  -
+    const {
+      label = "range slider",
+      description = "",
+      value,
+      name="field-price",
+      min,
+      max,
+      from,
+      to,
+    } = options || {};
+
+
+
+  .range-slider.js-range-slider
+    label.range-slider__label
+      span.range-slider__label-title= label
+      span.range-slider__label-hint.js-range-slider__label-hint
+    input.range-slider__input.js-range-slider__input(
+      type="text"
+      name=name
+      value=value
+      data-type="double"
+      data-min=min
+      data-max=max
+      data-from=from
+      data-to=to
+    )
+  if description
+    p.range-slider__description= description

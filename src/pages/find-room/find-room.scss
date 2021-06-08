@@ -17,6 +17,11 @@
       &>.checkboxExpandList {
          margin-top: 30px;
       }
+      & .range-slider {
+         margin-top: 30px;
+         margin-bottom: 37px;
+         @extend .sm-block;
+      }
    }
    &__filter-header {
       @extend .font-label;

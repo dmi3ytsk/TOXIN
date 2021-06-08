@@ -15,6 +15,7 @@ include ../../blocks/richCheckbox/richCheckbox
 include ../../blocks/bulletList/bulletList
 include ../../blocks/aboutRoom/aboutRoom
 include ../../blocks/userFeedback/userFeedback
+include ../../blocks/range-slider/range-slider
 
 
 block vars
@@ -116,10 +117,14 @@ block content
 
          .form-elements__column
 
-            .form-elements__element-title.form-elements__element-title_title-margin
-               span.form-elements__main-title Range Slider(non func)
-               span.form-elements__sub-title 
-            +rangeSlider({title: "диапазон цены", description: "Стоимость за сутки пребывания в номере", width: "sm"})
+            .form-elements__element-title
+            .sm-block
+               +range-slider({
+               min: 0,
+               max: 16000,
+               from: 5000,
+               to: 10000,
+               })
 
             .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title buttons

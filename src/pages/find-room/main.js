@@ -19,7 +19,7 @@ import "../../blocks/datepicker/datepicker.js";
 
 import "../../blocks/checkbox/checkbox.scss";
 
-import "../../blocks/rangeSlider/rangeSlider.scss";
+import "../../blocks/range-slider/range-slider.js";
 
 import "../../blocks/pagination/pagination.scss";
 import "../../blocks/pagination/pagination.js";

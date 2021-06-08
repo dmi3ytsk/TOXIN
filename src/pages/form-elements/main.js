@@ -25,7 +25,7 @@ import "../../blocks/likeBtn/likeBtn.js";
 import "../../blocks/rateStars/rateStars.scss";
 import "../../blocks/rateStars/rateStars.js";
 
-import "../../blocks/rangeSlider/rangeSlider.scss";
+import "../../blocks/range-slider/range-slider.js";
 
 import "../../blocks/button/button.scss";
 

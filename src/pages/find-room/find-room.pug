@@ -3,13 +3,12 @@ extends ../../layouts/page
 include ../../blocks/textfield/textfield
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox/checkbox
-include ../../blocks/rangeSlider/rangeSlider
 include ../../blocks/pagination/pagination
 include ../../blocks/checkboxExpandList/checkboxExpandList
 include ../../blocks/richCheckbox/richCheckbox
 include ../../blocks/bulletList/bulletList
 include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
-
+include ../../blocks/range-slider/range-slider
 
 
 block vars
@@ -119,7 +118,14 @@ block main
             +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", width: "sm", dropdown: 1})
             .room-search-page__filter-header.mt21 гости
             +dropdown({ itemList: guests, width: "sm", type: "sum" })
-            +rangeSlider({title: "диапазон цены", description: "Стоимость за сутки пребывания в номере", width: "sm"})
+            +range-slider({
+               label: "диапазон цены",
+               description: "Стоимость за сутки пребывания в номере",
+               min: 0,
+               max: 16000,
+               from: 5000,
+               to: 10000,
+               })
             .room-search-page__filter-header правила дома
             +checkbox({list: checkboxList})
             .room-search-page__filter-header доступность
