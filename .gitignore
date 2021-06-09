@@ -40,3 +40,4 @@ dist/src.e31bb0bc.css.map
 .cache/10/c94efdb0ca88aaeb7f7ebc3fc1b250.json
 *.json
 node_modules/*
+.parcel-cashe/*
