@@ -41,3 +41,4 @@ dist/src.e31bb0bc.css.map
 *.json
 node_modules/*
 .parcel-cashe/*
+.parcel-cashe/
