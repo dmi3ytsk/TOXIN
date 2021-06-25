@@ -1,11 +1,11 @@
 {
-  "name": "TOXIN",
+  "name": "toxin",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel ./src/pages/index/index.pug --open"
+    "start": "parcel serve ./src/pages/index/index.pug --open",
+    "build": "parcel build ./src/pages/*/*.pug --dist-dir public --public-url ../"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,11 @@
     "url": "https://github.com/dmi3ytsk/TOXIN/issues"
   },
   "homepage": "https://github.com/dmi3ytsk/TOXIN#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.3.1"
+  },
   "dependencies": {
-    "f": "^1.4.0",
     "ion-rangeslider": "^2.3.1",
-    "jquery": "^3.5.1",
-    "paginationjs": "^2.1.5",
-    "v": "^0.3.0"
+    "paginationjs": "^2.1.5"
   }
 }
