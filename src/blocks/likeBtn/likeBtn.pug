@@ -1,8 +1,0 @@
-mixin likeBtn(options)
-   - const { value, isLiked=false } = options
-   - const liked = isLiked? "liked":""
-   - const heart = isLiked? "favorite":"favorite_border"
-   .likeBtn
-      button.likeBtn__design(class=`${liked}`)
-         i.likeBtn__heart(class=`${liked}`).material-icons=heart
-         .likeBtn__likes(class=`${liked}`)=value
