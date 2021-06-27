@@ -178,7 +178,7 @@
    width: 26px;
    height: 26px;
    cursor: pointer;
-   z-index: 1;
+   z-index: 9;
 }
 /* добавляем "гамбургер" */
 .menu__btn > span,
@@ -237,6 +237,7 @@
 #menu__toggle:checked ~ .menu__box {
    visibility: visible;
    left: 0;
+   z-index: 5;
 }
 .menu__btn > span,
 .menu__btn > span::before,

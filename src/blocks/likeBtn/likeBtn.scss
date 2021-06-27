@@ -16,8 +16,8 @@
       background-color: #ffffff;
    }
    &__heart {
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 10px !important;
+      line-height: 12px !important;
       color: $dark25;
    }
    &__likes {
