@@ -1,4 +1,4 @@
-import "../../../node_modules/jquery/dist/import-jquery.js";
+import "../../import-jquery"
 
 import "../../base.scss";
 import "../../vars.scss";
