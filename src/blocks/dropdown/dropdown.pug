@@ -1,7 +1,7 @@
 mixin dropdown(attr)
   - const { itemList, width, type } = attr
   .dropdown
-    .ezdropdown(class=`${width}-block`)(class=`${type}`)
+    .ezdropdown(class=`${width}-block` class=`${type}`)
       .ezdropdown__selection
       .ezdropdown__menu
         each value in itemList
