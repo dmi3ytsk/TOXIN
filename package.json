@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel serve ./src/pages/index/index.pug",
+    "dev": "parcel serve ./src/pages/index/index.pug --open",
     "build": "parcel build ./src/pages/*/*.pug --dist-dir public --public-url ../"
   },
   "repository": {
