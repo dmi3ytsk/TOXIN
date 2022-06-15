@@ -1,6 +1,6 @@
 extends ../../layouts/page
 
-include ../../blocks/cardFindRoom/findRoom
+include ../../blocks/card-find-room/card-find-room
 
 block vars
    - const title = "Главная"
@@ -11,5 +11,5 @@ block main
   main.landing
     .landing__body
       section.landing__find-room
-        +findRoom()
+        +card-find-room()
       p.landing__slogan Лучшие номера для вашей работы, отдыха и просто вдохновения

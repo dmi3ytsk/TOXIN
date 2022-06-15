@@ -1,4 +1,4 @@
-import "./cardBuyRoom.scss"
+import "./card-find-room.scss"
 
 import "../textfield/textfield.scss"
 

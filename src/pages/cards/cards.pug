@@ -1,8 +1,8 @@
 extends ../../layouts/base
 
-include ../../blocks/cardFindRoom/findRoom
+include ../../blocks/card-find-room/card-find-room
 include ../../blocks/cardRegistration/cardRegistration
-include ../../blocks/cardBuyRoom/cardBuyRoom
+include ../../blocks/card-buy-room/card-buy-room
 include ../../blocks/cardLogin/cardLogin
 include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
 
@@ -23,12 +23,12 @@ block content
       .cards__body 
          .cards__column
             .cards__card
-               +findRoom()
+               +card-find-room()
             .cards__card
                +registration()
          .cards__column
             .cards__card
-               +buyRoom()
+               +card-buy-room()
             .cards__card
                +login()
          .cards__column

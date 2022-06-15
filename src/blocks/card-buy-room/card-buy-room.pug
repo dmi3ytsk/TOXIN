@@ -1,0 +1,39 @@
+include ../textfield/textfield
+include ../dropdown/dropdown
+include ../button/button
+
+mixin card-buy-room ()
+   .card-buy-room
+      .card-buy-room__body
+         .card-buy-room__header 
+            wrap 
+               span.card-buy-room__roomNumber 888
+               span.card-buy-room__luxeRoom люкс
+            wrap
+               span.card-buy-room__cost  9 990₽ 
+               span.card-buy-room__period в сутки 
+         .card-buy-room__inOut
+            .font-label прибытие
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+            .font-label выезд
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+         .card-buy-room__guests 
+            .font-label гости
+            +dropdown({ itemList: guests, width: "def", type: "sum" })
+         .card-buy-room__costList 
+            .card-buy-room__costList-row 
+               span 9 990₽ х 4 суток
+               span 39 960₽
+            .card-buy-room__costList-row  
+               span Сбор за услуги: скидка 2 179₽
+               span.card-buy-room__costList-infoButton
+               span.card-buy-room__costList-item 0₽
+            .card-buy-room__costList-row 
+               span.card-buy-room__costList-row-ultraItem Сбор за дополнительные услуги
+               span.card-buy-room__costList-infoButton
+               span 300₽
+         .card-buy-room__resultRow
+            span Итого
+            span.card-buy-room__dashLine
+            span.card-buy-room__ultraSum 38 081₽ 
+         +button({ active: "yes", title: "забронировать", style: "fillArrow"})

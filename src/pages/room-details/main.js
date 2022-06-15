@@ -9,7 +9,7 @@ import "../../blocks/header/header.js";
 
 import "../../blocks/footer/footer.js";
 
-import "../../blocks/cardBuyRoom/cardBuyRoom.js";
+import "../../blocks/card-buy-room/card-buy-room.js";
 
 import "../../blocks/bullet-list/bullet-list.scss";
 

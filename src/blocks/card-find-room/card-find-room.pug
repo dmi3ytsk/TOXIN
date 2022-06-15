@@ -3,19 +3,19 @@ include ../dropdown/dropdown
 include ../button/button
 
 
-mixin findRoom ()
-   .findRoom
-      .findRoom__body
-         h1.findRoom__title.font-title Найдём номера под ваши пожелания
-         .findRoom__inOut 
+mixin card-find-room ()
+   .card-find-room
+      .card-find-room__body
+         h1.card-find-room__title.font-title Найдём номера под ваши пожелания
+         .card-find-room__inOut 
             h3.font-label прибытие
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
             h3.font-label выезд
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
-         .findRoom__guests 
+         .card-find-room__guests 
             h3.font-label гости
             +dropdown({ itemList: guests, width: "def", type: "sum" })
-         .findRoom__button
+         .card-find-room__button
             +button({ active: "yes", title: "подобрать номер", style: "fillArrow"})
 
 

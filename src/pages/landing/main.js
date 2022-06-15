@@ -9,4 +9,4 @@ import "../../blocks/header/header.js";
 
 import "../../blocks/footer/footer.js";
 
-import "../../blocks/cardFindRoom/findRoom.js";
+import "../../blocks/card-find-room/card-find-room.js";
