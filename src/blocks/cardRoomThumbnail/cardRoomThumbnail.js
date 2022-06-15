@@ -1,4 +1,4 @@
 import "./cardRoomThumbnail.scss"
 
-import "../../blocks/rateStars/rateStars.scss";
-import "../../blocks/rateStars/rateStars.js";
+import "../../blocks/rate-stars/rate-stars.scss";
+import "../../blocks/rate-stars/rate-stars.js";

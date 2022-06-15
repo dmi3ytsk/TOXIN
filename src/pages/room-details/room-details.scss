@@ -65,10 +65,10 @@
             }
          }
 
-         & .aboutRoom:last-child {
+         & .about-room:last-child {
             border-bottom: none;
             margin-bottom: 0px;
-            & .aboutRoom__icon {
+            & .about-room__icon {
                margin-bottom: 4px;
             }
          }
@@ -81,7 +81,7 @@
             margin-top: 24px;
             margin-bottom: 4px;
          }
-         & .bulletList {
+         & .bullet-list {
             min-width: 266px;
          }
          &-cancel {

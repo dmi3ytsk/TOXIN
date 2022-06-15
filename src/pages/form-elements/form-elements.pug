@@ -5,14 +5,14 @@ include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox/checkbox
 include ../../blocks/radio/radio
 include ../../blocks/toggle/toggle
-include ../../blocks/likeBtn/likeBtn
-include ../../blocks/rateStars/rateStars
+include ../../blocks/like-btn/like-btn
+include ../../blocks/rate-stars/rate-stars
 include ../../blocks/button/button
 include ../../blocks/pagination/pagination
-include ../../blocks/checkboxExpandList/checkboxExpandList
-include ../../blocks/richCheckbox/richCheckbox
-include ../../blocks/bulletList/bulletList
-include ../../blocks/aboutRoom/aboutRoom
+include ../../blocks/checkbox-expand-list/checkbox-expand-list
+include ../../blocks/rich-checkbox/rich-checkbox
+include ../../blocks/bullet-list/bullet-list
+include ../../blocks/about-room/about-room
 include ../../blocks/userFeedback/userFeedback
 include ../../blocks/range-slider/range-slider
 
@@ -102,17 +102,17 @@ block content
                span.form-elements__main-title like Button
                span.form-elements__sub-title 
             section.form-elements__element-content
-               +likeBtn({value: "2"})
-               +likeBtn({value: "12", isLiked: true})
+               +like-btn({value: "2"})
+               +like-btn({value: "12", isLiked: true})
 
             .form-elements__element-title.form-elements__element-title_title-margin.mt32
                span.form-elements__main-title rate Button
                span.form-elements__sub-title 
             section.form-elements__element-content
                span.form-elements__element-content-stars 
-                  +rateStars(4)
+                  +rate-stars(4)
                span
-                  +rateStars(5)
+                  +rate-stars(5)
 
          .form-elements__column
 
@@ -188,28 +188,28 @@ block content
 
          .form-elements__column
 
-            +checkboxExpandList({title: "expandable checkbox list", width: "sm"})
-            +checkboxExpandList({title: "expandable checkbox list", expandList: expandableList, isOpen: true, width: "sm"})
+            +checkbox-expand-list({title: "expandable checkbox list", width: "sm"})
+            +checkbox-expand-list({title: "expandable checkbox list", expandList: expandableList, isOpen: true, width: "sm"})
 
          .form-elements__column
 
             .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title rich Checkbox Buttons
                span.form-elements__sub-title 
-            +richCheckbox({list: richList})
+            +rich-checkbox({list: richList})
 
          .form-elements__column
 
             .form-elements__element-title.form-elements__element-title_title-margin
                span.form-elements__main-title bullet list
                span.form-elements__sub-title 
-            +bulletList({list: bullet})
+            +bullet-list({list: bullet})
 
       .form-elements__row
 
          .form-elements__column
 
-            +aboutRoom({title: "Комфорт", subtitle: "Шумопоглощающие стены", icon: "insert_emoticon"})
-            +aboutRoom({title: "Удобство", subtitle: "Окно в каждой из спален", icon: "location_city"})
+            +about-room({title: "Комфорт", subtitle: "Шумопоглощающие стены", icon: "insert_emoticon"})
+            +about-room({title: "Удобство", subtitle: "Окно в каждой из спален", icon: "location_city"})
 
          +userFeedback({user: user_murad})

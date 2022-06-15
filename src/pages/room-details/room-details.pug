@@ -1,7 +1,7 @@
 extends ../../layouts/page
 
-include ../../blocks/bulletList/bulletList
-include ../../blocks/aboutRoom/aboutRoom
+include ../../blocks/bullet-list/bullet-list
+include ../../blocks/about-room/about-room
 include ../../blocks/userFeedback/userFeedback
 include ../../blocks/cardBuyRoom/cardBuyRoom
 
@@ -27,9 +27,9 @@ block main
             .room-details-page__info-block
                wrap
                   .room-details-page__info-header Сведения о номере
-                  +aboutRoom({title: "Комфорт", subtitle: "Шумопоглощающие стены", icon: "insert_emoticon"})
-                  +aboutRoom({title: "Удобство", subtitle: "Окно в каждой из спален", icon: "location_city"})
-                  +aboutRoom({title: "Уют", subtitle: "Номер оснащен камином", icon: "whatshot"})
+                  +about-room({title: "Комфорт", subtitle: "Шумопоглощающие стены", icon: "insert_emoticon"})
+                  +about-room({title: "Удобство", subtitle: "Окно в каждой из спален", icon: "location_city"})
+                  +about-room({title: "Уют", subtitle: "Номер оснащен камином", icon: "whatshot"})
                wrap   
                   .room-details-page__info-header Впечатления от номера
                   .room-details-page__info-diagram.doughnut-chart 
@@ -61,7 +61,7 @@ block main
             .room-details-page__info-block
                wrap
                   .room-details-page__info-header.room-details-page__info-header-rule Правила
-                  +bulletList({list: bullet})
+                  +bullet-list({list: bullet})
                wrap.room-details-page__info-block-cancel  
                   .room-details-page__info-header Отмена
                   .room-details-page__info-cancel-text=cancel

@@ -4,9 +4,9 @@ include ../../blocks/textfield/textfield
 include ../../blocks/dropdown/dropdown
 include ../../blocks/checkbox/checkbox
 include ../../blocks/pagination/pagination
-include ../../blocks/checkboxExpandList/checkboxExpandList
-include ../../blocks/richCheckbox/richCheckbox
-include ../../blocks/bulletList/bulletList
+include ../../blocks/checkbox-expand-list/checkbox-expand-list
+include ../../blocks/rich-checkbox/rich-checkbox
+include ../../blocks/bullet-list/bullet-list
 include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
 include ../../blocks/range-slider/range-slider
 
@@ -129,10 +129,10 @@ block main
             .room-search-page__filter-header правила дома
             +checkbox({list: checkboxList})
             .room-search-page__filter-header доступность
-            +richCheckbox({list: richList})
+            +rich-checkbox({list: richList})
             .room-search-page__filter-header удобства номера
             +dropdown({ itemList: apartment, width: "sm", type: "each" })
-            +checkboxExpandList({title: "дополнительные удобства", expandList: expandableList, width: "sm"})
+            +checkbox-expand-list({title: "дополнительные удобства", expandList: expandableList, width: "sm"})
 
          section.room-search-page__rooms
             h1.room-search-page__rooms-header Номера, которые мы для вас подобрали

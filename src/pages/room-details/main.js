@@ -11,11 +11,11 @@ import "../../blocks/footer/footer.js";
 
 import "../../blocks/cardBuyRoom/cardBuyRoom.js";
 
-import "../../blocks/bulletList/bulletList.scss";
+import "../../blocks/bullet-list/bullet-list.scss";
 
-import "../../blocks/aboutRoom/aboutRoom.scss";
+import "../../blocks/about-room/about-room.scss";
 
 import "../../blocks/userFeedback/userFeedback.js";
 
-import "../../blocks/likeBtn/likeBtn.scss";
+import "../../blocks/like-btn/like-btn.scss";
 

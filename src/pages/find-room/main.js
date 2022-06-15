@@ -24,11 +24,11 @@ import "../../blocks/range-slider/range-slider.js";
 import "../../blocks/pagination/pagination.scss";
 import "../../blocks/pagination/pagination.js";
 
-import "../../blocks/checkboxExpandList/checkboxExpandList.scss";
-import "../../blocks/checkboxExpandList/checkboxExpandList.js";
+import "../../blocks/checkbox-expand-list/checkbox-expand-list.scss";
+import "../../blocks/checkbox-expand-list/checkbox-expand-list.js";
 
-import "../../blocks/richCheckbox/richCheckbox.scss";
+import "../../blocks/rich-checkbox/rich-checkbox.scss";
 
-import "../../blocks/bulletList/bulletList.scss";
+import "../../blocks/bullet-list/bullet-list.scss";
 
 import "../../blocks/cardRoomThumbnail/cardRoomThumbnail.js";

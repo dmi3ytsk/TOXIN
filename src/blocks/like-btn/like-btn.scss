@@ -1,6 +1,6 @@
 @import "../../vars.scss";
 
-.likeBtn {
+.like-btn {
    margin-bottom: 10px;
    margin-right: 10px;
    &__design {
@@ -35,8 +35,8 @@
       margin: -$border;  
    }
 }
-.likeBtn__box:checked + .likeBtn__content:before,
-.likeBtn__box:not(:checked) + .likeBtn__content:before {
+.like-btn__box:checked + .like-btn__content:before,
+.like-btn__box:not(:checked) + .like-btn__content:before {
    content: "";
    position: absolute;
    left: 0px;
@@ -50,12 +50,12 @@
    border-top-right-radius: 10px;
    background-color: #ffffff;
 }
-.likeBtn__box:not(:checked) + .likeBtn__content:before {
+.like-btn__box:not(:checked) + .like-btn__content:before {
    border-color: $primary-color;
 }
 
-.likeBtn__box:checked + .likeBtn__content:after,
-.likeBtn__box:not(:checked) + .likeBtn__content:after {
+.like-btn__box:checked + .like-btn__content:after,
+.like-btn__box:not(:checked) + .like-btn__content:after {
    content: "";
    position: absolute;
    transition: all 0.2s ease;

@@ -19,11 +19,11 @@ import "../../blocks/radio/radio.scss";
 
 import "../../blocks/toggle/toggle.scss";
 
-import "../../blocks/likeBtn/likeBtn.scss";
-import "../../blocks/likeBtn/likeBtn.js";
+import "../../blocks/like-btn/like-btn.scss";
+import "../../blocks/like-btn/like-btn.js";
 
-import "../../blocks/rateStars/rateStars.scss";
-import "../../blocks/rateStars/rateStars.js";
+import "../../blocks/rate-stars/rate-stars.scss";
+import "../../blocks/rate-stars/rate-stars.js";
 
 import "../../blocks/range-slider/range-slider.js";
 
@@ -32,13 +32,13 @@ import "../../blocks/button/button.scss";
 import "../../blocks/pagination/pagination.scss";
 import "../../blocks/pagination/pagination.js";
 
-import "../../blocks/checkboxExpandList/checkboxExpandList.scss";
-import "../../blocks/checkboxExpandList/checkboxExpandList.js";
+import "../../blocks/checkbox-expand-list/checkbox-expand-list.scss";
+import "../../blocks/checkbox-expand-list/checkbox-expand-list.js";
 
-import "../../blocks/richCheckbox/richCheckbox.scss";
+import "../../blocks/rich-checkbox/rich-checkbox.scss";
 
-import "../../blocks/bulletList/bulletList.scss";
+import "../../blocks/bullet-list/bullet-list.scss";
 
-import "../../blocks/aboutRoom/aboutRoom.scss";
+import "../../blocks/about-room/about-room.scss";
 
 import "../../blocks/userFeedback/userFeedback.scss";

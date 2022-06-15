@@ -1,4 +1,4 @@
-include ../likeBtn/likeBtn
+include ../like-btn/like-btn
 
 mixin userFeedback(attr)
    - const { user } = attr
@@ -6,7 +6,7 @@ mixin userFeedback(attr)
          .userFeedback
             .userFeedback__left 
                img(src=`${avatar}`).userFeedback__avatar 
-               +likeBtn({value: likes, isLiked: isLiked})
+               +like-btn({value: likes, isLiked: isLiked})
             .userFeedback__right 
                .userFeedback__username=username
                   .userFeedback__lastActivity=lastActivity

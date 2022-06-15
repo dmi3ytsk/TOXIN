@@ -6,9 +6,9 @@ class CheckboxExpandList {
 
   init() {
     const doc = this.element,
-      listTitle = doc.querySelector(".checkboxExpandList__title"),
-      dropdownIcon = doc.querySelector(".checkboxExpandList__icon"),
-      listContent = doc.querySelector(".checkboxExpandList__content");
+      listTitle = doc.querySelector(".checkbox-expand-list__title"),
+      dropdownIcon = doc.querySelector(".checkbox-expand-list__icon"),
+      listContent = doc.querySelector(".checkbox-expand-list__content");
 
     let isClose = (dropdownIcon.innerHTML = "expand_more") ? true : false;
 
@@ -16,14 +16,14 @@ class CheckboxExpandList {
       isClose
         ? (dropdownIcon.innerHTML = "expand_less")
         : (dropdownIcon.innerHTML = "expand_more");
-      listContent.classList.toggle("checkboxExpandList__content_open");
+      listContent.classList.toggle("checkbox-expand-list__content_open");
 
       isClose = !isClose;
     });
   }
 }
 
-const checkboxExpandList = document.querySelectorAll(".checkboxExpandList");
+const checkboxExpandList = document.querySelectorAll(".checkbox-expand-list");
 checkboxExpandList.forEach(function (e) {
   new CheckboxExpandList(e);
 });

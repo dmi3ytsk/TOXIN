@@ -1,18 +1,18 @@
 @import '../../vars.scss';
 
-.richCheckbox {
+.rich-checkbox {
    margin-bottom: 10px;
    width: 266px;
 }
-.richCheckbox__box:checked, 
-.richCheckbox__box:not(:checked)
+.rich-checkbox__box:checked, 
+.rich-checkbox__box:not(:checked)
 {
     position: absolute;
     left: -9999px;
 }
 
-.richCheckbox__box:checked + .richCheckbox__title, 
-.richCheckbox__box:not(:checked) + .richCheckbox__title {
+.rich-checkbox__box:checked + .rich-checkbox__title, 
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title {
     display: inline-block;
     position: relative;
     padding-left: 30px;
@@ -25,8 +25,8 @@
     cursor: pointer;
 }
 
-.richCheckbox__box:checked + .richCheckbox__title:before,
-.richCheckbox__box:not(:checked) + .richCheckbox__title:before {
+.rich-checkbox__box:checked + .rich-checkbox__title:before,
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title:before {
    content: "";
    position: absolute;
    left: 0px;
@@ -37,19 +37,19 @@
    border-radius: 4px;
    background-color: #ffffff;
 } 
-.richCheckbox__box:not(:checked) + .richCheckbox__title:before {
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title:before {
    border-color: $dark25;
 }
 
-.richCheckbox__box:checked + .richCheckbox__title:after, 
-.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+.rich-checkbox__box:checked + .rich-checkbox__title:after, 
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title:after {
     content: "";
     position: absolute;
     transition: all 0.2s ease;
 }
 
-.richCheckbox__box:checked + .richCheckbox__title:after, 
-.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+.rich-checkbox__box:checked + .rich-checkbox__title:after, 
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title:after {
     content: "L";
     font-weight: bold;
     font-size: 12px;
@@ -61,14 +61,14 @@
 
 
 
-.richCheckbox__box:not(:checked) + .richCheckbox__title:after {
+.rich-checkbox__box:not(:checked) + .rich-checkbox__title:after {
     opacity: 0;
 }
 
-.richCheckbox__box:checked + .richCheckbox__title:after {
+.rich-checkbox__box:checked + .rich-checkbox__title:after {
     opacity: 1;
 }
-.richCheckbox__subtitle {
+.rich-checkbox__subtitle {
    margin-left: 30px;
    margin-right: 5px;
    color: $dark50;

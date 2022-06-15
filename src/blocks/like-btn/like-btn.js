@@ -6,10 +6,10 @@ class LikeButton {
 
   init() {
     const doc = this.element,
-      btn = doc.querySelector(".likeBtn__design"),
-      likes = doc.querySelector(".likeBtn__likes"),
+      btn = doc.querySelector(".like-btn__design"),
+      likes = doc.querySelector(".like-btn__likes"),
       status = doc.querySelector(".liked"),
-      heart = doc.querySelector(".likeBtn__heart");
+      heart = doc.querySelector(".like-btn__heart");
 
     let isLiked = status ? false : true,
       likeCount = likes.innerHTML,
@@ -29,7 +29,7 @@ class LikeButton {
   }
 }
 
-const likeBtn = document.querySelectorAll(".likeBtn");
+const likeBtn = document.querySelectorAll(".like-btn");
 likeBtn.forEach(function (e) {
   new LikeButton(e);
 });

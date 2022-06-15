@@ -6,7 +6,7 @@ class StarRating {
 
   init() {
     var doc = this.element,
-      $star_rating = $(doc).find(".rateStars__star");
+      $star_rating = $(doc).find(".rate-stars__star");
 
     var SetRatingStar = function () {
       return $star_rating.each(function () {
@@ -31,7 +31,7 @@ class StarRating {
   }
 }
 
-const rateStars = document.querySelectorAll(".rateStars");
+const rateStars = document.querySelectorAll(".rate-stars");
 rateStars.forEach(function (e) {
   new StarRating(e);
 });
