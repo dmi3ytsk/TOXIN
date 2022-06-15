@@ -9,4 +9,4 @@ import "../../blocks/header/header.js";
 
 import "../../blocks/footer/footer.js";
 
-import "../../blocks/cardLogin/cardLogin.js";
+import "../../blocks/card-login/card-login.js";

@@ -1,4 +1,4 @@
-import "./cardRegistration.scss"
+import "./card-registration.scss"
 
 import "../../blocks/textfield/textfield.scss";
 
