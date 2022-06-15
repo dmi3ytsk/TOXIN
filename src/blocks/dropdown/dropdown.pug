@@ -5,12 +5,12 @@ mixin dropdown(attr)
       .ezdropdown__selection
       .ezdropdown__menu
         each value in itemList
-            .ezdropdown__row(data-id=`${value}`)
-              .ezdropdown__rowTitle=value
-              span.ezdropdown__rowAction
-                button.counterBtn.decr(data-action='decrement').disable -
-                span.counter 
-                button.counterBtn.incr(data-action='increment') +
+          .ezdropdown__row(data-id=`${value}`)
+            .ezdropdown__row-title=value
+            span.ezdropdown__row-action
+              button.counter-btn.decr(data-action='decrement').disable -
+              span.counter 
+              button.counter-btn.incr(data-action='increment') +
         case type 
           when 'sum'
             .ezdropdown__buttons

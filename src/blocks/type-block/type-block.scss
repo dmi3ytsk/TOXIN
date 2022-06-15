@@ -1,4 +1,4 @@
-@import '../../vars.scss';
+@import "../../vars.scss";
 
 .type-block {
    display: flex;
@@ -38,12 +38,12 @@
          font-family: "Quicksand";
          font-size: 19px;
          line-height: 24px;
-         }
+      }
       &_h3 {
          font-size: 12px;
          line-height: 15px;
          text-transform: uppercase;
-         }
+      }
       &_body {
          max-width: 310px;
          font-size: 14px;

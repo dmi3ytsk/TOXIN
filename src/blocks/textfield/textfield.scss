@@ -26,7 +26,7 @@
          color: $dark25;
       }
    }
-   &__downArrow {
+   &__down-arrow {
       color: $dark50;
       font-size: 24px;
       line-height: 24px;
@@ -35,8 +35,8 @@
       top: 25%;
       pointer-events: none;
    }
-   &__forwardArrow {
-      @extend .textfield__downArrow;
+   &__forward-arrow {
+      @extend .textfield__down-arrow;
       pointer-events: auto;
       @include gradientText;
    }

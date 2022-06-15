@@ -93,7 +93,7 @@
    }
 }
 
-.loginBtn {
+.login-btn {
    width: 87px;
    height: 34px;
    position: relative;
@@ -134,7 +134,7 @@
       top: (15- 7.5) + px;
    }
 }
-.regBtn {
+.reg-btn {
    &:disabled {
       cursor: default;
       opacity: 0.5;

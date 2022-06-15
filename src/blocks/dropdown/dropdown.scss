@@ -59,9 +59,9 @@
       height: $btn-height;
       padding: 0px 7px 0px 15px;
    }
-   &__rowTitle {
+   &__row-title {
    }
-   &__rowAction {
+   &__row-action {
       display: flex;
       width: 92px;
       justify-content: space-between;
@@ -86,7 +86,7 @@
       }
    }
 }
-.counterBtn {
+.counter-btn {
    background: #ffffff;
    align-items: center;
    border: 1px solid $dark25;

@@ -42,7 +42,7 @@ class Dropdown {
         // For each item vars block
         const id = each.dataset.id;
         // const actual = each;
-        const buttons = each.querySelectorAll(".counterBtn");
+        const buttons = each.querySelectorAll(".counter-btn");
         const counter = each.querySelector(".counter");
         const decr = each.querySelector(".decr");
 
@@ -96,7 +96,7 @@ class Dropdown {
       row.forEach(function (each) {
         // For each item vars block
         const id = each.dataset.id;
-        const buttons = each.querySelectorAll(".counterBtn");
+        const buttons = each.querySelectorAll(".counter-btn");
         const counter = each.querySelector(".counter");
         const decr = each.querySelector(".decr");
 

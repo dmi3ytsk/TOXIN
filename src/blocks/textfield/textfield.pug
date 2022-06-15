@@ -7,14 +7,14 @@ mixin textfield(options)
                input(type='text', placeholder=placeholder, class="datepicker-here").textfield__input
                case dropdown
                   when 1
-                     i.textfield__downArrow.material-icons expand_more
+                     i.textfield__down-arrow.material-icons expand_more
             when 'on+range'
                input(type='text', placeholder=placeholder, data-range="true" data-multiple-dates-separator=" - " class="datepicker-here").textfield__input
                case dropdown
                   when 1
-                     i.textfield__downArrow.material-icons expand_more
+                     i.textfield__down-arrow.material-icons expand_more
             default
                input(type=type, placeholder=placeholder).textfield__input
                case subscribe
                   when 1
-                     button.textfield__forwardArrow.material-icons arrow_forward
+                     button.textfield__forward-arrow.material-icons arrow_forward
