@@ -1,6 +1,6 @@
 @import "../../vars.scss";
 
-.roomThumbnail {
+.card-room-thumbnail {
    width: 270px;
    height: 257px;
    background: #ffffff;
@@ -11,8 +11,8 @@
       margin-bottom: 20px;
       height: 151.44px;
          &:hover {
-            .roomThumbnail__roomPhotos-carousel-left,
-            .roomThumbnail__roomPhotos-carousel-right {
+            .card-room-thumbnail__roomPhotos-carousel-left,
+            .card-room-thumbnail__roomPhotos-carousel-right {
                visibility: visible;
             }
          }
@@ -67,7 +67,7 @@
                border-radius: 50%;
                filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
                &_active {
-                  @extend .roomThumbnail__roomPhotos-carousel-nav-circle;
+                  @extend .card-room-thumbnail__roomPhotos-carousel-nav-circle;
                   background: #ffffff;
                }
             }

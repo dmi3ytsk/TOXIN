@@ -31,4 +31,4 @@ import "../../blocks/rich-checkbox/rich-checkbox.scss";
 
 import "../../blocks/bullet-list/bullet-list.scss";
 
-import "../../blocks/cardRoomThumbnail/cardRoomThumbnail.js";
+import "../../blocks/card-room-thumbnail/card-room-thumbnail.js";

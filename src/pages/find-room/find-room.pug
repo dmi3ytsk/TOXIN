@@ -7,7 +7,7 @@ include ../../blocks/pagination/pagination
 include ../../blocks/checkbox-expand-list/checkbox-expand-list
 include ../../blocks/rich-checkbox/rich-checkbox
 include ../../blocks/bullet-list/bullet-list
-include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
+include ../../blocks/card-room-thumbnail/card-room-thumbnail
 include ../../blocks/range-slider/range-slider
 
 
@@ -138,7 +138,7 @@ block main
             h1.room-search-page__rooms-header Номера, которые мы для вас подобрали
             .room-search-page__rooms-thumbnails
                each room in roomList
-                  +roomThumbnail(room)
+                  +card-room-thumbnail(room)
             .room-search-page__rooms-pagination 
                +pagination({
                   source: JSON.stringify([...Array(180).keys()]),

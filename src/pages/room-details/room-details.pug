@@ -2,7 +2,7 @@ extends ../../layouts/page
 
 include ../../blocks/bullet-list/bullet-list
 include ../../blocks/about-room/about-room
-include ../../blocks/userFeedback/userFeedback
+include ../../blocks/user-feedback/user-feedback
 include ../../blocks/card-buy-room/card-buy-room
 
 
@@ -56,8 +56,8 @@ block main
                .room-details-page__info-block-feedbacks
                   .room-details-page__info-header Отзывы посетителей номера
                   .room-details-page__info-subtitle 2 отзыва
-               +userFeedback({user: user_murad})
-               +userFeedback({user: user_patricia})
+               +user-feedback({user: user_murad})
+               +user-feedback({user: user_patricia})
             .room-details-page__info-block
                wrap
                   .room-details-page__info-header.room-details-page__info-header-rule Правила

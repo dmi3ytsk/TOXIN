@@ -72,12 +72,12 @@
                margin-bottom: 4px;
             }
          }
-         & .userFeedback {
+         & .user-feedback {
             @media (max-width: 1024px) {
                max-width: 400px;
             }
          }
-         & .userFeedback:last-child {
+         & .user-feedback:last-child {
             margin-top: 24px;
             margin-bottom: 4px;
          }

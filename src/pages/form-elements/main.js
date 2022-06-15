@@ -41,4 +41,4 @@ import "../../blocks/bullet-list/bullet-list.scss";
 
 import "../../blocks/about-room/about-room.scss";
 
-import "../../blocks/userFeedback/userFeedback.scss";
+import "../../blocks/user-feedback/user-feedback.scss";

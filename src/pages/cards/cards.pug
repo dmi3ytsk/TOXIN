@@ -4,7 +4,7 @@ include ../../blocks/card-find-room/card-find-room
 include ../../blocks/card-registration/card-registration
 include ../../blocks/card-buy-room/card-buy-room
 include ../../blocks/card-login/card-login
-include ../../blocks/cardRoomThumbnail/cardRoomThumbnail
+include ../../blocks/card-room-thumbnail/card-room-thumbnail
 
 block vars
    - const title = 'UI-Kit Cards';
@@ -35,9 +35,9 @@ block content
             .cards__card
                .datepicker-here
             .cards__card
-               +roomThumbnail({roomNumber: 888, isLuxe: true, isCarousel: true, cost: "9 990", rating:"5", feedbacks:"145"})
+               +card-room-thumbnail({roomNumber: 888, isLuxe: true, isCarousel: true, cost: "9 990", rating:"5", feedbacks:"145"})
             .cards__card
-               +roomThumbnail({roomNumber: 840, isLuxe: false, isCarousel: false, cost: "9 990", rating:"4", feedbacks:"65"})
+               +card-room-thumbnail({roomNumber: 840, isLuxe: false, isCarousel: false, cost: "9 990", rating:"4", feedbacks:"65"})
 
 
 

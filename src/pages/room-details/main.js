@@ -15,7 +15,7 @@ import "../../blocks/bullet-list/bullet-list.scss";
 
 import "../../blocks/about-room/about-room.scss";
 
-import "../../blocks/userFeedback/userFeedback.js";
+import "../../blocks/user-feedback/user-feedback.js";
 
 import "../../blocks/like-btn/like-btn.scss";
 

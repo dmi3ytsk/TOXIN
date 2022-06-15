@@ -13,4 +13,4 @@ import "../../blocks/card-buy-room/card-buy-room.js";
 
 import "../../blocks/card-login/card-login.js";
 
-import "../../blocks/cardRoomThumbnail/cardRoomThumbnail.js";
+import "../../blocks/card-room-thumbnail/card-room-thumbnail.js";

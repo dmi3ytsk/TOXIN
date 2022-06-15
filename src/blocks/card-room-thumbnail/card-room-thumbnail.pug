@@ -1,0 +1,33 @@
+include ../rate-stars/rate-stars
+
+mixin card-room-thumbnail (options)
+   - const { roomNumber, isLuxe, isCarousel, cost, rating, feedbacks } = options
+     -const luxe = isLuxe ? "люкс" : "" 
+      .card-room-thumbnail
+         .card-room-thumbnail__roomPhotos 
+            img(src=`../../img/roomPhotos/room${roomNumber}/room__1_sm.png` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__roomPhotos-photo
+            - if (isCarousel)
+             .card-room-thumbnail__roomPhotos-carousel 
+               .card-room-thumbnail__roomPhotos-carousel-left.material-icons expand_more
+               .card-room-thumbnail__roomPhotos-carousel-right.material-icons expand_more 
+               .card-room-thumbnail__roomPhotos-carousel-nav
+                  .card-room-thumbnail__roomPhotos-carousel-nav-circle_active
+                  .card-room-thumbnail__roomPhotos-carousel-nav-circle
+                  .card-room-thumbnail__roomPhotos-carousel-nav-circle
+                  .card-room-thumbnail__roomPhotos-carousel-nav-circle
+                  
+         .card-room-thumbnail__roomInfo
+            wrap 
+               span.card-room-thumbnail__roomInfo-number=roomNumber
+               span.card-room-thumbnail__roomInfo-luxe=luxe
+            wrap
+               span.card-room-thumbnail__roomInfo-cost=cost+"₽" 
+               span.card-room-thumbnail__roomInfo-period в сутки 
+         .card-room-thumbnail__line
+         .card-room-thumbnail__roomFeedback
+            +rate-stars(rating)
+            wrap.card-room-thumbnail__roomFeedback-value=feedbacks
+            wrap Отзывов   
+
+
+      
