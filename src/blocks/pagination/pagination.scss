@@ -8,6 +8,8 @@
       margin: 0.125rem 0 0 0.0625rem;
       color: #ffffff;
       background: none;
+      border: 0;
+      padding-top: 7px;
 
       &:active {
          opacity: 0.85;
@@ -68,8 +70,5 @@
       color: $dark75;
       text-align: center;
 
-      //  @media (max-width: $screen-filter-xs-max) {
-      //    padding-bottom: 0;
-      //  }
    }
 }

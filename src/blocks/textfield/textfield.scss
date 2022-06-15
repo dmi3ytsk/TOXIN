@@ -38,6 +38,7 @@
    &__forward-arrow {
       @extend .textfield__down-arrow;
       pointer-events: auto;
+      border: 0;
       @include gradientText;
    }
 }
