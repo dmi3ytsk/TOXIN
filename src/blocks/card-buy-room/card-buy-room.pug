@@ -12,7 +12,7 @@ mixin card-buy-room ()
             wrap
                span.card-buy-room__cost  9 990₽ 
                span.card-buy-room__period в сутки 
-         .card-buy-room__inOut
+         .card-buy-room__in-out
             .font-label прибытие
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
             .font-label выезд
@@ -20,20 +20,20 @@ mixin card-buy-room ()
          .card-buy-room__guests 
             .font-label гости
             +dropdown({ itemList: guests, width: "def", type: "sum" })
-         .card-buy-room__costList 
-            .card-buy-room__costList-row 
+         .card-buy-room__cost-list 
+            .card-buy-room__cost-list-row 
                span 9 990₽ х 4 суток
                span 39 960₽
-            .card-buy-room__costList-row  
+            .card-buy-room__cost-list-row  
                span Сбор за услуги: скидка 2 179₽
-               span.card-buy-room__costList-infoButton
-               span.card-buy-room__costList-item 0₽
-            .card-buy-room__costList-row 
-               span.card-buy-room__costList-row-ultraItem Сбор за дополнительные услуги
-               span.card-buy-room__costList-infoButton
+               span.card-buy-room__cost-list-info-button
+               span.card-buy-room__cost-list-item 0₽
+            .card-buy-room__cost-list-row 
+               span.card-buy-room__cost-list-row-ultra-item Сбор за дополнительные услуги
+               span.card-buy-room__cost-list-info-button
                span 300₽
-         .card-buy-room__resultRow
+         .card-buy-room__result-row
             span Итого
-            span.card-buy-room__dashLine
-            span.card-buy-room__ultraSum 38 081₽ 
+            span.card-buy-room__dash-line
+            span.card-buy-room__ultra-sum 38 081₽ 
          +button({ active: "yes", title: "забронировать", style: "fillArrow"})

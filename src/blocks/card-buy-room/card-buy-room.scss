@@ -47,7 +47,7 @@
       line-height: 18px;
       color: $dark50;
    }
-   &__inOut {
+   &__in-out {
       margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
@@ -55,7 +55,7 @@
    &__guests {
       margin-bottom: 18px;
    }
-   &__costList {
+   &__cost-list {
       color: $dark75;
       margin-bottom: 34px;
       &-row {
@@ -63,7 +63,7 @@
          display: flex;
          justify-content: space-between;
          margin-bottom: 10px;
-         &-ultraItem {
+         &-ultra-item {
             position: relative;
             top: 3px;
             line-height: 18px;
@@ -75,7 +75,7 @@
          position: relative;
          left: 18px;
       }
-      &-infoButton {
+      &-info-button {
          cursor: pointer;
          color: $dark25;
          position: relative;
@@ -93,11 +93,11 @@
          }
       }
    }
-   &__resultRow {
+   &__result-row {
       @extend .font-subtitle;
       margin-bottom: 22px;
    }
-   &__dashLine {
+   &__dash-line {
       position: relative;
       top: -5px;
       margin-left: 4px;
@@ -105,7 +105,7 @@
       padding-right: 182px;
       border-bottom: 1px dashed $dark25;
    }
-   &__ultraSum {
+   &__ultra-sum {
       position: absolute;
       width: 77px;
    }

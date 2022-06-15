@@ -12,7 +12,7 @@
    }
 }
 
-.btnStyleFill {
+.btn-style-fill {
    &:disabled {
       cursor: default;
       opacity: 0.5;
@@ -25,7 +25,7 @@
    background: $primary-gradient;
    color: $white-text;
 }
-.btnStyleVoid {
+.btn-style-void {
    width: 99px;
    height: 44px;
    position: relative;
@@ -64,7 +64,7 @@
       top: (20- 7.5) + px;
    }
 }
-.btnStyleText {
+.btn-style-text {
    &:disabled {
       cursor: default;
       color: $dark50;
@@ -78,7 +78,7 @@
    background: transparent;
    color: $primary-color;
 }
-.btnStyleFillArrow {
+.btn-style-fill-arrow {
    &:disabled {
       cursor: default;
       opacity: 0.5;
