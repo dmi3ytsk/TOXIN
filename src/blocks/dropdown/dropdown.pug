@@ -8,11 +8,11 @@ mixin dropdown(attr)
           .ezdropdown__row(data-id=`${value}`)
             .ezdropdown__row-title=value
             span.ezdropdown__row-action
-              button.counter-btn.decr(data-action='decrement').disable -
+              button.counter-btn.decr(data-action="decrement").disable -
               span.counter 
-              button.counter-btn.incr(data-action='increment') +
+              button.counter-btn.incr(data-action="increment") +
         case type 
-          when 'sum'
+          when "sum"
             .ezdropdown__buttons
-              span.ezdropdown__button.clr(data-action='clear').hide Очистить
-              span.ezdropdown__button(data-action='accept') Применить
+              span.ezdropdown__button.clr(data-action="clear").hide Очистить
+              span.ezdropdown__button(data-action="accept") Применить

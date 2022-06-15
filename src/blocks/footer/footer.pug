@@ -22,11 +22,11 @@ mixin footer(options)
                         li.footer__full-block-item
                            +textfield({ type: "email", placeholder: "Email", subscribe: 1})
 
-            
+
             div(class=`footer__copyright${smallFooter}`)
                .footer__body
                   a(href="../index/index.pug") 
-                   img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
+                     img(src=`../../img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
                   .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
                   .footer__copyright-socials
                      a(href="https://twitter.com/" target="_blank" class="fab fa-twitter")

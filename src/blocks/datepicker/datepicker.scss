@@ -23,7 +23,6 @@
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-   // background-color: rgba(92, 196, 239, 0.9);
    color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
@@ -97,8 +96,7 @@
       background: $primary-gradient;
       opacity: 0.25;
       z-index: -999;
- }
-
+   }
 }
 .datepicker--cell.-in-range-.-focus- {
    background: rgba(0, 0, 0, 0.05);
@@ -134,7 +132,7 @@
       background: $primary-gradient;
       opacity: 0.25;
       z-index: -999;
- }
+   }
 }
 .datepicker--cell.-range-to- {
    border-radius: 50%;
@@ -152,7 +150,7 @@
       background: $primary-gradient;
       opacity: 0.25;
       z-index: -999;
- }
+   }
 }
 .datepicker--cell.-range-from-.-range-to- {
    border-radius: 4px;
@@ -343,7 +341,6 @@
    width: 280px;
    margin: 28px auto;
    margin-bottom: 4px;
-
 }
 .-only-timepicker- .datepicker--content {
    display: none;
@@ -442,33 +439,33 @@
    height: 10px;
    border-bottom: 2px solid;
    border-color: $primary-color;
-   
-   &:after{
-     position: absolute;
-     content: "";
-     display: block;
-     width: 10px;
-     height: 10px;
-     border-top: 2px solid;
-     border-right: 2px solid;
-     border-color: $primary-color;
-     color: $primary-color;
+
+   &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid;
+      border-right: 2px solid;
+      border-color: $primary-color;
+      color: $primary-color;
    }
 }
 .rightArrow {
    left: 4px;
-   &:after{
+   &:after {
       top: 4px;
       left: 5px;
-     transform: rotate(45deg);
+      transform: rotate(45deg);
    }
 }
 .leftArrow {
    left: -4px;
-   &:after{
+   &:after {
       top: 4.4px;
       left: 0px;
-     transform: rotate(225deg);
+      transform: rotate(225deg);
    }
 }
 
@@ -531,7 +528,6 @@
    color: $primary-color;
    font-size: 12px;
    line-height: 15px;
-
 }
 .datepicker--button:hover {
    background: #f0f0f0;

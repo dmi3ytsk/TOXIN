@@ -1,9 +1,9 @@
-import "../../import-jquery"
+import "../../import-jquery";
 
 import "../../base.scss";
 import "../../vars.scss";
 
-import './cards.scss';
+import "./cards.scss";
 
 import "../../blocks/card-find-room/card-find-room.js";
 

@@ -1,5 +1,5 @@
-import "./card-login.scss"
+import "./card-login.scss";
 
-import "../textfield/textfield.scss"
+import "../textfield/textfield.scss";
 
-import "../button/button.scss"
+import "../button/button.scss";

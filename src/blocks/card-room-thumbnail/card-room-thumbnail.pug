@@ -2,32 +2,32 @@ include ../rate-stars/rate-stars
 
 mixin card-room-thumbnail (options)
    - const { roomNumber, isLuxe, isCarousel, cost, rating, feedbacks } = options
-     -const luxe = isLuxe ? "люкс" : "" 
-      .card-room-thumbnail
-         .card-room-thumbnail__room-photos 
-            img(src=`../../img/roomPhotos/room${roomNumber}/room__1_sm.png` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__room-photos-photo
-            - if (isCarousel)
-             .card-room-thumbnail__room-photos-carousel 
-               .card-room-thumbnail__room-photos-carousel-left.material-icons expand_more
-               .card-room-thumbnail__room-photos-carousel-right.material-icons expand_more 
-               .card-room-thumbnail__room-photos-carousel-nav
-                  .card-room-thumbnail__room-photos-carousel-nav-circle_active
-                  .card-room-thumbnail__room-photos-carousel-nav-circle
-                  .card-room-thumbnail__room-photos-carousel-nav-circle
-                  .card-room-thumbnail__room-photos-carousel-nav-circle
-                  
-         .card-room-thumbnail__room-info
-            wrap 
-               span.card-room-thumbnail__room-info-number=roomNumber
-               span.card-room-thumbnail__room-info-luxe=luxe
-            wrap
-               span.card-room-thumbnail__room-info-cost=cost+"₽" 
-               span.card-room-thumbnail__room-info-period в сутки 
-         .card-room-thumbnail__line
-         .card-room-thumbnail__room-feedback
-            +rate-stars(rating)
-            wrap.card-room-thumbnail__room-feedback-value=feedbacks
-            wrap Отзывов   
+      -const luxe = isLuxe ? "люкс" : "" 
+         .card-room-thumbnail
+            .card-room-thumbnail__room-photos 
+               img(src=`../../img/roomPhotos/room${roomNumber}/room__1_sm.png` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__room-photos-photo
+               - if (isCarousel)
+                  .card-room-thumbnail__room-photos-carousel 
+                     .card-room-thumbnail__room-photos-carousel-left.material-icons expand_more
+                     .card-room-thumbnail__room-photos-carousel-right.material-icons expand_more 
+                     .card-room-thumbnail__room-photos-carousel-nav
+                        .card-room-thumbnail__room-photos-carousel-nav-circle_active
+                        .card-room-thumbnail__room-photos-carousel-nav-circle
+                        .card-room-thumbnail__room-photos-carousel-nav-circle
+                        .card-room-thumbnail__room-photos-carousel-nav-circle
+
+            .card-room-thumbnail__room-info
+               wrap 
+                  span.card-room-thumbnail__room-info-number=roomNumber
+                  span.card-room-thumbnail__room-info-luxe=luxe
+               wrap
+                  span.card-room-thumbnail__room-info-cost=cost+"₽" 
+                  span.card-room-thumbnail__room-info-period в сутки 
+            .card-room-thumbnail__line
+            .card-room-thumbnail__room-feedback
+               +rate-stars(rating)
+               wrap.card-room-thumbnail__room-feedback-value=feedbacks
+               wrap Отзывов   
 
 
-      
+

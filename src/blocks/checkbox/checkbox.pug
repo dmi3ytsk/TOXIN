@@ -2,5 +2,5 @@ mixin checkbox(options)
    - const { list } = options
       each content, id in list
          .checkbox
-            input(type='checkbox' id=`${content.title}` checked=content.isChecked).checkbox__box
+            input(type="checkbox" id=`${content.title}` checked=content.isChecked).checkbox__box
             label(for=`${content.title}`).checkbox__content.font-body=content.title

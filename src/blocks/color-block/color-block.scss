@@ -1,4 +1,4 @@
-@import '../../vars.scss';
+@import "../../vars.scss";
 
 .color-block {
    display: flex;
@@ -37,7 +37,7 @@
       font-size: 19px;
       line-height: 28.5px;
       color: $dark100;
-      }
+   }
    &__title {
       font-weight: 700;
    }

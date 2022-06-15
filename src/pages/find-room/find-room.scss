@@ -1,4 +1,4 @@
-@import '../../vars.scss';
+@import "../../vars.scss";
 
 .room-search-page {
    border-bottom: 1px solid $dark25;
@@ -8,13 +8,13 @@
       display: flex;
       padding: 30px 0px 70px 0px;
       justify-content: space-between;
-      background: #FFFFFF;
+      background: #ffffff;
       @media (max-width: 1200px) {
          padding: 20px 10px 30px 10px;
       }
    }
    &__filters {
-      &>.checkbox-expand-list {
+      & > .checkbox-expand-list {
          margin-top: 30px;
       }
       & .range-slider {

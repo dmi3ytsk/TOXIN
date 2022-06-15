@@ -73,7 +73,7 @@
       }
    }
    @extend .font-label;
-  
+
    @include byClick;
    background: transparent;
    color: $primary-color;

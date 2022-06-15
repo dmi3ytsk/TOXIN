@@ -1,9 +1,9 @@
-import "../../import-jquery"
+import "../../import-jquery";
 
 import "../../base.scss";
 import "../../vars.scss";
 
-import './login.scss';
+import "./login.scss";
 
 import "../../blocks/header/header.js";
 

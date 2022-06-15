@@ -17,15 +17,15 @@ mixin button(attr)
             p=title
       case active
          when "yes"
-          a(href=`${page}`) 
-            button(name=`${title}` class=`${classStyle}` )
-               wrap(class=`${classStyle}__body`)
-                  wrap(class=`${classStyle}__title`)=title
-               i.btn-style-fill-arrow__arrow.material-icons=arrow
+            a(href=`${page}`) 
+               button(name=`${title}` class=`${classStyle}` )
+                  wrap(class=`${classStyle}__body`)
+                     wrap(class=`${classStyle}__title`)=title
+                  i.btn-style-fill-arrow__arrow.material-icons=arrow
          when  "no"
-          a(href=`${page}`) 
-            button(name=`${title}` class=`${classStyle}` disabled)
-               wrap(class=`${classStyle}__body`)
-                  wrap(class=`${classStyle}__title` disabled)=title
+            a(href=`${page}`) 
+               button(name=`${title}` class=`${classStyle}` disabled)
+                  wrap(class=`${classStyle}__body`)
+                     wrap(class=`${classStyle}__title` disabled)=title
          default
             p Chose active or not

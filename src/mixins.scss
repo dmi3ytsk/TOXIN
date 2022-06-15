@@ -4,8 +4,8 @@
     font-weight: $weight;
     font-style: $style;
     src:
-      url('#{$file}.woff') format('woff'),
-      url('#{$file}.woff') format('truetype'),
-      url('#{$file}.svg') format('svg');
+      url("#{$file}.woff") format("woff"),
+      url("#{$file}.woff") format("truetype"),
+      url("#{$file}.svg") format("svg");
   }
 }

@@ -75,7 +75,7 @@ class Dropdown {
               : decr.classList.add("disable");
             // Placeholder if all counters = 0
             let sumValue = Object.values(itemQuantity).reduce((a, b) => a + b);
-            // 
+            //
             let resultSelection = Object.entries(itemQuantity)
               .filter(([, val]) => val > 0)
               .map((each) => each.reverse().join(" "))

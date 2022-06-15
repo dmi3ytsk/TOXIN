@@ -1,9 +1,9 @@
-import "../../import-jquery"
+import "../../import-jquery";
 
 import "../../base.scss";
 import "../../vars.scss";
 
-import './form-elements.scss';
+import "./form-elements.scss";
 
 import "../../blocks/textfield/textfield.scss";
 

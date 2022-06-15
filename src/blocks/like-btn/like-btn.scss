@@ -30,9 +30,9 @@
    color: $primary-color;
    @include gradientBorder;
    $border: 1px;
-   border: solid $border transparent;  
+   border: solid $border transparent;
    &:before {
-      margin: -$border;  
+      margin: -$border;
    }
 }
 .like-btn__box:checked + .like-btn__content:before,

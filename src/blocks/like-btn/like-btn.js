@@ -14,7 +14,7 @@ class LikeButton {
     let isLiked = status ? false : true,
       likeCount = likes.innerHTML,
       heartIcon = heart.innerHTML;
-    
+
     btn.addEventListener("click", () => {
       likeCount = isLiked ? ++likeCount : --likeCount;
       heartIcon = isLiked ? "favorite" : "favorite_border";
