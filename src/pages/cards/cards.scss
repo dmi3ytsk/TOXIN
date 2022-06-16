@@ -1,8 +1,12 @@
-
 .cards {
    background: #e5e5e5;
    padding-top: 150px;
-      &__body {
+   * {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+   }
+   &__body {
       max-width: 1160px;
       margin: 0 auto;
       display: flex;

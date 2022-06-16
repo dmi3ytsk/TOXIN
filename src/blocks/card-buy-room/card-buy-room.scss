@@ -1,7 +1,8 @@
 @import "../../vars.scss";
 
 .card-buy-room {
-   width: 380px;
+   max-width: 380px;
+   min-width: 300px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -9,13 +10,13 @@
    margin-top: 19px;
    margin-bottom: 19px;
    &__body {
-      padding: 40px 30px 30px 30px;
+      padding: 40px 30px 30px 28px;
    }
    &__header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 20px;
+      margin-bottom: 23px;
    }
    &__roomNumber {
       @extend .font-title;

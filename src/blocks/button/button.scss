@@ -4,6 +4,9 @@
    @extend .font-label;
    padding: 14px 20px 15px 20px;
    border-radius: 22px;
+   border: 0;
+   cursor: pointer;
+   outline: none;
 }
 
 @mixin byClick {
@@ -65,6 +68,9 @@
    }
 }
 .btn-style-text {
+   border: 0;
+   cursor: pointer;
+   outline: none;
    &:disabled {
       cursor: default;
       color: $dark50;

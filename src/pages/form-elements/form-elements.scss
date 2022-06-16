@@ -4,7 +4,17 @@
    max-width: 1110px;
    min-width: 675px;
    margin: 145px auto;
-   a, a:visited{text-decoration: none;}
+   a,
+   a:visited {
+      text-decoration: none;
+   }
+   *,
+   *:before,
+   *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+   }
 
    &__row {
       display: flex;

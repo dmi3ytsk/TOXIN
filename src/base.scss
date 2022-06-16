@@ -3,14 +3,19 @@
 @import "./mixins.scss";
 
 //-Fonts
-@include font-face("Quicksand", 700, "normal","fonts/Quicksand-Bold");
-@include font-face("Quicksand", 400, "normal","fonts/Quicksand-Regular");
-@include font-face("Montserrat", 700, "normal","fonts/Montserrat-Bold");
-@include font-face("Montserrat", 400, "normal","fonts/Montserrat-Regular");
+@include font-face("Quicksand", 700, "normal", "fonts/Quicksand-Bold");
+@include font-face("Quicksand", 400, "normal", "fonts/Quicksand-Regular");
+@include font-face("Montserrat", 700, "normal", "fonts/Montserrat-Bold");
+@include font-face("Montserrat", 400, "normal", "fonts/Montserrat-Regular");
 
 html {
-  @extend .font-body;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: $dark75;
   background: #ffffff;
+}
+body {
+  margin: 0;
 }
 .global-menu-button {
   position: absolute;
