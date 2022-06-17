@@ -5,7 +5,7 @@ mixin card-room-thumbnail (options)
       -const luxe = isLuxe ? "люкс" : "" 
          .card-room-thumbnail
             .card-room-thumbnail__room-photos 
-               img(src=`../../img/roomPhotos/room${roomNumber}/room__1_sm.png` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__room-photos-photo
+               img(src=`../../blocks/card-room-thumbnail/img/room/room${roomNumber}/room__1_sm.png` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__room-photos-photo
                - if (isCarousel)
                   .card-room-thumbnail__room-photos-carousel 
                      .card-room-thumbnail__room-photos-carousel-left.material-icons expand_more
