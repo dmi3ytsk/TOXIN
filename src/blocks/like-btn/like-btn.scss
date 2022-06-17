@@ -3,6 +3,10 @@
 .like-btn {
    margin-bottom: 10px;
    margin-right: 10px;
+   :focus,
+   :active {
+      outline: none;
+   }
    &__design {
       display: flex;
       justify-content: space-evenly;
