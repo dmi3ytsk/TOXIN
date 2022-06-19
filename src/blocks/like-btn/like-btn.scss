@@ -10,6 +10,10 @@
       padding: 0;
       margin: 0;
       border: 0;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
    }
    :focus,
    :active {

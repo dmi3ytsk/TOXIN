@@ -12,7 +12,11 @@
    justify-content: space-between;
    padding: 0 15px;
    position: relative;
-   &:hover {
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+&:hover {
       border-color: $dark50;
    }
    &-open {

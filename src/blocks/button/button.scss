@@ -7,6 +7,11 @@
    border: 0;
    cursor: pointer;
    outline: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
 }
 
 @mixin byClick {
@@ -71,6 +76,10 @@
    border: 0;
    cursor: pointer;
    outline: none;
+   -ms-user-select: none;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
    &:disabled {
       cursor: default;
       color: $dark50;

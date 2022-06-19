@@ -3,6 +3,11 @@
 .checkbox {
     margin-bottom: 10px;
     width: 230px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
 }
 .checkbox__box:checked,
 .checkbox__box:not(:checked) {
