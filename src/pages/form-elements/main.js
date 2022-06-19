@@ -6,6 +6,7 @@ import "../../vars.scss";
 import "./form-elements.scss";
 
 import "../../blocks/textfield/textfield.scss";
+import "../../blocks/textfield/textfield.js";
 
 import "../../blocks/dropdown/dropdown.scss";
 import "../../blocks/dropdown/dropdown.js";
