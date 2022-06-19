@@ -10,11 +10,10 @@
    }
    &__input {
       font-family: inherit;
-      width: 100%;
       color: $dark75;
       border: 1px solid $dark25;
       border-radius: 4px;
-      padding: 12px 15px 12px 15px;
+      padding: 12px 40px 12px 15px;
       display: flex;
       flex: 1;
       position: relative;
@@ -40,6 +39,7 @@
       @extend .textfield__down-arrow;
       pointer-events: auto;
       border: 0;
+      top: 20%;
       @include gradientText;
    }
 }
