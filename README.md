@@ -22,3 +22,4 @@
 - ion-rangeslider [npm](https://www.npmjs.com/package/ion-rangeslider)
 - jquery v3.6.0 [npm](https://www.npmjs.com/package/jquery)
 - paginationjs [npm](https://www.npmjs.com/package/paginationjs)
+- inputmask [npm](https://www.npmjs.com/package/inputmask)
