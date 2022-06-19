@@ -16,7 +16,7 @@
    -moz-user-select: none;
    -khtml-user-select: none;
    -webkit-user-select: none;
-&:hover {
+   &:hover {
       border-color: $dark50;
    }
    &-open {
@@ -62,8 +62,6 @@
       align-items: center;
       height: $btn-height;
       padding: 0px 7px 0px 15px;
-   }
-   &__row-title {
    }
    &__row-action {
       display: flex;

@@ -31,17 +31,22 @@ class Dropdown {
         dropdown.classList.remove("ezdropdown-open");
       }
     });
-    // Open dropdown by click on selector
-    selection.addEventListener("click", function () {
-      menu.classList.toggle("ezdropdown__menu-open");
-      dropdown.classList.toggle("ezdropdown-open");
+    // Open dropdown by click on dropdown
+    dropdown.addEventListener("click", function () {
+      if (
+        !dropdown.classList.contains("ezdropdown-open") ||
+        (dropdown.classList.contains("ezdropdown-open") &&
+          !menu.contains(event.target))
+      ) {
+        dropdown.classList.toggle("ezdropdown-open");
+        menu.classList.toggle("ezdropdown__menu-open");
+      }
     });
     if (isRooms) {
       // Actions with each row
       row.forEach(function (each) {
         // For each item vars block
         const id = each.dataset.id;
-        // const actual = each;
         const buttons = each.querySelectorAll(".counter-btn");
         const counter = each.querySelector(".counter");
         const decr = each.querySelector(".decr");
