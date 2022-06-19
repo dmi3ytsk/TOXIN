@@ -3,13 +3,26 @@
 .like-btn {
    margin-bottom: 10px;
    margin-right: 10px;
+   button {
+      font-family: inherit;
+   }
+   * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+   }
    :focus,
    :active {
       outline: none;
    }
    &__design {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-evenly;
+      align-items: center;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-between;
       width: 40px;
       height: 20px;
       border: 1px solid $dark25;
@@ -23,11 +36,14 @@
       font-size: 10px !important;
       line-height: 12px !important;
       color: $dark25;
+      margin-left: 4px;
    }
    &__likes {
       font-size: 10px;
       line-height: 12px;
       color: $dark25;
+      margin-right: 11px;
+      line-height: 16px;
    }
 }
 .liked {
@@ -37,6 +53,12 @@
    border: solid $border transparent;
    &:before {
       margin: -$border;
+   }
+   .like-btn__heart {
+      margin-left: 3px;
+   }
+   .like-btn__likes {
+      margin-left: 3px;
    }
 }
 .like-btn__box:checked + .like-btn__content:before,
