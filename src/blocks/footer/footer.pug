@@ -14,7 +14,8 @@ mixin footer(options)
                      .footer__full-block 
                         ul 
                            each item in block 
-                              li.footer__full-block-item= item
+                              a(href="../index/index.pug").footer__full-block-item= item
+                                 li
                   .footer__full-block 
                      ul
                         li.footer__full-block-item Подписка
@@ -25,7 +26,7 @@ mixin footer(options)
 
             div(class=`footer__copyright${smallFooter}`)
                .footer__body
-                  a(href="../index/index.pug") 
+                  a(href="../index/index.pug" class=`footer__copyright-logo${smallFooter}`) 
                      img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
                   .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
                   .footer__copyright-socials
