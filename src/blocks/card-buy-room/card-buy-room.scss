@@ -1,8 +1,7 @@
 @import "../../vars.scss";
 
 .card-buy-room {
-   max-width: 380px;
-   min-width: 300px;
+   width: 380px;
    background: #ffffff;
    border: 1px solid rgba(0, 0, 0, 0.12);
    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -36,6 +35,7 @@
       font-weight: 700;
       font-size: 12px;
       line-height: 15px;
+      margin-left: 8px;
       text-transform: uppercase;
       color: $primary-color;
    }
@@ -44,6 +44,7 @@
       font-size: 14px;
       line-height: 18px;
       color: $dark50;
+      margin-right: 0px;
    }
    &__period {
       font-weight: 400;
@@ -52,12 +53,12 @@
       color: $dark50;
    }
    &__in-out {
-      margin-bottom: 12px;
+      margin-bottom: 11px;
       display: flex;
       justify-content: space-between;
    }
    &__guests {
-      margin-bottom: 18px;
+      margin-bottom: 15px;
    }
    &__cost-list {
       color: $dark75;
@@ -106,7 +107,7 @@
       top: -5px;
       margin-left: 4px;
       margin-right: 5px;
-      padding-right: 182px;
+      padding-right: 173px;
       border-bottom: 1px dashed $dark25;
    }
    &__ultra-sum {
