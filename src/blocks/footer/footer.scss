@@ -119,6 +119,15 @@
             }
          }
       }
+      @media (max-width: 400px) {
+         & .footer__copyright-text {
+          visibility: hidden;
+          font-size: 8px;
+          line-height: 1px;
+          margin: 0px;
+         }
+      }
+
       @media (max-width: 1280px) {
          height: 100%;
          padding: 120px 0;
