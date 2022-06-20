@@ -14,9 +14,9 @@ mixin card-buy-room ()
                span.card-buy-room__period в сутки 
          .card-buy-room__in-out
             .font-label прибытие
-               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "dd1"})
             .font-label выезд
-               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
+               +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "dd2"})
          .card-buy-room__guests 
             .font-label гости
             +dropdown({ itemList: guests, type: "sum" })
@@ -36,4 +36,4 @@ mixin card-buy-room ()
             span Итого
             span.card-buy-room__dash-line
             span.card-buy-room__ultra-sum 38 081₽ 
-         +button({ active: "yes", title: "забронировать", style: "fillArrow"})
+         +button({ active: "yes", title: "забронировать", style: "fillArrow", page: "../index/index.pug"})
