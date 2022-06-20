@@ -6,6 +6,9 @@
    border-radius: 4px;
    margin-top: 19px;
    margin-bottom: 19px;
+   @media (max-width: 400px) {
+      width: 312px;
+   }
    h1 {
       margin-top: 0;
    }
@@ -13,17 +16,22 @@
       margin-bottom: 20px;
    }
    &__label-birth {
-      margin-top: 24px;
+      margin-top: 26px;
+      margin-bottom: 5px;
    }
    &__label-login {
-      margin-top: 22px;
+      margin-top: 20px;
+      margin-bottom: 5px;
    }
    &__chose-room-btn {
-      margin-top: 24px;
+      margin-top: 22px;
       margin-bottom: 30px;
    }
    &__body {
       padding: 38px 30px 30px 28px;
+      @media (max-width: 400px) {
+         padding: 30px 8px 20px 8px;
+      }
    }
    &__footer {
       display: flex;

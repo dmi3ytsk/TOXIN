@@ -11,6 +11,9 @@
    margin-bottom: 19px;
    &__body {
       padding: 40px 30px 30px 28px;
+      @media (max-width: 362px) {
+         padding: 30px 6px 20px 6px;
+      }
    }
    &__header {
       display: flex;

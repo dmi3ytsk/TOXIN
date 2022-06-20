@@ -7,14 +7,14 @@ mixin registration ()
    .registration
       .registration__body
          h1.registration__title.font-title Регистрация аккаунта
-         +textfield({ type: "text", placeholder: "Имя", width: "def"})
-         +textfield({ type: "text", placeholder: "Фамилия", width: "def"})
+         +textfield({ type: "text", placeholder: "Имя"})
+         +textfield({ type: "text", placeholder: "Фамилия"})
          +radio()
          h3.registration__label-birth.font-label дата рождения
-         +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "def", actionButton: "dropdown"})
+         +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", actionButton: "dropdown"})
          h3.registration__label-login.font-label данные для входа в сервис
-         +textfield({ type: "email", placeholder: "Email", width: "def"})
-         +textfield({ type: "text", placeholder: "Пароль", width: "def"})
+         +textfield({ type: "email", placeholder: "Email"})
+         +textfield({ type: "text", placeholder: "Пароль"})
          +toggle(0)
          .registration__chose-room-btn
             +button({ active: "yes", title: "перейти к оплате", style: "fillArrow"})
