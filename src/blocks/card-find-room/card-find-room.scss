@@ -11,6 +11,9 @@
    }
    &__body {
       padding: 40px 30px 30px 28px;
+      @media (max-width: 362px) {
+         padding: 30px 6px 20px 6px;
+      }
    }
    &__in-out {
       margin-top: 21px;
@@ -18,9 +21,9 @@
       justify-content: space-between;
    }
    &__guests {
-      margin-top: 14px;
+      margin-top: 13px;
    }
    &__button {
-      margin-top: 31px;
+      margin-top: 29px;
    }
 }
