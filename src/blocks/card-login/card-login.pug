@@ -5,8 +5,8 @@ mixin login ()
    .login
       h1.login__title.font-title Войти
       .login__input
-         +textfield({ type: "email", placeholder: "Email", width: "def"})
-         +textfield({ type: "text", placeholder: "Пароль", width: "def"})
+         +textfield({ type: "email", placeholder: "Email"})
+         +textfield({ type: "text", placeholder: "Пароль"})
       .login__login-button
          +button({ active: "yes", title: "войти", style: "fillArrow"})
       .login__footer
