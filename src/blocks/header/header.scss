@@ -17,7 +17,7 @@
       height: 40px;
       position: relative;
       top: 15px;
-      @media (max-width: 900px) {
+      @media (max-width: 956px) {
          width: 100%;
          display: flex;
          justify-content: center;
@@ -30,16 +30,35 @@
    &__nav {
       &-list {
          list-style: none;
-         @media (max-width: 900px) {
+         @media (max-width: 956px) {
             display: none;
          }
+         &-dropdown {
+            display: flex;
+            justify-content: space-between;
+            width: 74px;
+            &:last-child {
+               width: 111.5px;
+            }
+         }
          &-item {
+            margin-left: 20.5px;
+            cursor: pointer;
+            color: $dark50;
             & a {
                text-decoration: none;
+               color: $dark50;
                &:visited {
                   color: $dark50;
                }
-               color: $dark50;
+               &::before {
+                  display: block;
+                  content: attr(title);
+                  font-weight: bold;
+                  height: 0;
+                  overflow: hidden;
+                  visibility: hidden;
+               }
             }
             & span {
                font-size: 14px;
@@ -53,16 +72,14 @@
             }
             &:hover {
                font-weight: 700;
-               & a {
+               & a,
+               span {
+                  color: $dark75;
                   &:visited {
                      color: $dark75;
                   }
-                  color: $dark75;
                }
             }
-            margin-left: 20.5px;
-            cursor: pointer;
-            color: $dark50;
          }
          display: flex;
          justify-content: space-between;
@@ -165,7 +182,7 @@
 }
 .hamburger-menu {
    display: none;
-   @media (max-width: 900px) {
+   @media (max-width: 956px) {
       display: block;
    }
 }

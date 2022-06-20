@@ -12,27 +12,27 @@ mixin header(options)
 
                ul.menu__box
                   li
-                     a(class="menu__item" href="#") О нас
+                     a(class="menu__item" href="../index/index.pug") О нас
                   li
-                     a(class="menu__item" href="#") Услуги
+                     a(class="menu__item" href="../index/index.pug") Услуги
                   li
-                     a(class="menu__item" href="#") Вакансии
+                     a(class="menu__item" href="../index/index.pug") Вакансии
                   li
-                     a(class="menu__item" href="#") Новости
+                     a(class="menu__item" href="../index/index.pug") Новости
                   li
-                     a(class="menu__item" href="#") Соглашения
+                     a(class="menu__item" href="../index/index.pug") Соглашения
             nav.header__nav 
                ul.header__nav-list
                   li.header__nav-list-item
-                     a(href="#") О нас
-                  li.header__nav-list-item
+                     a(href="../index/index.pug" title="О нас") О нас
+                  li.header__nav-list-item.header__nav-list-dropdown
                      span Услуги
                      span.material-icons expand_more
                   li.header__nav-list-item
-                     a(href="#") Вакансии
+                     a(href="../index/index.pug" title="Вакансии") Вакансии
                   li.header__nav-list-item
-                     a(href="#") Новости
-                  li.header__nav-list-item
+                     a(href="../index/index.pug"  title="Новости") Новости
+                  li.header__nav-list-item.header__nav-list-dropdown
                      span Соглашения
                      span.material-icons expand_more
                .header__auth-block
