@@ -14,7 +14,7 @@ mixin card-find-room ()
                +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", width: "xsm", dropdown: 1})
          .card-find-room__guests 
             h3.font-label гости
-            +dropdown({ itemList: guests, width: "def", type: "sum" })
+            +dropdown({ itemList: guests,type: "sum" })
          .card-find-room__button
             +button({ active: "yes", title: "подобрать номер", style: "fillArrow"})
 
