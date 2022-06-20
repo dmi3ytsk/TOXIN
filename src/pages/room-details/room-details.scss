@@ -8,12 +8,13 @@
       padding: 40px 0px;
       display: flex;
       justify-content: space-between;
-      @media (max-width: 1024px) {
+      padding: 0 10px 0 10px;
+      @media (max-width: 1070px) {
          justify-content: space-around;
       }
 
-      @media (max-width: 740px) {
-         display: block;
+      @media (max-width: 750px) {
+         flex-wrap: wrap;;
       }
    }
    &__photos {
@@ -47,9 +48,9 @@
       }
    }
    &__info {
-      max-width: 711px;
+      width: 711px;
       margin-right: 10px;
-      @media (max-width: 1024px) {
+      @media (max-width: 1070px) {
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -60,7 +61,7 @@
          &-feedbacks {
             display: flex;
             justify-content: space-between;
-            @media (max-width: 1024px) {
+            @media (max-width: 1070px) {
                display: block;
             }
          }
@@ -76,7 +77,10 @@
             @media (max-width: 1024px) {
                max-width: 400px;
             }
-         }
+            @media (max-width: 450px) {
+               width: 300px;
+            }
+            }
          & .user-feedback:last-child {
             margin-top: 24px;
             margin-bottom: 4px;
@@ -91,10 +95,16 @@
       }
       &-diagram {
          width: 349px;
+         @media (max-width: 450px) {
+            width: 290px;
+         }
       }
       &-cancel-text {
          width: 340px;
          line-height: 24px;
+         @media (max-width: 450px) {
+            width: 300px;
+         }
       }
       &-header {
          @extend .font-subtitle;
@@ -104,24 +114,27 @@
             margin-left: 20px;
             margin-bottom: 18px;
          }
+         @media (max-width: 450px) {
+            margin-left: 0px;
+         }
       }
       &-subtitle {
          position: relative;
          top: 36px;
          color: $dark50;
          line-height: 14px;
-         @media (max-width: 1024px) {
+         @media (max-width: 1070px) {
             display: none;
          }
       }
    }
    &__booking {
-      @media (max-width: 740px) {
-         display: flex;
+      @media (max-width: 750px) {
          flex-direction: column;
          align-items: center;
+         order: -1;
       }
-   & .card-buy-room {
+      & .card-buy-room {
          margin-top: 30px;
       }
    }

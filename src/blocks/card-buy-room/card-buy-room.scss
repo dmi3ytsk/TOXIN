@@ -8,9 +8,12 @@
    border-radius: 4px;
    margin-top: 19px;
    margin-bottom: 19px;
+   @media (max-width: 390px) {
+      max-width: 300px;
+   }
    &__body {
       padding: 40px 30px 30px 28px;
-      @media (max-width: 362px) {
+      @media (max-width: 390px) {
          padding: 30px 6px 20px 6px;
       }
    }
@@ -56,6 +59,10 @@
       margin-bottom: 11px;
       display: flex;
       justify-content: space-between;
+      @media (max-width: 390px) {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
    }
    &__guests {
       margin-bottom: 15px;
@@ -96,6 +103,9 @@
             top: -3px;
             left: 7px;
          }
+         @media (max-width: 390px) {
+            display: none;
+         }
       }
    }
    &__result-row {
@@ -109,9 +119,21 @@
       margin-right: 5px;
       padding-right: 173px;
       border-bottom: 1px dashed $dark25;
+      @media (max-width: 390px) {
+         padding-right: 143px;
+      }
    }
    &__ultra-sum {
       position: absolute;
       width: 77px;
+   }
+}
+.datepickers-container {
+   left: -130px;
+   @media (max-width: 749px) {
+      left: -100px;
+   }
+   @media (max-width: 390px) {
+      left: -80px;
    }
 }
