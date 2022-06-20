@@ -1,10 +1,15 @@
 mixin textfield(options)
-   - const { type, placeholder, dropdown, subscribe, width, calendar } = options
+   - const { type, placeholder, dropdown, subscribe, width, calendar, elId } = options
    .textfield
       form(action="" class=`${width}-block`).textfield__form
          case calendar
             when "on"
                input(type="text", placeholder=placeholder, class="datepicker-here").textfield__input
+               case dropdown
+                  when 1
+                     i.textfield__down-arrow.material-icons expand_more
+            when "2in1"
+               input(type="text", placeholder=placeholder, id=elId, class="datepicker-here", minDate="08.06.2022").textfield__input
                case dropdown
                   when 1
                      i.textfield__down-arrow.material-icons expand_more
