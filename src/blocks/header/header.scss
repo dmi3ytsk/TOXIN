@@ -37,6 +37,8 @@
             display: flex;
             justify-content: space-between;
             width: 74px;
+            position: relative;
+            text-decoration: none;
             &:last-child {
                width: 111.5px;
             }
@@ -71,9 +73,9 @@
                top: 8px;
             }
             &:hover {
-               font-weight: 700;
                & a,
                span {
+                  font-weight: 700;
                   color: $dark75;
                   &:visited {
                      color: $dark75;
@@ -275,4 +277,49 @@
 }
 .menu__item {
    transition-duration: 0.25s;
+}
+
+ul li ul {
+   background: white;
+   visibility: hidden;
+   opacity: 0;
+   display: none;
+   position: absolute;
+   transition: all 0.5s ease;
+   margin-top: 1rem;
+   left: -10px;
+   list-style: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+ul li ul li {
+   clear: both;
+   width: 100%;
+   padding: 10px;
+   position: relative;
+   left: -39px;
+   &:first-child {
+      padding-top: 15px;
+   }
+   &::before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+   }
+}
+.list-dropdown__item a {
+   font-weight: 400 !important;
+   &:hover {
+     font-weight: 700 !important;
+   }
+   
 }

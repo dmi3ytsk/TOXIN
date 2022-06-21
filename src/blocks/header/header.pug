@@ -28,6 +28,13 @@ mixin header(options)
                   li.header__nav-list-item.header__nav-list-dropdown
                      span Услуги
                      span.material-icons expand_more
+                     ul.list-dropdown
+                        li.list-dropdown__item 
+                           a(href="../index/index.pug" title="Услуга 1") Услуга 1
+                        li.list-dropdown__item  
+                           a(href="../index/index.pug" title="Услуга 2") Услуга 2
+                        li.list-dropdown__item  
+                           a(href="../index/index.pug" title="Услуга 3") Услуга 3
                   li.header__nav-list-item
                      a(href="../index/index.pug" title="Вакансии") Вакансии
                   li.header__nav-list-item
@@ -35,6 +42,13 @@ mixin header(options)
                   li.header__nav-list-item.header__nav-list-dropdown
                      span Соглашения
                      span.material-icons expand_more
+                     ul.list-dropdown
+                        li.list-dropdown__item 
+                           a(href="../index/index.pug" title="Документ 1") Документ 1
+                        li.list-dropdown__item  
+                           a(href="../index/index.pug" title="Документ 2") Документ 2
+                        li.list-dropdown__item  
+                           a(href="../index/index.pug" title="Документ 3") Документ 3
                .header__auth-block
                   -if(isAuth)
                      .header__auth-block-pipe
