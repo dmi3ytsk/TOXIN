@@ -1,31 +1,25 @@
 
 mixin button(attr)
-   - let classStyle, arrow
-   - const { active, title, style, page } = attr
-      case style
-         when "fill"
-            - classStyle = "btn-style-fill"
-         when "fillArrow"
-            - classStyle = "btn-style-fill-arrow"
-            - arrow = "arrow_forward"
-         when "void"
-            - classStyle = "btn-style-void"
-         when "text"
-            - classStyle = "btn-style-text"
-         default 
-            p chose button style
-            p=title
-      case active
-         when "yes"
-            a(href=`${page}`) 
-               button(name=`${title}` class=`${classStyle}` )
-                  wrap(class=`${classStyle}__body`)
-                     wrap(class=`${classStyle}__title`)=title
-                  i.btn-style-fill-arrow__arrow.material-icons=arrow
-         when  "no"
-            a(href=`${page}`) 
-               button(name=`${title}` class=`${classStyle}` disabled)
-                  wrap(class=`${classStyle}__body`)
-                     wrap(class=`${classStyle}__title` disabled)=title
-         default
-            p Chose active or not
+  - let classStyle, arrow
+  - const { isActive, title, style, page } = attr
+    case style 
+      when "fillArrow"
+        - classStyle = "btn-style-fill-arrow"
+        - arrow = "arrow_forward"
+      when "fill"
+        - classStyle = `btn-style-${style}`
+      when "void"
+        - classStyle = `btn-style-${style}`
+      default 
+        - classStyle = "btn-style-text"
+    if (isActive)   
+      a(href=`${page}`) 
+        button(name=`${title}` class=`${classStyle}` )
+          div(class=`${classStyle}__body`)
+            div(class=`${classStyle}__title`)=title
+          i.btn-style-fill-arrow__arrow.material-icons=arrow
+    else
+      a(href=`${page}`) 
+        button(name=`${title}` class=`${classStyle}` disabled)
+          div(class=`${classStyle}__body`)
+            div(class=`${classStyle}__title` disabled)=title
