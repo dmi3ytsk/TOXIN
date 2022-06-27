@@ -7,37 +7,82 @@ include ../../blocks/card-login/card-login
 include ../../blocks/card-room-thumbnail/card-room-thumbnail
 
 block vars
-   -const title = "UI-Kit Cards";
-   -const apartment = ["Спальни", "Кровати", "Ванные комнаты"]
-   -const guests = ["Взрослые", "Дети", "Младенцы"]
-   -const checkboxList = [{title: "Можно курить"}, {title: "Можно с питомцами", isChecked: true}, {title:"Можно пригласить гостей (до 10 человек)", isChecked: true}]
-   -const expandableList = [{title:"Завтрак"}, {title:"Письменный стол", isChecked: true}, {title:"Стул для кормления", isChecked: true}, {title:"Кроватка", isChecked: true}, {title:"Телевизор"}, {title:"Шампунь"}, {title:"Телевизор?"}, {title:"Шампунь??"}]
-   -const richList = [{title: "Широкий коридор", subtitle:"Ширина коридоров в номере <br>не менее 91 см."}, {title: "Помощник для инвалидов", subtitle:"На 1 этаже вас встретит специалист  и проводит до номера."}]
-   -const bullet = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, <br>а выезд до 12:00"]
-   -const user_murad = {username: "Мурад Сарафанов", avatar: "../../img/user_murad.png", lastActivity: "5 дней назад", likes: 12, isLiked: true, feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."}
-   -const user_patricia = {username: "Патрисия Стёклышкова", avatar: "../../img/user_patricia.png", lastActivity: "Неделю назад", likes: 2, feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"}
+  -const title = "UI-Kit Cards";
+  -const apartment = ["Спальни", "Кровати", "Ванные комнаты"]
+  -const guests = ["Взрослые", "Дети", "Младенцы"]
+  -
+    const checkboxList = [
+      {title: "Можно курить"}, 
+      {title: "Можно с питомцами", isChecked: true}, 
+      {title:"Можно пригласить гостей (до 10 человек)", isChecked: true}
+      ]
+  -
+    const expandableList = [
+      {title:"Завтрак"}, 
+      {title:"Письменный стол", isChecked: true}, 
+      {title:"Стул для кормления", isChecked: true}, 
+      {title:"Кроватка", isChecked: true}, 
+      {title:"Телевизор"}, 
+      {title:"Шампунь"}, 
+      {title:"Телевизор2"}, 
+      {title:"Шампунь2"}
+      ]
+    const richList = [
+      {
+        title: "Широкий коридор", 
+        subtitle:"Ширина коридоров в номере <br>не менее 91 см."
+        }, 
+      {
+        title: "Помощник для инвалидов", 
+        subtitle:"На 1 этаже вас встретит специалист  и проводит до номера."
+        }
+      ]
+  -
+    const bullet = [
+      "Нельзя с питомцами", 
+      "Без вечеринок и мероприятий", 
+      "Время прибытия — после 13:00, <br>а выезд до 12:00"
+      ]
+  -
+    const user_murad = {
+      username: "Мурад Сарафанов", 
+      avatar: "../../blocks/user-feedback/img/user_murad.png", 
+      lastActivity: "5 дней назад", 
+      likes: 12, 
+      isLiked: true, 
+      feedback: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+      }
+  -
+    const user_patricia = {
+      username: "Патрисия Стёклышкова", 
+      avatar: "../../blocks/user-feedback/img/user_patricia.png", 
+      lastActivity: "Неделю назад", 
+      likes: 2, 
+      feedback: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+      }
+
 block content
-   a(href="../index/index.pug").global-menu-button
-      img(src="../../pages/cards/img/watermark-logo.png" alt="global menu") 
-   section.cards   
-      .cards__body 
-         .cards__column
-            .cards__card
-               +card-find-room()
-            .cards__card
-               +registration()
-         .cards__column
-            .cards__card
-               +card-buy-room()
-            .cards__card
-               +login()
-         .cards__column
-            .cards__card
-               .datepicker-here
-            .cards__card
-               +card-room-thumbnail({roomNumber: 888, isLuxe: true, isCarousel: true, cost: "9 990", rating:"5", feedbacks:"145"})
-            .cards__card
-               +card-room-thumbnail({roomNumber: 840, isLuxe: false, isCarousel: false, cost: "9 990", rating:"4", feedbacks:"65"})
+  a(href="../index/index.pug").global-menu-button
+    img(src="../../pages/cards/img/watermark-logo.png" alt="global menu") 
+  section.cards   
+    .cards__body 
+      .cards__column
+        .cards__card
+          +card-find-room()
+        .cards__card
+          +registration()
+      .cards__column
+        .cards__card
+          +card-buy-room()
+        .cards__card
+          +login()
+      .cards__column
+        .cards__card
+          .datepicker-here
+        .cards__card
+          +card-room-thumbnail({roomNumber: 888, isLuxe: true, isCarousel: true, cost: "9 990", rating:"5", feedbacks:"145"})
+        .cards__card
+          +card-room-thumbnail({roomNumber: 840, isLuxe: false, isCarousel: false, cost: "9 990", rating:"4", feedbacks:"65"})
 
 
 
