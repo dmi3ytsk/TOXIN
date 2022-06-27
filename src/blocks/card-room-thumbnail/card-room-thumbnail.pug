@@ -17,17 +17,17 @@ mixin card-room-thumbnail (options)
                         .card-room-thumbnail__room-photos-carousel-nav-circle
 
             .card-room-thumbnail__room-info
-               wrap 
+               div 
                   span.card-room-thumbnail__room-info-number=roomNumber
                   span.card-room-thumbnail__room-info-luxe=luxe
-               wrap
+               div
                   span.card-room-thumbnail__room-info-cost=cost+"₽" 
                   span.card-room-thumbnail__room-info-period в сутки 
             .card-room-thumbnail__line
             .card-room-thumbnail__room-feedback
                +rate-stars(rating)
-               wrap.card-room-thumbnail__room-feedback-value=feedbacks
-               wrap Отзывов   
+               .card-room-thumbnail__room-feedback-value=feedbacks
+               div Отзывов   
 
 
 
