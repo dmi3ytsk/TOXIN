@@ -8,8 +8,8 @@ mixin login ()
          +textfield({ type: "email", placeholder: "Email"})
          +textfield({ type: "text", placeholder: "Пароль"})
       .login__login-button
-         +button({ active: "yes", title: "войти", style: "fillArrow", page: "../index/index.pug"})
+         +button({ isActive: true, title: "войти", style: "fillArrow", page: "../index/index.pug"})
       .login__footer
          span.font-body Нет аккаунта на Toxin?
-         +button({ active: "yes", title: "создать", style: "void", page:"../../pages/registration/registration.pug"})
+         +button({ isActive: true, title: "создать", style: "void", page:"../../pages/registration/registration.pug"})
 

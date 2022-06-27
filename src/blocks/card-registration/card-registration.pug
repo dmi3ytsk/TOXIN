@@ -17,10 +17,10 @@ mixin registration ()
          +textfield({ type: "text", placeholder: "Пароль"})
          +toggle(0)
          .registration__chose-room-btn
-            +button({ active: "yes", title: "перейти к оплате", style: "fillArrow", page: "../index/index.pug"})
+            +button({ isActive: true, title: "перейти к оплате", style: "fillArrow", page: "../index/index.pug"})
          .registration__footer
             span.font-body Уже есть аккаунт на Toxin
-            +button({ active: "yes", title: "войти", style: "void", page:"../../pages/login/login.pug"})
+            +button({ isActive: true, title: "войти", style: "void", page:"../../pages/login/login.pug"})
 
 
 
