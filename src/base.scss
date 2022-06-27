@@ -2,10 +2,10 @@
 @import "./mixins.scss";
 
 //-Fonts
-@include font-face("Quicksand", 700, "normal", "fonts/Quicksand-Bold");
-@include font-face("Quicksand", 400, "normal", "fonts/Quicksand-Regular");
-@include font-face("Montserrat", 700, "normal", "fonts/Montserrat-Bold");
-@include font-face("Montserrat", 400, "normal", "fonts/Montserrat-Regular");
+@include font-face("Quicksand", 700, "normal", "fonts/quicksand-bold");
+@include font-face("Quicksand", 400, "normal", "fonts/quicksand-regular");
+@include font-face("Montserrat", 700, "normal", "fonts/montserrat-bold");
+@include font-face("Montserrat", 400, "normal", "fonts/montserrat-regular");
 
 html {
   font-family: "Montserrat", sans-serif;
