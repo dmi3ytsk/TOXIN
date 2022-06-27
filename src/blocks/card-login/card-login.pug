@@ -2,14 +2,14 @@ include ../textfield/textfield
 include ../button/button
 
 mixin login ()
-   .login
-      h1.login__title.font-title Войти
-      .login__input
-         +textfield({ type: "email", placeholder: "Email"})
-         +textfield({ type: "text", placeholder: "Пароль"})
-      .login__login-button
-         +button({ isActive: true, title: "войти", style: "fillArrow", page: "../index/index.pug"})
-      .login__footer
-         span.font-body Нет аккаунта на Toxin?
-         +button({ isActive: true, title: "создать", style: "void", page:"../../pages/registration/registration.pug"})
+  .login
+    h1.login__title.font-title Войти
+    .login__input
+      +textfield({ type: "email", placeholder: "Email"})
+      +textfield({ type: "text", placeholder: "Пароль"})
+    .login__login-button
+      +button({ isActive: true, title: "войти", style: "fillArrow", page: "../index/index.pug"})
+    .login__footer
+      span.font-body Нет аккаунта на Toxin?
+      +button({ isActive: true, title: "создать", style: "void", page:"../../pages/registration/registration.pug"})
 

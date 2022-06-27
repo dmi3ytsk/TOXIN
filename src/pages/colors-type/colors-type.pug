@@ -4,22 +4,22 @@ include ../../blocks/color-block/color-block
 include ../../blocks/type-block/type-block
 
 block vars
-   - const title = "Colors&Type";
+  - const title = "Colors&Type";
 block content
-   a(href="../index/index.pug").global-menu-button
-      img(src="../../pages/colors-type/img/watermark-logo.png" alt="global menu") 
-   section.colors-type
-      .colors-type__row
-         .colors-type__colors-column
-            +color-block({ title: "Dark Shade 100%", hash: "#1F2041", color: "dark100" })
-            +color-block({ title: "Dark Shade 75%", hash: "#1F2041", color: "dark75" })
-            +color-block({ title: "Dark Shade 50%", hash: "#1F2041", color: "dark50" })
-            +color-block({ title: "Dark Shade 25%", hash: "#1F2041", color: "dark25" })
-            +color-block({ title: "Dark Shade 5%", hash: "#1F2041", color: "dark5" })
-            +color-block({ title: "Purple", hash: "#BC9CFF", color: "purple" })
-            +color-block({ title: "Green", hash: "#6FCF97", color: "green" })
-         .colors-type__type-column
-            +type-block({ tag: "H1", usefor: "This one is the sub-section or widget title"})
-            +type-block({ tag: "H2", usefor: "Next one is the item title inside widgets"})
-            +type-block({ tag: "H3", usefor: "This is a label or CTA text"})
-            +type-block({ tag: "Body", usefor: "This is the body text which is used for most of the design, like paragraphs, lists, etc."})
+  a(href="../index/index.pug").global-menu-button
+    img(src="../../pages/colors-type/img/watermark-logo.png" alt="global menu") 
+  section.colors-type
+    .colors-type__row
+      .colors-type__colors-column
+        +color-block({ title: "Dark Shade 100%", hash: "#1F2041", color: "dark100" })
+        +color-block({ title: "Dark Shade 75%", hash: "#1F2041", color: "dark75" })
+        +color-block({ title: "Dark Shade 50%", hash: "#1F2041", color: "dark50" })
+        +color-block({ title: "Dark Shade 25%", hash: "#1F2041", color: "dark25" })
+        +color-block({ title: "Dark Shade 5%", hash: "#1F2041", color: "dark5" })
+        +color-block({ title: "Purple", hash: "#BC9CFF", color: "purple" })
+        +color-block({ title: "Green", hash: "#6FCF97", color: "green" })
+      .colors-type__type-column
+        +type-block({ tag: "H1", usefor: "This one is the sub-section or widget title"})
+        +type-block({ tag: "H2", usefor: "Next one is the item title inside widgets"})
+        +type-block({ tag: "H3", usefor: "This is a label or CTA text"})
+        +type-block({ tag: "Body", usefor: "This is the body text which is used for most of the design, like paragraphs, lists, etc."})

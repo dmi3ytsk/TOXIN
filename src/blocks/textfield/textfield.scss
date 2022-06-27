@@ -1,46 +1,46 @@
 @import "../../vars.scss";
 
 .textfield {
-   &__form {
-      margin-top: 5px;
-      margin-bottom: 10px;
-      height: $btn-height;
-      position: relative;
-      display: flex;
-   }
-   &__input {
-      width: 100%;
-      font-family: inherit;
+  &__form {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: $btn-height;
+    position: relative;
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+    font-family: inherit;
+    color: $dark75;
+    border: 1px solid $dark25;
+    border-radius: 4px;
+    padding: 12px 40px 12px 15px;
+    display: flex;
+    flex: 1;
+    position: relative;
+    &:hover,
+    &:focus {
       color: $dark75;
-      border: 1px solid $dark25;
-      border-radius: 4px;
-      padding: 12px 40px 12px 15px;
-      display: flex;
-      flex: 1;
-      position: relative;
-      &:hover,
-      &:focus {
-         color: $dark75;
-         border-color: $dark50;
-      }
-      &::placeholder {
-         color: $dark25;
-      }
-   }
-   &__down-arrow {
-      color: $dark50;
-      font-size: 24px;
-      line-height: 24px;
-      position: absolute;
-      right: 9px;
-      top: 25%;
-      pointer-events: none;
-   }
-   &__forward-arrow {
-      @extend .textfield__down-arrow;
-      pointer-events: auto;
-      border: 0;
-      top: 20%;
-      @include gradientText;
-   }
+      border-color: $dark50;
+    }
+    &::placeholder {
+      color: $dark25;
+    }
+  }
+  &__down-arrow {
+    color: $dark50;
+    font-size: 24px;
+    line-height: 24px;
+    position: absolute;
+    right: 9px;
+    top: 25%;
+    pointer-events: none;
+  }
+  &__forward-arrow {
+    @extend .textfield__down-arrow;
+    pointer-events: auto;
+    border: 0;
+    top: 20%;
+    @include gradientText;
+  }
 }

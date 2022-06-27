@@ -1,76 +1,75 @@
 @import "../../vars.scss";
 
 .pagination {
-   display: inline-block;
-   -ms-user-select: none;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
+  display: inline-block;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 
-   &__arrow-next,
-   &__arrow-prev {
-      color: #ffffff;
-      background: none;
-      border: 0;
+  &__arrow-next,
+  &__arrow-prev {
+    color: #ffffff;
+    background: none;
+    border: 0;
 
-      &:active {
-         opacity: 0.85;
-      }
-   }
+    &:active {
+      opacity: 0.85;
+    }
+  }
 
-   &__ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
+  &__ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-   &-page,
-   &-ellipsis,
-   &-next,
-   &-prev {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: inline-flex;
-      font-style: normal;
-      font-size: 0.75rem;
-      justify-content: center;
-      align-items: center;
+  &-page,
+  &-ellipsis,
+  &-next,
+  &-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    font-style: normal;
+    font-size: 0.75rem;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $dark50;
+    }
+  }
+
+  &-page {
+    cursor: pointer;
+
+    &_active {
+      border-radius: 50%;
+      font-weight: bold;
+      background: $primary-gradient;
+      cursor: default;
 
       a {
-         text-decoration: none;
-         color: $dark50;
+        color: #ffffff;
       }
-   }
+    }
+  }
 
-   &-page {
-      cursor: pointer;
+  &-next,
+  &-prev {
+    border-radius: 50%;
+    background: $secondary-gradient;
+    &:active {
+      opacity: 0.85;
+    }
+  }
 
-      &_active {
-         border-radius: 50%;
-         font-weight: bold;
-         background: $primary-gradient;
-         cursor: default;
-
-         a {
-            color: #ffffff;
-         }
-      }
-   }
-
-   &-next,
-   &-prev {
-      border-radius: 50%;
-      background: $secondary-gradient;
-      &:active {
-         opacity: 0.85;
-      }
-   }
-
-   &-nav {
-      font-size: 0.875rem;
-      padding: 0.625rem 0;
-      color: $dark75;
-      text-align: center;
-
-   }
+  &-nav {
+    font-size: 0.875rem;
+    padding: 0.625rem 0;
+    color: $dark75;
+    text-align: center;
+  }
 }

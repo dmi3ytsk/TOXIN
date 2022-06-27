@@ -1,250 +1,250 @@
 @import "../../vars.scss";
 
 .room-details-page {
-   border-bottom: 1px solid $dark25;
-   &__body {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 40px 0px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px 0 10px;
-      @media (max-width: 1070px) {
-         justify-content: space-around;
-      }
+  border-bottom: 1px solid $dark25;
+  &__body {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    @media (max-width: 1070px) {
+      justify-content: space-around;
+    }
 
-      @media (max-width: 750px) {
-         flex-wrap: wrap;;
-      }
-   }
-   &__photos {
-      width: 100%;
-      margin: 0 auto;
-      &:after {
-         content: "";
-         display: block;
-         height: 0;
-         clear: both;
-      }
-   }
-   &__photo {
-      float: left;
-      width: 31.9%;
-      height: 100%;
+    @media (max-width: 750px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__photos {
+    width: 100%;
+    margin: 0 auto;
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+  &__photo {
+    float: left;
+    width: 31.9%;
+    height: 100%;
+    @media (max-width: 740px) {
+      display: none;
+    }
+
+    &:first-child {
+      width: 68.1%;
       @media (max-width: 740px) {
-         display: none;
+        display: block;
+        width: 100%;
+      }
+    }
+    &:last-child {
+      position: relative;
+      top: -1px;
+    }
+  }
+  &__info {
+    width: 711px;
+    margin-right: 10px;
+    @media (max-width: 1070px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-block {
+      &:first-child,
+      &:last-child,
+      &-feedbacks {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1070px) {
+          display: block;
+        }
       }
 
-      &:first-child {
-         width: 68.1%;
-         @media (max-width: 740px) {
-            display: block;
-            width: 100%;
-         }
+      & .about-room:last-child {
+        border-bottom: none;
+        margin-bottom: 0px;
+        & .about-room__icon {
+          margin-bottom: 4px;
+        }
       }
-      &:last-child {
-         position: relative;
-         top: -1px;
+      & .user-feedback {
+        @media (max-width: 1024px) {
+          max-width: 400px;
+        }
+        @media (max-width: 450px) {
+          width: 300px;
+        }
       }
-   }
-   &__info {
-      width: 711px;
-      margin-right: 10px;
+      & .user-feedback:last-child {
+        margin-top: 24px;
+        margin-bottom: 4px;
+      }
+      & .bullet-list {
+        min-width: 266px;
+      }
+      &-cancel {
+        margin-top: -1px;
+        margin-right: 10px;
+      }
+    }
+    &-diagram {
+      width: 349px;
+      @media (max-width: 450px) {
+        width: 290px;
+      }
+    }
+    &-cancel-text {
+      width: 340px;
+      line-height: 24px;
+      @media (max-width: 450px) {
+        width: 300px;
+      }
+    }
+    &-header {
+      @extend .font-subtitle;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      &-rule {
+        margin-left: 20px;
+        margin-bottom: 18px;
+      }
+      @media (max-width: 450px) {
+        margin-left: 0px;
+      }
+    }
+    &-subtitle {
+      position: relative;
+      top: 36px;
+      color: $dark50;
+      line-height: 14px;
       @media (max-width: 1070px) {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
+        display: none;
       }
-      &-block {
-         &:first-child,
-         &:last-child,
-         &-feedbacks {
-            display: flex;
-            justify-content: space-between;
-            @media (max-width: 1070px) {
-               display: block;
-            }
-         }
-
-         & .about-room:last-child {
-            border-bottom: none;
-            margin-bottom: 0px;
-            & .about-room__icon {
-               margin-bottom: 4px;
-            }
-         }
-         & .user-feedback {
-            @media (max-width: 1024px) {
-               max-width: 400px;
-            }
-            @media (max-width: 450px) {
-               width: 300px;
-            }
-            }
-         & .user-feedback:last-child {
-            margin-top: 24px;
-            margin-bottom: 4px;
-         }
-         & .bullet-list {
-            min-width: 266px;
-         }
-         &-cancel {
-            margin-top: -1px;
-            margin-right: 10px;
-         }
-      }
-      &-diagram {
-         width: 349px;
-         @media (max-width: 450px) {
-            width: 290px;
-         }
-      }
-      &-cancel-text {
-         width: 340px;
-         line-height: 24px;
-         @media (max-width: 450px) {
-            width: 300px;
-         }
-      }
-      &-header {
-         @extend .font-subtitle;
-         margin-top: 30px;
-         margin-bottom: 20px;
-         &-rule {
-            margin-left: 20px;
-            margin-bottom: 18px;
-         }
-         @media (max-width: 450px) {
-            margin-left: 0px;
-         }
-      }
-      &-subtitle {
-         position: relative;
-         top: 36px;
-         color: $dark50;
-         line-height: 14px;
-         @media (max-width: 1070px) {
-            display: none;
-         }
-      }
-   }
-   &__booking {
-      @media (max-width: 750px) {
-         flex-direction: column;
-         align-items: center;
-         order: -1;
-      }
-      & .card-buy-room {
-         margin-top: 30px;
-      }
-   }
+    }
+  }
+  &__booking {
+    @media (max-width: 750px) {
+      flex-direction: column;
+      align-items: center;
+      order: -1;
+    }
+    & .card-buy-room {
+      margin-top: 30px;
+    }
+  }
 }
 .doughnut-chart {
-   display: flex;
-   &__diagram {
+  display: flex;
+  &__diagram {
+    position: relative;
+    &-body {
+    }
+    &-wrap {
+      position: absolute;
+      z-index: 5;
+      width: 112px;
+      height: 112px;
+      top: 4px;
+      left: 4px;
+      background: #ffffff;
+      border-radius: 50%;
+      &::after {
+        position: absolute;
+        content: " ";
+        z-index: 4;
+        top: -4px;
+        left: 55px;
+        width: 2px;
+        height: 120px;
+        background: #ffffff;
+      }
+      &::before {
+        position: absolute;
+        content: " ";
+        z-index: 4;
+        top: 55px;
+        left: 110px;
+        width: 10px;
+        height: 2px;
+        background: #ffffff;
+      }
+    }
+    &-great {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+      border-radius: 50%;
+    }
+    &-good {
+      position: absolute;
+      z-index: 2;
+      width: 60px;
+      height: 60px;
+      top: 0px;
+      left: 60px;
+      background: $primary-gradient;
+      border-top-right-radius: 100%;
+    }
+    &-norm {
+      position: absolute;
+      z-index: 3;
+      width: 60px;
+      height: 60px;
+      top: 60px;
+      left: 60px;
+      background: $secondary-gradient;
+      border-bottom-right-radius: 100%;
+    }
+    &-counter {
+      color: $primary-color;
+      text-align: center;
       position: relative;
-      &-body {
-      }
-      &-wrap {
-         position: absolute;
-         z-index: 5;
-         width: 112px;
-         height: 112px;
-         top: 4px;
-         left: 4px;
-         background: #ffffff;
-         border-radius: 50%;
-         &::after {
-            position: absolute;
-            content: " ";
-            z-index: 4;
-            top: -4px;
-            left: 55px;
-            width: 2px;
-            height: 120px;
-            background: #ffffff;
-         }
-         &::before {
-            position: absolute;
-            content: " ";
-            z-index: 4;
-            top: 55px;
-            left: 110px;
-            width: 10px;
-            height: 2px;
-            background: #ffffff;
-         }
-      }
-      &-great {
-         width: 120px;
-         height: 120px;
-         background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-         border-radius: 50%;
-      }
-      &-good {
-         position: absolute;
-         z-index: 2;
-         width: 60px;
-         height: 60px;
-         top: 0px;
-         left: 60px;
-         background: $primary-gradient;
-         border-top-right-radius: 100%;
-      }
-      &-norm {
-         position: absolute;
-         z-index: 3;
-         width: 60px;
-         height: 60px;
-         top: 60px;
-         left: 60px;
-         background: $secondary-gradient;
-         border-bottom-right-radius: 100%;
-      }
-      &-counter {
-         color: $primary-color;
-         text-align: center;
-         position: relative;
-         top: -84px;
-         z-index: 6;
+      top: -84px;
+      z-index: 6;
 
-         &-value {
-            @extend .font-title;
-            color: $primary-color;
-         }
-         &-voice {
-            font-size: 15px;
-         }
+      &-value {
+        @extend .font-title;
+        color: $primary-color;
       }
-   }
-   &__legend {
-      width: 170px;
-      margin-left: 30px;
+      &-voice {
+        font-size: 15px;
+      }
+    }
+  }
+  &__legend {
+    width: 170px;
+    margin-left: 30px;
+    position: relative;
+    top: 34px;
+    &-dot {
+      width: 10.43px;
+      height: 10px;
+      border-radius: 50%;
+      margin-bottom: 14px;
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+      &:nth-child(1) {
+        background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+      }
+      &:nth-child(2) {
+        background: $secondary-gradient;
+      }
+      &:nth-child(3) {
+        background: $primary-gradient;
+      }
+    }
+    &-content {
       position: relative;
-      top: 34px;
-      &-dot {
-         width: 10.43px;
-         height: 10px;
-         border-radius: 50%;
-         margin-bottom: 14px;
-         background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
-         &:nth-child(1) {
-            background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
-         }
-         &:nth-child(2) {
-            background: $secondary-gradient;
-         }
-         &:nth-child(3) {
-            background: $primary-gradient;
-         }
-      }
-      &-content {
-         position: relative;
-         top: -7px;
-         margin-left: 15px;
-         font-size: 14px;
-         line-height: 24px;
-         color: $dark75;
-      }
-   }
+      top: -7px;
+      margin-left: 15px;
+      font-size: 14px;
+      line-height: 24px;
+      color: $dark75;
+    }
+  }
 }

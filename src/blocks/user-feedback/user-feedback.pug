@@ -1,13 +1,13 @@
 include ../like-btn/like-btn
 
 mixin user-feedback(attr)
-   - const { user } = attr
-      -const {username, avatar, lastActivity, feedback, likes, isLiked} = user
-         .user-feedback
-            .user-feedback__left 
-               img(src=`${avatar}`).user-feedback__avatar 
-               +like-btn({value: likes, isLiked: isLiked})
-            .user-feedback__right 
-               .user-feedback__username=username
-                  .user-feedback__last-activity=lastActivity
-               .user-feedback__feedback=feedback   
+  - const { user } = attr
+    -const {username, avatar, lastActivity, feedback, likes, isLiked} = user
+      .user-feedback
+        .user-feedback__left 
+          img(src=`${avatar}`).user-feedback__avatar 
+          +like-btn({value: likes, isLiked: isLiked})
+        .user-feedback__right 
+          .user-feedback__username=username
+            .user-feedback__last-activity=lastActivity
+          .user-feedback__feedback=feedback   

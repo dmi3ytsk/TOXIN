@@ -1,29 +1,29 @@
 .card-find-room {
-   max-width: 380px;
-   min-width: 300px;
-   background: #ffffff;
-   border: 1px solid rgba(0, 0, 0, 0.12);
-   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-   border-radius: 4px;
-   h1,
-   h3 {
-      margin: 0;
-   }
-   &__body {
-      padding: 40px 30px 30px 28px;
-      @media (max-width: 362px) {
-         padding: 30px 6px 20px 6px;
-      }
-   }
-   &__in-out {
-      margin-top: 21px;
-      display: flex;
-      justify-content: space-between;
-   }
-   &__guests {
-      margin-top: 13px;
-   }
-   &__button {
-      margin-top: 29px;
-   }
+  max-width: 380px;
+  min-width: 300px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  h1,
+  h3 {
+    margin: 0;
+  }
+  &__body {
+    padding: 40px 30px 30px 28px;
+    @media (max-width: 362px) {
+      padding: 30px 6px 20px 6px;
+    }
+  }
+  &__in-out {
+    margin-top: 21px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__guests {
+    margin-top: 13px;
+  }
+  &__button {
+    margin-top: 29px;
+  }
 }

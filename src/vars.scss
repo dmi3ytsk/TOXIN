@@ -13,28 +13,28 @@ $secondary-gradient: linear-gradient(#6fcf97, #66d2ea);
 $white-text: #ffffff;
 
 @mixin gradientText {
-   background: $primary-gradient;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   color: $primary-color;
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $primary-color;
 }
 @mixin gradientBorder {
-   position: relative;
-   color: $primary-color;
-   background: #ffffff;
-   background-clip: padding-box;
+  position: relative;
+  color: $primary-color;
+  background: #ffffff;
+  background-clip: padding-box;
 
-   &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      border-radius: inherit;
-      background: $primary-gradient;
-   }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: $primary-gradient;
+  }
 }
 
 //-Blocks size vars
@@ -48,52 +48,52 @@ $xl-srceen: 1160px;
 
 //-Style class vars
 .font-body {
-   font-family: "Montserrat", sans-serif;
-   font-size: 14px;
-   line-height: 24px;
-   font-weight: 400;
-   color: $dark75;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $dark75;
 }
 .font-label {
-   font-family: "Montserrat", sans-serif;
-   font-weight: 700;
-   font-size: 12px;
-   line-height: 15px;
-   text-transform: uppercase;
-   color: $dark100;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark100;
 }
 .font-subtitle {
-   font-family: "Montserrat", sans-serif;
-   font-weight: 700;
-   font-size: 19px;
-   line-height: 23px;
-   color: $dark100;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: $dark100;
 }
 .font-title {
-   font-family: "Montserrat", sans-serif;
-   font-weight: 700;
-   font-size: 24px;
-   line-height: 29px;
-   color: $dark100;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: $dark100;
 }
 .def-block {
-   width: $def-block-width;
+  width: $def-block-width;
 }
 .sm-block {
-   width: $sm-block-width;
+  width: $sm-block-width;
 }
 .xsm-block {
-   width: $xsm-block-width;
+  width: $xsm-block-width;
 }
 
 //-css drawn elements
 .down-arrow {
-   content: "";
-   display: inline-block;
-   position: absolute;
-   width: 8.35px;
-   height: 8.35px;
-   border-top: 2px solid $dark50;
-   border-right: 2px solid $dark50;
-   transform: rotate(135deg);
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8.35px;
+  height: 8.35px;
+  border-top: 2px solid $dark50;
+  border-right: 2px solid $dark50;
+  transform: rotate(135deg);
 }

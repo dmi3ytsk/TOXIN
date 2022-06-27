@@ -1,12 +1,12 @@
 .login-page {
-   width: 100%;
-   background: url(./img/login.png) no-repeat center bottom/cover;
-   &__body {
-      padding: 163px 0;
-      display: flex;
-      justify-content: space-around;
-      @media (max-width: 1200px) {
-         padding: 20px 10px 30px 10px;
-      }
-   }
+  width: 100%;
+  background: url(./img/login.png) no-repeat center bottom/cover;
+  &__body {
+    padding: 163px 0;
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 1200px) {
+      padding: 20px 10px 30px 10px;
+    }
+  }
 }

@@ -1,104 +1,103 @@
 @import "../../vars.scss";
 
 .room-search-page {
-   border-bottom: 1px solid $dark25;
-   * {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-   }
-   &__body {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      padding: 30px 0px 70px 0px;
-      justify-content: space-between;
-      background: #ffffff;
-      @media (max-width: 1200px) {
-         padding: 30px 10px 30px 10px;
-         justify-content: center;
-      }
-      @media (max-width: 600px) {
-         flex-wrap: wrap;
-         padding: 30px 4px 30px 4px;
-      }
-   }
-   &__filters {
-      @media (max-width: 630px) {
-         width: 310px;
-         margin-left: 60px;
-      }
-      @media (max-width: 630px) {
-         width: 300px;
-         margin-left: 10px;
-         justify-content: center;
-
-      }
-      & > .checkbox-expand-list {
-         margin-top: 30px;
-      }
-      & .range-slider {
-         margin-top: 27px;
-         margin-bottom: 37px;
-         @extend .sm-block;
-      }
-   }
-   &__filter-header {
-      @extend .font-label;
+  border-bottom: 1px solid $dark25;
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &__body {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0px 70px 0px;
+    justify-content: space-between;
+    background: #ffffff;
+    @media (max-width: 1200px) {
+      padding: 30px 10px 30px 10px;
+      justify-content: center;
+    }
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+      padding: 30px 4px 30px 4px;
+    }
+  }
+  &__filters {
+    @media (max-width: 630px) {
+      width: 310px;
+      margin-left: 60px;
+    }
+    @media (max-width: 630px) {
+      width: 300px;
+      margin-left: 10px;
+      justify-content: center;
+    }
+    & > .checkbox-expand-list {
       margin-top: 30px;
-      margin-bottom: 5px;
-      &:first-child {
-         margin-top: 0px;
-      }
-      &.mt21 {
-         margin-top: 21px;
-      }
-      &:nth-child(7) {
-         margin-bottom: 15px;
-      }
-      &:nth-child(11) {
-         margin-bottom: 15px;
-      }
-   }
-   &__rooms {
-      max-width: 860px;
-      margin-left: 48px;
-      @media (max-width: 1200px) {
-         width: 570px;
-      }
+    }
+    & .range-slider {
+      margin-top: 27px;
+      margin-bottom: 37px;
+      @extend .sm-block;
+    }
+  }
+  &__filter-header {
+    @extend .font-label;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    &:first-child {
+      margin-top: 0px;
+    }
+    &.mt21 {
+      margin-top: 21px;
+    }
+    &:nth-child(7) {
+      margin-bottom: 15px;
+    }
+    &:nth-child(11) {
+      margin-bottom: 15px;
+    }
+  }
+  &__rooms {
+    max-width: 860px;
+    margin-left: 48px;
+    @media (max-width: 1200px) {
+      width: 570px;
+    }
+    @media (max-width: 897px) {
+      width: 290px;
+    }
+    @media (max-width: 600px) {
+      margin-left: 0px;
+    }
+
+    &-header {
+      @extend .font-title;
+      margin-top: 0px;
+      margin-left: 10px;
+      margin-bottom: 21px;
       @media (max-width: 897px) {
-         width: 290px;
+        width: 290px;
+      }
+    }
+    &-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      & .card-room-thumbnail {
+        margin-left: 12px;
+        margin-bottom: 20px;
+      }
+    }
+    &-pagination {
+      width: 210px;
+      margin: 0 auto;
+      @media (max-width: 897px) {
+        margin-left: -10px;
       }
       @media (max-width: 600px) {
-         margin-left: 0px;
+        margin-left: -20px;
       }
-
-      &-header {
-         @extend .font-title;
-         margin-top: 0px;
-         margin-left: 10px;
-         margin-bottom: 21px;
-         @media (max-width: 897px) {
-            width: 290px;
-         }
-      }
-      &-thumbnails {
-         display: flex;
-         flex-wrap: wrap;
-         & .card-room-thumbnail {
-            margin-left: 12px;
-            margin-bottom: 20px;
-         }
-      }
-      &-pagination {
-         width: 210px;
-         margin: 0 auto;
-         @media (max-width: 897px) {
-            margin-left: -10px;
-         }
-         @media (max-width: 600px) {
-            margin-left: -20px;
-         }
-         }
-   }
+    }
+  }
 }

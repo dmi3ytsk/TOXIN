@@ -1,35 +1,35 @@
 include ../textfield/textfield
 
 mixin footer(options)
-   -const { isMobile } = options
-      -const smallFooter = isMobile?`-small-footer`:``
-         footer(class=`footer${smallFooter}`)
-            div(class=`footer__full${smallFooter}`)
-               .footer__body
-                  .footer__full-block
-                     a(href="../index/index.pug")
-                        img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
-                     .footer__full-block-item Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-                  each block in footerFullBlocksData
-                     .footer__full-block 
-                        ul 
-                           each item in block 
-                              a(href="../index/index.pug").footer__full-block-item= item
-                                 li
-                  .footer__full-block 
-                     ul
-                        li.footer__full-block-item Подписка
-                        li.footer__full-block-item Получайте специальные предложения и новости сервиса
-                        li.footer__full-block-item
-                           +textfield({ type: "email", placeholder: "Email", subscribe: 1})
+  -const { isMobile } = options
+    -const smallFooter = isMobile?`-small-footer`:``
+      footer(class=`footer${smallFooter}`)
+        div(class=`footer__full${smallFooter}`)
+          .footer__body
+            .footer__full-block
+              a(href="../index/index.pug")
+                img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
+              .footer__full-block-item Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            each block in footerFullBlocksData
+              .footer__full-block 
+                ul 
+                  each item in block 
+                    a(href="../index/index.pug").footer__full-block-item= item
+                      li
+            .footer__full-block 
+              ul
+                li.footer__full-block-item Подписка
+                li.footer__full-block-item Получайте специальные предложения и новости сервиса
+                li.footer__full-block-item
+                  +textfield({ type: "email", placeholder: "Email", subscribe: 1})
 
 
-            div(class=`footer__copyright${smallFooter}`)
-               .footer__body
-                  a(href="../index/index.pug" class=`footer__copyright-logo${smallFooter}`) 
-                     img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
-                  .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
-                  .footer__copyright-socials
-                     a(href="https://twitter.com/" target="_blank" class="fab fa-twitter")
-                     a(href="https://facebook.com/" target="_blank" class="fab fa-facebook-square")
-                     a(href="https://instagram.com/" target="_blank" class="fab fa-instagram")
+        div(class=`footer__copyright${smallFooter}`)
+          .footer__body
+            a(href="../index/index.pug" class=`footer__copyright-logo${smallFooter}`) 
+              img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
+            .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
+            .footer__copyright-socials
+              a(href="https://twitter.com/" target="_blank" class="fab fa-twitter")
+              a(href="https://facebook.com/" target="_blank" class="fab fa-facebook-square")
+              a(href="https://instagram.com/" target="_blank" class="fab fa-instagram")

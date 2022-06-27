@@ -1,91 +1,91 @@
 @import "../../vars.scss";
 
 .range-slider {
-   &__label {
-      display: inline-block;
-      width: 100%;
-   }
+  &__label {
+    display: inline-block;
+    width: 100%;
+  }
 
-   &__label-title {
-      @extend .font-label;
-   }
+  &__label-title {
+    @extend .font-label;
+  }
 
-   &__label-hint {
-      @extend .font-label;
-      color: $dark50;
-      font-weight: 400;
-      float: right;
-   }
+  &__label-hint {
+    @extend .font-label;
+    color: $dark50;
+    font-weight: 400;
+    float: right;
+  }
 
-   &__description {
-      font-size: 12px;
-      line-height: 14px;
-   }
+  &__description {
+    font-size: 12px;
+    line-height: 14px;
+  }
 
-   .irs {
-      $irs-bar-top: 23px;
+  .irs {
+    $irs-bar-top: 23px;
+    position: relative;
+    display: block;
+    -webkit-touch-callout: none;
+    user-select: none;
+
+    &-line {
       position: relative;
       display: block;
-      -webkit-touch-callout: none;
-      user-select: none;
+      overflow: hidden;
+      outline: none;
+      top: $irs-bar-top;
+      height: 0.4rem;
+      background-color: white;
+      border: 1px solid $dark25;
+      border-radius: 3px;
+    }
 
-      &-line {
-         position: relative;
-         display: block;
-         overflow: hidden;
-         outline: none;
-         top: $irs-bar-top;
-         height: 0.4rem;
-         background-color: white;
-         border: 1px solid $dark25;
-         border-radius: 3px;
+    &-bar {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 0;
+      top: $irs-bar-top;
+      height: 0.4rem;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+
+    $irs-handle-top: $irs-bar-top - 3px;
+    &-handle {
+      position: absolute;
+      display: block;
+      box-sizing: border-box;
+      cursor: pointer;
+      z-index: 1;
+      top: $irs-handle-top;
+      width: 1rem;
+      height: 1rem;
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      border: 0.125rem solid #ffffff;
+      border-radius: 50%;
+      margin-top: -1px;
+
+      &.type_last {
+        z-index: 2;
       }
+    }
 
-      &-bar {
-         position: absolute;
-         display: block;
-         left: 0;
-         width: 0;
-         top: $irs-bar-top;
-         height: 0.4rem;
-         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-      }
-
-      $irs-handle-top: $irs-bar-top - 3px;
-      &-handle {
-         position: absolute;
-         display: block;
-         box-sizing: border-box;
-         cursor: pointer;
-         z-index: 1;
-         top: $irs-handle-top;
-         width: 1rem;
-         height: 1rem;
-         background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-         border: 0.125rem solid #ffffff;
-         border-radius: 50%;
-         margin-top: -1px;
-
-         &.type_last {
-            z-index: 2;
-         }
-      }
-
-      &-hidden-input {
-         position: absolute;
-         display: block;
-         top: 0;
-         left: 0;
-         width: 0;
-         height: 0;
-         font-size: 0;
-         line-height: 0;
-         overflow: hidden;
-         outline: none;
-         z-index: -9999;
-         background: none;
-         border-style: solid;
-         border-color: transparent;
-      }
-   }
+    &-hidden-input {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+      overflow: hidden;
+      outline: none;
+      z-index: -9999;
+      background: none;
+      border-style: solid;
+      border-color: transparent;
+    }
+  }
 }

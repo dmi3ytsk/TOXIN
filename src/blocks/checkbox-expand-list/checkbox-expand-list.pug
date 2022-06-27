@@ -1,12 +1,12 @@
 include ../checkbox/checkbox
 
 mixin checkbox-expand-list(options)
-   - const { title, expandList = [], isOpen, width } = options
-      -const icon = isOpen ? "expand_less" : "expand_more"
-      -const contentClass = isOpen ? "checkbox-expand-list__content_open" : "checkbox-expand-list__content"
+  - const { title, expandList = [], isOpen, width } = options
+    -const icon = isOpen ? "expand_less" : "expand_more"
+    -const contentClass = isOpen ? "checkbox-expand-list__content_open" : "checkbox-expand-list__content"
 
-         .checkbox-expand-list(class=`${width}-block`)
-            .checkbox-expand-list__title=title
-               i.material-icons.checkbox-expand-list__icon=icon 
-            .checkbox-expand-list__content(class=`${contentClass}`)
-               +checkbox({list: expandList})
+      .checkbox-expand-list(class=`${width}-block`)
+        .checkbox-expand-list__title=title
+          i.material-icons.checkbox-expand-list__icon=icon 
+        .checkbox-expand-list__content(class=`${contentClass}`)
+          +checkbox({list: expandList})

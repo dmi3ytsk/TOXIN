@@ -1,116 +1,115 @@
 @import "../../vars.scss";
 
 @mixin ovalBtn {
-   @extend .font-label;
-   padding: 14px 20px 15px 20px;
-   border-radius: 22px;
-   border: 0;
-   cursor: pointer;
-   outline: none;
-   -ms-user-select: none;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-
+  @extend .font-label;
+  padding: 14px 20px 15px 20px;
+  border-radius: 22px;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 @mixin byClick {
-   &:active {
-      opacity: 0.85;
-   }
+  &:active {
+    opacity: 0.85;
+  }
 }
 
 .btn-style-fill {
-   &:disabled {
-      cursor: default;
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    &:active {
       opacity: 0.5;
-      &:active {
-         opacity: 0.5;
-      }
-   }
-   @include ovalBtn;
-   @include byClick;
-   background: $primary-gradient;
-   color: $white-text;
+    }
+  }
+  @include ovalBtn;
+  @include byClick;
+  background: $primary-gradient;
+  color: $white-text;
 }
 .btn-style-void {
-   width: 99px;
-   height: 44px;
-   position: relative;
-   &:disabled {
-      cursor: default;
-      background: $primary-gradient05;
-      &:active {
-         box-shadow: none;
-      }
-   }
-   &:active {
+  width: 99px;
+  height: 44px;
+  position: relative;
+  &:disabled {
+    cursor: default;
+    background: $primary-gradient05;
+    &:active {
+      box-shadow: none;
+    }
+  }
+  &:active {
+    box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3),
+      inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
+  }
+
+  @include ovalBtn;
+  background: $primary-gradient;
+  padding: 0px 0px;
+
+  &__body {
+    width: 95px;
+    height: 40px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #ffffff;
+    border-radius: 22px;
+    &:active {
       box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3),
-         inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
-   }
-
-   @include ovalBtn;
-   background: $primary-gradient;
-   padding: 0px 0px;
-
-   &__body {
-      width: 95px;
-      height: 40px;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      background: #ffffff;
-      border-radius: 22px;
-      &:active {
-         box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3),
-            inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
-      }
-   }
-   &__title {
-      color: $primary-color;
-      position: relative;
-      top: (20- 7.5) + px;
-   }
+        inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
+    }
+  }
+  &__title {
+    color: $primary-color;
+    position: relative;
+    top: (20- 7.5) + px;
+  }
 }
 .btn-style-text {
-   border: 0;
-   cursor: pointer;
-   outline: none;
-   -ms-user-select: none;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   &:disabled {
-      cursor: default;
-      color: $dark50;
-      &:active {
-         opacity: 1;
-      }
-   }
-   @extend .font-label;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  &:disabled {
+    cursor: default;
+    color: $dark50;
+    &:active {
+      opacity: 1;
+    }
+  }
+  @extend .font-label;
 
-   @include byClick;
-   background: transparent;
-   color: $primary-color;
+  @include byClick;
+  background: transparent;
+  color: $primary-color;
 }
 .btn-style-fill-arrow {
-   &:disabled {
-      cursor: default;
-      opacity: 0.5;
-   }
-   &__arrow {
-      font-size: 24px !important;
-      line-height: 24px !important;
-      display: flex !important;
-      position: relative;
-      flex-direction: row-reverse;
-      left: 4%;
-      bottom: 19px;
-   }
-   width: 100%;
-   height: 44px;
-   @include ovalBtn;
-   @include byClick;
-   color: $white-text;
-   background: $primary-gradient;
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+  &__arrow {
+    font-size: 24px !important;
+    line-height: 24px !important;
+    display: flex !important;
+    position: relative;
+    flex-direction: row-reverse;
+    left: 4%;
+    bottom: 19px;
+  }
+  width: 100%;
+  height: 44px;
+  @include ovalBtn;
+  @include byClick;
+  color: $white-text;
+  background: $primary-gradient;
 }

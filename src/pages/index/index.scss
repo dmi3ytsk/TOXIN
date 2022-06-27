@@ -1,39 +1,39 @@
 @import "../../vars.scss";
 
 .root {
-   width: 400px;
-   margin: 0 auto;
-   &__header {
+  width: 400px;
+  margin: 0 auto;
+  &__header {
+    color: $dark100;
+    text-align: center;
+    margin: 50px 0;
+    font-size: 24px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    &-column {
+      width: 170px;
+      border: 1px solid $dark25;
+      &:first-child {
+        background: $primary-gradient;
+      }
+      &:last-child {
+        background: $secondary-gradient;
+      }
+    }
+    &-element {
+      margin: 15px auto;
       color: $dark100;
-      text-align: center;
-      margin: 50px 0;
-      font-size: 24px;
-   }
-   &__nav {
+      font-size: 18px;
       display: flex;
       justify-content: center;
-      &-column {
-         width: 170px;
-         border: 1px solid $dark25;
-         &:first-child {
-            background: $primary-gradient;
-         }
-         &:last-child {
-            background: $secondary-gradient;
-         }
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.75;
+        cursor: pointer;
       }
-      &-element {
-         margin: 15px auto;
-         color: $dark100;
-         font-size: 18px;
-         display: flex;
-         justify-content: center;
-         text-decoration: none;
-         &:hover {
-            text-decoration: underline;
-            opacity: 0.75;
-            cursor: pointer;
-         }
-      }
-   }
+    }
+  }
 }

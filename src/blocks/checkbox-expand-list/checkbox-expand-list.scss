@@ -1,26 +1,26 @@
 @import "../../vars.scss";
 
 .checkbox-expand-list {
-   margin-top: 25px;
-   margin-bottom: 49px;
-   &__title {
-      position: relative;
-      @extend .font-label;
-      cursor: pointer;
-      margin-bottom: 17.5px;
-   }
-   &__icon {
-      position: absolute;
-      font-size: 24px;
-      line-height: 24px;
-      color: $dark50;
-      right: 10.5px;
-      top: -4px;
-   }
-   &__content {
-      display: none;
-      &_open {
-         display: block;
-      }
-   }
+  margin-top: 25px;
+  margin-bottom: 49px;
+  &__title {
+    position: relative;
+    @extend .font-label;
+    cursor: pointer;
+    margin-bottom: 17.5px;
+  }
+  &__icon {
+    position: absolute;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark50;
+    right: 10.5px;
+    top: -4px;
+  }
+  &__content {
+    display: none;
+    &_open {
+      display: block;
+    }
+  }
 }

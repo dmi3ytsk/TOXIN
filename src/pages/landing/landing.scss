@@ -1,33 +1,33 @@
 @import "../../vars.scss";
 
 .landing {
-   width: 100%;
-   background: url(./img/landing.png) no-repeat center bottom/cover;
-   &__body {
-      margin: 0 auto;
-      max-width: $xl-srceen;
-      padding: 70px 134px 18px 140px;
-      display: flex;
-      flex-direction: column;
-      @media (max-width: 1330px) {
-         padding: 30px 0px 30px 0;
-      }
-   }
+  width: 100%;
+  background: url(./img/landing.png) no-repeat center bottom/cover;
+  &__body {
+    margin: 0 auto;
+    max-width: $xl-srceen;
+    padding: 70px 134px 18px 140px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1330px) {
+      padding: 30px 0px 30px 0;
+    }
+  }
 
-   &__find-room {
-      @media (max-width: 1330px) {
-         align-self: center;
-      }
-   }
+  &__find-room {
+    @media (max-width: 1330px) {
+      align-self: center;
+    }
+  }
 
-   &__slogan {
-      margin-top: 320px;
-      width: 300px;
-      text-align: right;
-      line-height: 24px;
-      align-self: flex-end;
-      @media (max-width: 1330px) {
-         display: none;
-      }
-   }
+  &__slogan {
+    margin-top: 320px;
+    width: 300px;
+    text-align: right;
+    line-height: 24px;
+    align-self: flex-end;
+    @media (max-width: 1330px) {
+      display: none;
+    }
+  }
 }

@@ -1,22 +1,22 @@
 .cards {
-   background: #e5e5e5;
-   padding-top: 150px;
-   * {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-   }
-   &__body {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-   }
-   &__card {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      & .datepicker {
-         display: block;
-      }
-   }
+  background: #e5e5e5;
+  padding-top: 150px;
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &__body {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__card {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    & .datepicker {
+      display: block;
+    }
+  }
 }

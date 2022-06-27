@@ -1,9 +1,9 @@
 mixin rich-checkbox(options)
-   - const { list } = options
-      each item in list
-         -const {title, subtitle} = item
+  - const { list } = options
+    each item in list
+      -const {title, subtitle} = item
 
-         .rich-checkbox
-            input(type="checkbox" id=`${title}`).rich-checkbox__box
-            label(for=`${title}`).rich-checkbox__title=title
-            .rich-checkbox__subtitle!=subtitle
+      .rich-checkbox
+        input(type="checkbox" id=`${title}`).rich-checkbox__box
+        label(for=`${title}`).rich-checkbox__title=title
+        .rich-checkbox__subtitle!=subtitle
