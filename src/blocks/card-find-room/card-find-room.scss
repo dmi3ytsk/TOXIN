@@ -5,8 +5,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  h1,
-  h3 {
+  &__title {
     margin: 0;
   }
   &__body {
@@ -19,6 +18,9 @@
     margin-top: 21px;
     display: flex;
     justify-content: space-between;
+    .font-label {
+      margin: 0;
+    }
   }
   &__guests {
     margin-top: 13px;

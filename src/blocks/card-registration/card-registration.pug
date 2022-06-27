@@ -4,21 +4,21 @@ include ../radio/radio
 include ../button/button
 
 mixin card-registration ()
-  .registration
-    .registration__body
-      h1.registration__title.font-title Регистрация аккаунта
+  .card-registration
+    .card-registration__body
+      h1.card-registration__title.font-title Регистрация аккаунта
       +textfield({ type: "text", placeholder: "Имя"})
       +textfield({ type: "text", placeholder: "Фамилия"})
       +radio()
-      h3.registration__label-birth.font-label дата рождения
+      h3.card-registration__label-birth.font-label дата рождения
       +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", actionButton: "dropdown"})
-      h3.registration__label-login.font-label данные для входа в сервис
+      h3.card-registration__label-login.font-label данные для входа в сервис
       +textfield({ type: "email", placeholder: "Email"})
       +textfield({ type: "text", placeholder: "Пароль"})
       +toggle(0)
-      .registration__chose-room-btn
+      .card-registration__chose-room-btn
         +button({ isActive: true, title: "перейти к оплате", style: "fillArrow", page: "../index/index.pug"})
-      .registration__footer
+      .card-registration__footer
         span.font-body Уже есть аккаунт на Toxin
         +button({ isActive: true, title: "войти", style: "void", page:"../../pages/login/login.pug"})
 
