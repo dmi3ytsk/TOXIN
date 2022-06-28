@@ -439,8 +439,11 @@
   height: 10px;
   border-bottom: 2px solid;
   border-color: $primary-color;
+  box-sizing: border-box;
+
 
   &:after {
+    box-sizing: border-box;
     position: absolute;
     content: "";
     display: block;
