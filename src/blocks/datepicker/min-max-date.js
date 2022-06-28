@@ -5,7 +5,7 @@ document.getElementById("dd1").addEventListener("focusout", () => {
     .split(".")
     .reverse()
     .join("-");
-  if (inputDate !== undefined) {
+  if (inputDate !== (undefined || "")) {
     $("#dd2").datepicker({
       minDate: new Date(inputDate),
     });
@@ -19,7 +19,7 @@ document.getElementById("dd2").addEventListener("focusout", () => {
     .split(".")
     .reverse()
     .join("-");
-  if (inputDate !== undefined) {
+  if (inputDate !== (undefined || "")) {
     $("#dd1").datepicker({
       maxDate: new Date(inputDate),
     });
