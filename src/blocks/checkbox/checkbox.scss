@@ -13,15 +13,16 @@
   display: block;
   position: relative;
   padding-left: 30px;
-  top: -1px;
+  top: 0px;
   line-height: 20px;
+  color: $dark50;
   cursor: pointer;
   .checkbox--show {
     &:after {
       left: 7px;
       top: 4px;
-      width: 5px;
-      height: 8px;
+      width: 3px;
+      height: 6px;
       border: solid $primary-color;
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
