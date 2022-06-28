@@ -293,6 +293,10 @@
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   z-index: 100;
+  @media (max-width: 330px) {
+    width: 300px;
+  }
+
 }
 .datepicker.-from-top- {
   -webkit-transform: translateY(-8px);
@@ -341,6 +345,7 @@
   width: 280px;
   margin: 28px auto;
   margin-bottom: 4px;
+
 }
 .-only-timepicker- .datepicker--content {
   display: none;
@@ -376,7 +381,6 @@
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  // background-color: rgba(92, 196, 239, 0.1);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,

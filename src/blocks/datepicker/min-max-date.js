@@ -1,27 +1,28 @@
-document.getElementById("dd1").addEventListener("focusout", () => {
+document.querySelector(".dd1").addEventListener("focusout", () => {
   const inputDate = document
-    .getElementById("dd1")
+    .querySelector(".dd1")
     .value.toString()
     .split(".")
     .reverse()
     .join("-");
   if (inputDate !== (undefined || "")) {
-    $("#dd2").datepicker({
+    $(".dd2").datepicker({
       minDate: new Date(inputDate),
     });
   }
 });
 
-document.getElementById("dd2").addEventListener("focusout", () => {
+document.querySelector(".dd2").addEventListener("focusout", () => {
   const inputDate = document
-    .getElementById("dd2")
+    .querySelector(".dd2")
     .value.toString()
     .split(".")
     .reverse()
     .join("-");
   if (inputDate !== (undefined || "")) {
-    $("#dd1").datepicker({
+    $(".dd1").datepicker({
       maxDate: new Date(inputDate),
     });
   }
 });
+document.querySelector(".dd2").dataset.position = "bottom right"
