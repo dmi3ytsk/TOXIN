@@ -26,6 +26,7 @@
   }
 
   &__selection {
+    margin-bottom: 1px;
     line-height: 18px;
     flex: 1;
     position: relative;
@@ -60,14 +61,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: $btn-height;
-    padding: 0px 7px 0px 15px;
+    padding: 5px 7px 0px 15px;
+    margin-bottom: 2px;
+    &:last-child {
+      margin-bottom: 8px;
+    }
   }
   &__row-action {
     display: flex;
     width: 92px;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2px;
   }
   &__buttons {
     @extend .ezdropdown__row;
@@ -97,12 +102,17 @@
   height: 30px;
   width: 30px;
   transition: all 0.2s ease-in-out;
-  padding-left: 10.5px;
+  padding-left: 10px;
+  padding-top: 2px;
   color: $dark50;
-
+  cursor: pointer;
+  font-size: 16px;
   &:hover {
     background: #f0f0f0;
   }
+}
+.decr {
+  padding-left: 11px;
 }
 .disable {
   opacity: 0.35;
