@@ -3,5 +3,5 @@ mixin checkbox(options)
     each content in list
       .checkbox
         label.checkbox__content=content.title
-          input(type="checkbox" checked=content.isChecked).checkbox--hidden.checkbox--primary
-          .checkbox--show
+          input(type="checkbox" checked=content.isChecked).checkbox__wrapper
+          .checkbox__thumb
