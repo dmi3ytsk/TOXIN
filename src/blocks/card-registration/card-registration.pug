@@ -17,7 +17,7 @@ mixin card-registration ()
       +textfield({ type: "text", placeholder: "Пароль"})
       +toggle(0)
       .card-registration__chose-room-btn
-        +button({ isActive: true, title: "перейти к оплате", style: "fillArrow", page: "../index/index.pug"})
+        +button({ isActive: true, title: "зарегистрироваться", style: "fillArrow", page: "../index/index.pug"})
       .card-registration__footer
         span.font-body Уже есть аккаунт на Toxin
         +button({ isActive: true, title: "войти", style: "void", page:"../../pages/login/login.pug"})
