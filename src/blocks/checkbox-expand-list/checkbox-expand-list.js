@@ -5,20 +5,20 @@ class CheckboxExpandList {
   }
 
   init() {
-    const doc = this.element,
-      listTitle = doc.querySelector(".checkbox-expand-list__title"),
-      dropdownIcon = doc.querySelector(".checkbox-expand-list__icon"),
-      listContent = doc.querySelector(".checkbox-expand-list__content");
+    this.listSwitch();
+  }
 
-    let isClose = (dropdownIcon.innerHTML = "expand_more") ? true : false;
+  listSwitch() {
+    const doc = this.element;
+    const listTitle = doc.querySelector(".checkbox-expand-list__title");
+    const dropdownIcon = doc.querySelector(".checkbox-expand-list__icon");
+    const listContent = doc.querySelector(".checkbox-expand-list__content");
 
     listTitle.addEventListener("click", () => {
-      isClose
+      dropdownIcon.innerHTML == "expand_more"
         ? (dropdownIcon.innerHTML = "expand_less")
         : (dropdownIcon.innerHTML = "expand_more");
       listContent.classList.toggle("checkbox-expand-list__content_open");
-
-      isClose = !isClose;
     });
   }
 }
