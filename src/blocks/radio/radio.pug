@@ -1,7 +1,9 @@
 mixin radio()
   span.radio
-    input(type="radio" name="gender" id="male" checked).radio__box
-    label(for="male").radio__content.font-body Мужчина
+    label.radio__content Мужчина
+      input(type="radio" name="gender" checked).radio--hidden.radio--primary
+      .radio--show
   span.radio
-    input(type="radio" name="gender" id="female").radio__box
-    label(for="female").radio__content.font-body Женщина
+    label.radio__content Женщина
+      input(type="radio" name="gender" ).radio--hidden.radio--primary
+      .radio--show
