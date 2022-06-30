@@ -1,7 +1,16 @@
 @import "../../vars.scss";
 
 .bullet-list {
+  padding: 0;
+  margin: 0 ;
   margin-bottom: 10px;
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   &__dot {
     display: inline-flex;
     width: 10.43px;
