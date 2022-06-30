@@ -23,20 +23,20 @@ import "../../blocks/radio/radio.scss";
 import "../../blocks/toggle/toggle.scss";
 
 import "../../blocks/like-btn/like-btn.scss";
-import "../../blocks/like-btn/like-btn.js";
+import "../../blocks/like-btn/LikeBtn.js";
 
 import "../../blocks/rate-stars/rate-stars.scss";
-import "../../blocks/rate-stars/rate-stars.js";
+import "../../blocks/rate-stars/RateStars.js";
 
-import "../../blocks/range-slider/range-slider.js";
+import "../../blocks/range-slider/RangeSlider.js";
 
 import "../../blocks/button/button.scss";
 
 import "../../blocks/pagination/pagination.scss";
-import "../../blocks/pagination/pagination.js";
+import "../../blocks/pagination/Pagination.js";
 
 import "../../blocks/checkbox-expand-list/checkbox-expand-list.scss";
-import "../../blocks/checkbox-expand-list/checkbox-expand-list.js";
+import "../../blocks/checkbox-expand-list/CheckboxExpandList.js";
 
 import "../../blocks/rich-checkbox/rich-checkbox.scss";
 

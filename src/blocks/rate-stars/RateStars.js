@@ -1,14 +1,17 @@
-class StarRating {
+class RateStars {
   constructor(element) {
     this.element = element;
     this.init();
   }
 
   init() {
-    var doc = this.element,
+    this.rating();
+  }
+  rating() {
+    const doc = this.element,
       $star_rating = $(doc).find(".rate-stars__star");
 
-    var SetRatingStar = function () {
+    const SetRatingStar = function () {
       return $star_rating.each(function () {
         if (
           parseInt($star_rating.siblings("input.rating-value").val()) >=
@@ -33,5 +36,5 @@ class StarRating {
 
 const rateStars = document.querySelectorAll(".rate-stars");
 rateStars.forEach(function (e) {
-  new StarRating(e);
+  new RateStars(e);
 });

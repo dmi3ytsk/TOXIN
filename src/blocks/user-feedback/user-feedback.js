@@ -1,3 +1,3 @@
 import "./user-feedback.scss"
 
-import "../like-btn/like-btn.js"
+import "../like-btn/LikeBtn.js"

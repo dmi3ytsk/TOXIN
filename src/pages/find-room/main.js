@@ -19,13 +19,13 @@ import "../../blocks/datepicker/datepicker.js";
 
 import "../../blocks/checkbox/checkbox.scss";
 
-import "../../blocks/range-slider/range-slider.js";
+import "../../blocks/range-slider/RangeSlider.js";
 
 import "../../blocks/pagination/pagination.scss";
-import "../../blocks/pagination/pagination.js";
+import "../../blocks/pagination/Pagination.js";
 
 import "../../blocks/checkbox-expand-list/checkbox-expand-list.scss";
-import "../../blocks/checkbox-expand-list/checkbox-expand-list.js";
+import "../../blocks/checkbox-expand-list/CheckboxExpandList.js";
 
 import "../../blocks/rich-checkbox/rich-checkbox.scss";
 

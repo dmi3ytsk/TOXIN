@@ -1,10 +1,13 @@
-class LikeButton {
+class LikeBtn {
   constructor(element) {
     this.element = element;
     this.init();
   }
 
   init() {
+    this.like();
+  }
+  like() {
     const doc = this.element,
       btn = doc.querySelector(".like-btn__design"),
       likes = doc.querySelector(".like-btn__likes"),
@@ -31,5 +34,5 @@ class LikeButton {
 
 const likeBtn = document.querySelectorAll(".like-btn");
 likeBtn.forEach(function (e) {
-  new LikeButton(e);
+  new LikeBtn(e);
 });
