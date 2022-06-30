@@ -19,7 +19,7 @@ mixin textfield(options)
             when 1
               i.textfield__down-arrow.material-icons expand_more
         when "off"
-          input(type="text", placeholder=placeholder, id="mask-date").textfield__input
+          input(type="text", placeholder=placeholder, class="js-mask-date").textfield__input
         default
           input(type=type, placeholder=placeholder).textfield__input
           case subscribe
