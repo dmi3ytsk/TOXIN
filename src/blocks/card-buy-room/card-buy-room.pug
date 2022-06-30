@@ -13,9 +13,9 @@ mixin card-buy-room ()
           span.card-buy-room__cost  9 990₽ 
           span.card-buy-room__period в сутки 
       .card-buy-room__in-out
-        .font-label прибытие
+        .card-buy-room__in прибытие
           +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "js-dd1"})
-        .font-label выезд
+        .card-buy-room__out выезд
           +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "js-dd2"})
       .card-buy-room__guests 
         .font-label гости

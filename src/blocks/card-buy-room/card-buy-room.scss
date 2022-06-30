@@ -9,12 +9,12 @@
   margin-top: 19px;
   margin-bottom: 19px;
   @media (max-width: 390px) {
-    max-width: 300px;
+    max-width: 308px;
   }
   &__body {
     padding: 40px 30px 30px 28px;
     @media (max-width: 390px) {
-      padding: 30px 6px 20px 6px;
+      padding: 30px 5px 20px 5px;
     }
   }
   &__header {
@@ -55,14 +55,19 @@
     line-height: 18px;
     color: $dark50;
   }
+  &__in,
+  &__out {
+    @extend .font-label;
+    .xsm-block {
+      @media (max-width: 390px) {
+        width: 143px;
+      }
+    }
+  }
   &__in-out {
     margin-bottom: 11px;
     display: flex;
     justify-content: space-between;
-    @media (max-width: 390px) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
   }
   &__guests {
     margin-bottom: 15px;
