@@ -1,8 +1,6 @@
 mixin rate-stars(startNumber)
   .rate-stars
-    span(class="rate-stars__star material-icons" data-rating="1") 
-    span(class="rate-stars__star material-icons" data-rating="2")  
-    span(class="rate-stars__star material-icons" data-rating="3")  
-    span(class="rate-stars__star material-icons" data-rating="4")  
-    span(class="rate-stars__star material-icons" data-rating="5")  
+    - let i= 1;
+      while i<6
+        span(class="rate-stars__star material-icons" data-rating=i++) 
     input(type="hidden" class="rating-value" value=`${startNumber}`)   
