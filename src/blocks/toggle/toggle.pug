@@ -1,5 +1,7 @@
 mixin toggle(options)
-  - const { number, isTurn } = options
+  - const { isTurn } = options
     .toggle
-      input(type="checkbox" id=`toggle${number}` checked=isTurn).toggle__box
-      label(for=`toggle${number}`).toggle__content.font-body Получать спецпредложения
+      label.toggle__content Получать спецпредложения
+        input(type="checkbox" checked=isTurn).toggle__wrapper
+        .toggle__thumb
+

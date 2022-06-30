@@ -15,66 +15,48 @@
     -webkit-user-select: none;
   }
   &__content {
-    margin-top: -10px;
+    @extend .font-body;
+    display: inline-block;
+    position: relative;
+    padding-left: 50px;
+    line-height: 20px;
+    color: $dark50;
+    cursor: pointer;
   }
-}
-.toggle__box:checked,
-.toggle__box:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-
-.toggle__box:checked + .toggle__content,
-.toggle__box:not(:checked) + .toggle__content {
-  display: inline-block;
-  position: relative;
-  padding-left: 30px+20px;
-  line-height: 24px;
-  color: $dark50;
-  cursor: pointer;
-}
-
-.toggle__box:checked + .toggle__content:before,
-.toggle__box:not(:checked) + .toggle__content:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 40px;
-  height: 20px;
-  border: 1px solid $primary-color;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: #ffffff;
-}
-.toggle__box:not(:checked) + .toggle__content:before {
-  border-color: $dark25;
-}
-
-.toggle__box:checked + .toggle__content:after,
-.toggle__box:not(:checked) + .toggle__content:after {
-  content: "";
-  position: absolute;
-  transition: all 0.2s ease;
-}
-
-.toggle__box:checked + .toggle__content:after,
-.toggle__box:not(:checked) + .toggle__content:after {
-  position: absolute;
-  left: 24px;
-  top: 4px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: $primary-gradient;
-}
-.toggle__box:not(:checked) + .toggle__content:after {
-  left: 4px;
-  background: $dark25;
-}
-
-.toggle__box:checked + .toggle__content:after {
-  opacity: 1;
+  &__thumb {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark25;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: ease 200ms;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $dark25;
+      transition: ease 200ms;
+    }
+  }
+  &__wrapper {
+    display: none;
+    &:checked {
+      & ~ .toggle__thumb {
+        border: 1px solid $primary-color;
+        &:after {
+          left: 23px;
+          top: 3px;
+          background: $primary-gradient;
+            }
+      }
+    }
+  }
 }
