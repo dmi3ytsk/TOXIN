@@ -91,6 +91,10 @@
     &:hover {
       background: #f0f0f0;
     }
+    &_hide {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }
 .counter-btn {
@@ -110,18 +114,14 @@
   &:hover {
     background: #f0f0f0;
   }
+  &_disable {
+    opacity: 0.35;
+    cursor: default;
+    &:hover {
+      background: none;
+    }
+  }
 }
 .decr {
   padding-left: 11px;
-}
-.disable {
-  opacity: 0.35;
-  cursor: default;
-  &:hover {
-    background: none;
-  }
-}
-.hide {
-  opacity: 0;
-  visibility: hidden;
 }

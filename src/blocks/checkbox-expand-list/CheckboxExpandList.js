@@ -10,9 +10,9 @@ class CheckboxExpandList {
 
   listSwitch() {
     const doc = this.element;
-    const listTitle = doc.querySelector(".checkbox-expand-list__title");
-    const dropdownIcon = doc.querySelector(".checkbox-expand-list__icon");
-    const listContent = doc.querySelector(".checkbox-expand-list__content");
+    const listTitle = doc.querySelector(".js-checkbox-expand-list__title");
+    const dropdownIcon = doc.querySelector(".js-checkbox-expand-list__icon");
+    const listContent = doc.querySelector(".js-checkbox-expand-list__content");
 
     listTitle.addEventListener("click", () => {
       dropdownIcon.innerHTML == "expand_more"
@@ -23,7 +23,7 @@ class CheckboxExpandList {
   }
 }
 
-const checkboxExpandList = document.querySelectorAll(".checkbox-expand-list");
+const checkboxExpandList = document.querySelectorAll(".js-checkbox-expand-list");
 checkboxExpandList.forEach(function (e) {
   new CheckboxExpandList(e);
 });

@@ -7,13 +7,16 @@ class Dropdown {
   }
 
   init() {
+    this.dropdown();
+  }
+  dropdown() {
     // Global vars block
     const doc = this.element;
-    const dropdown = doc.querySelector(".ezdropdown");
-    const selection = doc.querySelector(".ezdropdown__selection");
-    const menu = doc.querySelector(".ezdropdown__menu");
-    const row = doc.querySelectorAll(".ezdropdown__row");
-    const clearBtn = doc.querySelector(".clr");
+    const dropdown = doc.querySelector(".js-ezdropdown");
+    const selection = doc.querySelector(".js-ezdropdown__selection");
+    const menu = doc.querySelector(".js-ezdropdown__menu");
+    const row = doc.querySelectorAll(".js-ezdropdown__row");
+    const clearBtn = doc.querySelector(".js-ezdropdown__button-clear");
     const isRooms = dropdown.classList.contains("each");
     let sumValue = 0;
     let itemQuantity = {};
@@ -47,9 +50,9 @@ class Dropdown {
       row.forEach(function (each) {
         // For each item vars block
         const id = each.dataset.id;
-        const buttons = each.querySelectorAll(".counter-btn");
-        const counter = each.querySelector(".counter");
-        const decr = each.querySelector(".decr");
+        const buttons = each.querySelectorAll(".js-counter-btn");
+        const counter = each.querySelector(".js-counter");
+        const decr = each.querySelector(".js-decr");
 
         if (id == "Спальни") {
           itemQuantity[id] = 2;
@@ -60,8 +63,8 @@ class Dropdown {
         }
         counter.innerHTML = itemQuantity[id];
         counter.innerHTML > 0
-          ? decr.classList.remove("disable")
-          : decr.classList.add("disable");
+          ? decr.classList.remove("counter-btn_disable")
+          : decr.classList.add("counter-btn_disable");
 
         // Change counters by incr-decr buttons + write result in selector
         buttons.forEach(function (each) {
@@ -76,8 +79,8 @@ class Dropdown {
             counter.innerHTML = itemQuantity[id];
             // Add/remove disable class to decr button
             counter.innerHTML > 0
-              ? decr.classList.remove("disable")
-              : decr.classList.add("disable");
+              ? decr.classList.remove("counter-btn_disable")
+              : decr.classList.add("counter-btn_disable");
             // Placeholder if all counters = 0
             let sumValue = Object.values(itemQuantity).reduce((a, b) => a + b);
             //
@@ -101,9 +104,9 @@ class Dropdown {
       row.forEach(function (each) {
         // For each item vars block
         const id = each.dataset.id;
-        const buttons = each.querySelectorAll(".counter-btn");
-        const counter = each.querySelector(".counter");
-        const decr = each.querySelector(".decr");
+        const buttons = each.querySelectorAll(".js-counter-btn");
+        const counter = each.querySelector(".js-counter");
+        const decr = each.querySelector(".js-decr");
 
         itemQuantity[id] = 0;
         counter.innerHTML = itemQuantity[id];
@@ -112,8 +115,8 @@ class Dropdown {
           const bottomBtn = event.target;
           if (bottomBtn.dataset.action == "clear" && !isRooms) {
             itemQuantity[id] = 0;
-            decr.classList.add("disable");
-            clearBtn.classList.add("hide");
+            decr.classList.add("counter-btn_disable");
+            clearBtn.classList.add("ezdropdown__button_hide");
           }
           counter.innerHTML = itemQuantity[id];
           let itemQuantityValues = Object.values(itemQuantity);
@@ -135,14 +138,14 @@ class Dropdown {
             }
             counter.innerHTML = itemQuantity[id];
             counter.innerHTML > 0
-              ? decr.classList.remove("disable") &
-                clearBtn.classList.remove("hide")
-              : decr.classList.add("disable");
+              ? decr.classList.remove("counter-btn_disable") &
+                clearBtn.classList.remove("ezdropdown__button_hide")
+              : decr.classList.add("counter-btn_disable");
             let itemQuantityValues = Object.values(itemQuantity);
             sumValue = itemQuantityValues.reduce((a, b) => a + b);
             if (sumValue == 0) {
               selection.innerHTML = "Сколько гостей";
-              clearBtn.classList.add("hide");
+              clearBtn.classList.add("ezdropdown__button_hide");
             } else if (sumValue == 1) {
               selection.innerHTML = sumValue + " гость";
             }

@@ -3,7 +3,7 @@ import "./card-find-room.scss";
 import "../textfield/textfield.scss";
 
 import "../dropdown/dropdown.scss";
-import "../dropdown/dropdown.js";
+import "../dropdown/Dropdown.js";
 
 import "../datepicker/datepicker.js";
 import "../datepicker/min-max-date.js";

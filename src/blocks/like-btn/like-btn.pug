@@ -2,7 +2,7 @@ mixin like-btn(options)
   - const { value, isLiked=false } = options
   - const liked = isLiked? "liked":""
   - const heart = isLiked? "favorite":"favorite_border"
-  .like-btn
-    button.like-btn__design(class=`${liked}`)
-      i.like-btn__heart(class=`${liked}`).material-icons=heart
-      .like-btn__likes(class=`${liked}`)=value
+  .like-btn.js-like-btn
+    button.like-btn__design.js-like-btn__design(class=`${liked}` class=`js-${liked}`)
+      i.like-btn__heart.js-like-btn__heart.material-icons(class=`${liked}` class=`js-${liked}`)=heart
+      .like-btn__likes.js-like-btn__likes(class=`${liked}` class=`js-${liked}`)=value

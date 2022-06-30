@@ -9,10 +9,10 @@ class LikeBtn {
   }
   like() {
     const doc = this.element,
-      btn = doc.querySelector(".like-btn__design"),
-      likes = doc.querySelector(".like-btn__likes"),
-      status = doc.querySelector(".liked"),
-      heart = doc.querySelector(".like-btn__heart");
+      btn = doc.querySelector(".js-like-btn__design"),
+      likes = doc.querySelector(".js-like-btn__likes"),
+      status = doc.querySelector(".js-liked"),
+      heart = doc.querySelector(".js-like-btn__heart");
 
     let isLiked = status ? false : true,
       likeCount = likes.innerHTML,
@@ -32,7 +32,7 @@ class LikeBtn {
   }
 }
 
-const likeBtn = document.querySelectorAll(".like-btn");
+const likeBtn = document.querySelectorAll(".js-like-btn");
 likeBtn.forEach(function (e) {
   new LikeBtn(e);
 });
