@@ -66,8 +66,8 @@
         }
       }
       &:last-child {
-        @media (max-width:330px) {
-          margin-left: 10px;
+        @media (max-width:345px) {
+          margin-left: 25px;
         }
       }
 
@@ -228,6 +228,9 @@
     margin-left: 30px;
     position: relative;
     top: 34px;
+    @media (max-width:390px) {
+      margin-left: 15px;
+    }
     &-dot {
       width: 10.43px;
       height: 10px;
