@@ -1,66 +1,54 @@
 
 mixin header(options)
   -const { isAuth, username } = options
-    header.header 
-      .header__body 
-        a(href="../index/index.pug").header__logo
-          img(src=`../../blocks/header/img/toxin-logo.png` alt=`Toxin Hotel Logo`)
-        .hamburger-menu
-          input(id="menu__toggle" type="checkbox")
-          label(class="menu__btn" for="menu__toggle")
-            span
+  include ./const.pug
 
-          ul.menu__box
+  header.header 
+    .header__body 
+      a(href="../index/index.pug").header__logo
+        img(src=`../../blocks/header/img/toxin-logo.png` alt=`Toxin Hotel Logo`)
+      .hamburger-menu
+        input(id="menu__toggle" type="checkbox")
+        label(class="menu__btn" for="menu__toggle")
+          span
+        ul.menu__box
+          each item in burgerList
             li
-              a(class="menu__item" href="../index/index.pug") О нас
-            li
-              a(class="menu__item" href="../index/index.pug") Услуги
-            li
-              a(class="menu__item" href="../index/index.pug") Вакансии
-            li
-              a(class="menu__item" href="../index/index.pug") Новости
-            li
-              a(class="menu__item" href="../index/index.pug") Соглашения
-        nav.header__nav 
-          ul.header__nav-list
-            li.header__nav-list-item
-              a(href="../index/index.pug" title="О нас") О нас
-            li.header__nav-list-item.header__nav-list-dropdown
-              span Услуги
-              span.material-icons expand_more
-              ul.list-dropdown
+              a(class="menu__item" href=item[1])=item[0]
+      nav.header__nav 
+        ul.header__nav-list
+          li.header__nav-list-item
+            a(href="../index/index.pug" title="О нас") О нас
+          li.header__nav-list-item.header__nav-list-dropdown
+            span Услуги
+            span.material-icons expand_more
+            ul.list-dropdown
+              each service in services
                 li.list-dropdown__item 
-                  a(href="../index/index.pug" title="Услуга 1") Услуга 1
-                li.list-dropdown__item  
-                  a(href="../index/index.pug" title="Услуга 2") Услуга 2
-                li.list-dropdown__item  
-                  a(href="../index/index.pug" title="Услуга 3") Услуга 3
-            li.header__nav-list-item
-              a(href="../index/index.pug" title="Вакансии") Вакансии
-            li.header__nav-list-item
-              a(href="../index/index.pug" title="Новости") Новости
-            li.header__nav-list-item.header__nav-list-dropdown
-              span Соглашения
-              span.material-icons expand_more
-              ul.list-dropdown
+                  a(href=service[1] title=service[0])=service[0]
+          li.header__nav-list-item
+            a(href="../index/index.pug" title="Вакансии") Вакансии
+          li.header__nav-list-item
+            a(href="../index/index.pug" title="Новости") Новости
+          li.header__nav-list-item.header__nav-list-dropdown
+            span Соглашения
+            span.material-icons expand_more
+            ul.list-dropdown
+              each doc in docs
                 li.list-dropdown__item 
-                  a(href="../index/index.pug" title="Документ 1") Документ 1
-                li.list-dropdown__item  
-                  a(href="../index/index.pug" title="Документ 2") Документ 2
-                li.list-dropdown__item  
-                  a(href="../index/index.pug" title="Документ 3") Документ 3
-          .header__auth-block
-            -if(isAuth)
-              .header__auth-block-pipe
-              .header__auth-block-username=username
-            -else
-              .header__auth-block-button
-                a(href="../../pages/login/login.pug") 
-                  button(name=`войти`).login-btn
-                    .login-btn__body
-                      .login-btn__title войти
-              .header__auth-block-button
-                a(href="../../pages/registration/registration.pug") 
-                  button(name=`зарегистрироваться`).reg-btn
-                    .reg-btn__body
-                      .reg-btn__title зарегистрироваться
+                  a(href=doc[1] title=doc[0])=doc[0]
+        .header__auth-block
+          -if(isAuth)
+            .header__auth-block-pipe
+            .header__auth-block-username=username
+          -else
+            .header__auth-block-button
+              a(href="../../pages/login/login.pug") 
+                button(name=`войти`).login-btn
+                  .login-btn__body
+                    .login-btn__title войти
+            .header__auth-block-button
+              a(href="../../pages/registration/registration.pug") 
+                button(name=`зарегистрироваться`).reg-btn
+                  .reg-btn__body
+                    .reg-btn__title зарегистрироваться
