@@ -1,6 +1,6 @@
 # TOXIN
 
-[Demo page](https://dmi3ytsk.github.io/TOXIN/public/index/index.html)
+[Demo page](https://dmi3ytsk.github.io/TOXIN/public/landing/landing.html)
  
 ## Clone
 ```
