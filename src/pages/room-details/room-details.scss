@@ -1,6 +1,7 @@
 @import "../../vars.scss";
 
 .room-details-page {
+  flex: 1 0 auto;
   border-bottom: 1px solid $dark25;
   &__body {
     max-width: 1160px;

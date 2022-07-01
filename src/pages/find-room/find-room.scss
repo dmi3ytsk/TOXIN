@@ -1,6 +1,7 @@
 @import "../../vars.scss";
 
 .room-search-page {
+  flex: 1 0 auto;
   border-bottom: 1px solid $dark25;
   * {
     -moz-box-sizing: border-box;
