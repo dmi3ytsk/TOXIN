@@ -12,6 +12,7 @@
     width: 312px;
   }
   &__title {
+    @extend .font-title;
     margin-top: 0px;
     margin-bottom: 20px;
   }
