@@ -71,6 +71,9 @@
   }
   &__guests {
     margin-bottom: 15px;
+    &-title {
+      @extend .font-label;
+    }
   }
   &__cost-list {
     color: $dark75;

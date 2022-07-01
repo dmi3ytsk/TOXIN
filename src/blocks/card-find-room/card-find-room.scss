@@ -1,3 +1,5 @@
+@import "../../vars.scss";
+
 .card-find-room {
   max-width: 380px;
   min-width: 300px;
@@ -21,12 +23,17 @@
     margin-top: 21px;
     display: flex;
     justify-content: space-between;
-    .font-label {
-      margin: 0;
-    }
+  }
+  &__in,
+  &__out {
+    @extend .font-label;
+    margin: 0;
   }
   &__guests {
     margin-top: 13px;
+    &-text {
+      @extend .font-label;
+    }
   }
   &__button {
     margin-top: 29px;

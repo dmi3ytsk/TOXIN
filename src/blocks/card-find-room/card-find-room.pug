@@ -8,12 +8,12 @@ mixin card-find-room ()
     .card-find-room__body
       h1.card-find-room__title.font-title Найдём номера под ваши пожелания
       .card-find-room__in-out 
-        h3.font-label прибытие
+        h3.card-find-room__in прибытие
           +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "js-dd1"})
-        h3.font-label выезд
+        h3.card-find-room__out выезд
           +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "js-dd2"})
       .card-find-room__guests 
-        h3.font-label гости
+        h3.card-find-room__guests-text гости
         +dropdown({ itemList: guests,type: "sum" })
       .card-find-room__button
         +button({ isActive: true, title: "подобрать номер", style: "fillArrow", page: "../index/index.pug"})

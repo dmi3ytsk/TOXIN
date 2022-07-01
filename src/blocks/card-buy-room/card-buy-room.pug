@@ -18,7 +18,7 @@ mixin card-buy-room ()
         .card-buy-room__out выезд
           +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1,  elId: "js-dd2"})
       .card-buy-room__guests 
-        .font-label гости
+        .card-buy-room__guests-title гости
         +dropdown({ itemList: guests, type: "sum" })
       .card-buy-room__cost-list 
         .card-buy-room__cost-list-row 

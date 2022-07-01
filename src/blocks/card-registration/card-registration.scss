@@ -1,3 +1,5 @@
+@import "../../vars.scss";
+
 .card-registration {
   width: 380px;
   background: #ffffff;
@@ -14,10 +16,12 @@
     margin-bottom: 20px;
   }
   &__label-birth {
+    @extend .font-label;
     margin-top: 26px;
     margin-bottom: 5px;
   }
   &__label-login {
+    @extend .font-label;
     margin-top: 20px;
     margin-bottom: 5px;
   }
