@@ -2,6 +2,7 @@
 mixin button(attr)
   - let classStyle, arrow
   - const { isActive, title, style, page } = attr
+  - const status = isActive ? "" : "_disable" 
     case style 
       when "fillArrow"
         - classStyle = "fill-arrow"
@@ -12,16 +13,7 @@ mixin button(attr)
         - classStyle = style
       default 
         - classStyle = "text"
-    if (isActive)   
-      a(href=`${page}`) 
-        button(name=`${title}` class=`button_style_${classStyle}` ).button
-          div(class=`button__body_style_${classStyle}`).button__body
-            div(class=`button__title_style_${classStyle}`).button__title=title
-            case style 
-              when "fillArrow"
-                i.button__arrow.button__arrow_style_fill-arrow.material-icons=arrow
-    else
-      a(href=`${page}`) 
-        button(name=`${title}` class=`button_style_${classStyle}` disabled).button
-          div(class=`button__body_style_${classStyle}`).button__body
-            div(class=`button__title_style_${classStyle}`).button__title=title
+    a(href=`${page}` class=`button${status} button_style_${classStyle} `)=title
+      case style 
+        when "fillArrow"
+          i.button__arrow.button__arrow_style_fill-arrow=arrow

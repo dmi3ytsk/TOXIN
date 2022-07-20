@@ -2,10 +2,9 @@
 
 @mixin ovalBtn {
   @extend .font-label;
-  padding: 14px 20px 15px 20px;
+  padding: 13px 20px 15px 18px;
   border-radius: 22px;
   border: 0;
-  cursor: pointer;
   outline: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -20,6 +19,10 @@
 }
 
 .button {
+  &_disable {
+    cursor: default;
+    opacity: 0.5;
+  }
   &_style {
     &_fill {
       @include ovalBtn;
@@ -27,36 +30,23 @@
       background: $primary-gradient;
       color: $white-text;
       margin-right: -5px;
-      &:disabled {
-        cursor: default;
-        opacity: 0.5;
-        &:active {
-          opacity: 0.5;
-        }
-      }
     }
     &_void {
       width: 99px;
       height: 44px;
       position: relative;
       @include ovalBtn;
-      background: $primary-gradient;
+      color: $primary-color;
+      background: white;
       margin-right: -5px;
-      &:disabled {
-        cursor: default;
-        background: $primary-gradient05;
-        &:active {
-          box-shadow: none;
-        }
-      }
-      &:active {
-        box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3),
-          inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
-      }
+      box-shadow:
+        1px 1px 0px 0.5px rgba(188, 156, 255, 1) inset,
+        -1px 1px 0px 0.5px rgba(188, 156, 255, 1) inset,
+        -1px -1px 0px 0.5px rgba(139, 164, 249, 1) inset,
+        1px -1px 0px 0.5px rgba(139, 164, 249, 1) inset;
     }
     &_text {
       border: 0;
-      cursor: pointer;
       outline: none;
       -ms-user-select: none;
       -moz-user-select: none;
@@ -68,13 +58,6 @@
       color: $primary-color;
       padding-left: 0px;
       padding-right: 0px;
-      &:disabled {
-        cursor: default;
-        color: $dark50;
-        &:active {
-          opacity: 1;
-        }
-      }
     }
     &_fill-arrow {
       width: 100%;
@@ -83,43 +66,22 @@
       @include byClick;
       color: $white-text;
       background: $primary-gradient;
-      &:disabled {
-        cursor: default;
-        opacity: 0.5;
-      }
-    }
-  }
-  &__body {
-    &_style_void {
-      width: 95px;
-      height: 40px;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      background: #ffffff;
-      border-radius: 22px;
-      &:active {
-        box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(0, 0, 0, 0.3),
-          inset 0 0 0 60px transparentize($color: $primary-color, $amount: 0.91);
-      }
-    }
-  }
-  &__title {
-    &_style_void {
-      color: $primary-color;
-      position: relative;
-      top: (20- 7.5) + px;
+      padding-left: 95px;
     }
   }
   &__arrow {
-    &_style_fill-arrow {
-      font-size: 24px !important;
-      line-height: 24px !important;
-      display: flex !important;
-      position: relative;
-      flex-direction: row-reverse;
-      left: 4%;
-      bottom: 19px;
-    }
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 15px;
+    text-transform: none;
+    margin-left: 49px;
+    position: relative;
+    top: 9px;
+    left: 10px;
   }
+}
+.button_disable.button_style_text {
+  color: $dark50;
 }

@@ -76,11 +76,22 @@
     text-transform: uppercase;
     color: $dark50;
   }
-  &__buttonRow {
-    margin-bottom: 30px;
-    margin-right: 20px;
+  &__button-row {
+    &:nth-child(4) {
+      margin-top: 28px;
+      margin-bottom: 57px;
+    }
+    &:nth-child(1) {
+      margin-right: 26px;
+    }
+    &:nth-child(5) {
+      margin-bottom: 43px;
+    }
+    &:nth-child(6) {
+      margin-bottom: 36px;
+    }
   }
-  &__buttonBig {
-    margin-bottom: 40px;
+  &__button-big {
+    margin-bottom: 56px;
   }
 }
