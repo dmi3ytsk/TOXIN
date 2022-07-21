@@ -1,7 +1,7 @@
 @import "../../vars.scss";
 
 .root {
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   &__header {
     color: $dark100;
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     &-column {
-      width: 170px;
+      min-width: 170px;
       border: 1px solid $dark25;
       &:first-child {
         background: $primary-gradient;

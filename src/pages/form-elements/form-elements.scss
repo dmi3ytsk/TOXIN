@@ -52,6 +52,11 @@
         margin-top: -2px;
       }
     }
+    .checkbox-expand-list__content {
+      .checkbox:nth-child(4) {
+        margin-bottom: 11px;
+      }
+      }
   }
   &__element-title {
     display: flex;

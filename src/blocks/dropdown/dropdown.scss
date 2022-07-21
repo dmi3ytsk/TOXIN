@@ -8,7 +8,7 @@
   margin-bottom: 10px;
   cursor: pointer;
   display: flex;
-  height: $btn-height;
+  min-height: $btn-height;
   justify-content: space-between;
   padding: 0 15px;
   position: relative;

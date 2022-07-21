@@ -26,11 +26,11 @@
   }
   &__filters {
     @media (max-width: 630px) {
-      width: 310px;
+      max-width: 310px;
       margin-left: 60px;
     }
     @media (max-width: 630px) {
-      width: 300px;
+      max-width: 300px;
       margin-left: 10px;
       justify-content: center;
     }
@@ -64,10 +64,10 @@
     max-width: 860px;
     margin-left: 48px;
     @media (max-width: 1200px) {
-      width: 570px;
+      max-width: 570px;
     }
     @media (max-width: 897px) {
-      width: 290px;
+      max-width: 290px;
     }
     @media (max-width: 600px) {
       margin-left: 0px;
@@ -79,7 +79,7 @@
       margin-left: 10px;
       margin-bottom: 21px;
       @media (max-width: 897px) {
-        width: 290px;
+        max-width: 290px;
       }
     }
     &-thumbnails {
@@ -91,7 +91,7 @@
       }
     }
     &-pagination {
-      width: 210px;
+      max-width: 210px;
       margin: 0 auto;
       @media (max-width: 897px) {
         margin-left: -10px;

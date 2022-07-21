@@ -3,7 +3,7 @@
 .header {
   background: #ffffff;
   box-shadow: 0px 10px 20px $dark5;
-  height: 70px;
+  // min-height: 70px;
   position: relative;
   padding: 0 10px;
   &__body {
@@ -28,6 +28,8 @@
     }
   }
   &__nav {
+    margin-top: 11px;
+    margin-bottom: 11px;
     &-list {
       list-style: none;
       margin-right: 23px;
@@ -35,6 +37,7 @@
         display: none;
       }
       &-dropdown {
+        margin-top: 1px;
         display: flex;
         justify-content: space-between;
         width: 74px;

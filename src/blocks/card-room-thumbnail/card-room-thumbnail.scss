@@ -1,15 +1,15 @@
 @import "../../vars.scss";
 
 .card-room-thumbnail {
-  width: 270px;
-  height: 257px;
+  max-width: 270px;
+  max-height: 257px;
   background: #ffffff;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   &__room-photos {
     margin-bottom: 20px;
-    height: 151.44px;
+    max-height: 151.44px;
     &:hover {
       .card-room-thumbnail__room-photos-carousel-left,
       .card-room-thumbnail__room-photos-carousel-right {
