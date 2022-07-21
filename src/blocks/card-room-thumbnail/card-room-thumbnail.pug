@@ -8,8 +8,8 @@ mixin card-room-thumbnail (options)
           img(src=`../../blocks/card-room-thumbnail/img/room/room-${roomNumber}/room-thumbnail-${roomNumber}.jpg` alt=`Фото апартаменты №${roomNumber}` width="100%").card-room-thumbnail__room-photos-photo
           - if (isCarousel)
             .card-room-thumbnail__room-photos-carousel 
-              .card-room-thumbnail__room-photos-carousel-left.material-icons expand_more
-              .card-room-thumbnail__room-photos-carousel-right.material-icons expand_more 
+              .card-room-thumbnail__room-photos-carousel-left expand_more
+              .card-room-thumbnail__room-photos-carousel-right expand_more 
               .card-room-thumbnail__room-photos-carousel-nav
                 .card-room-thumbnail__room-photos-carousel-nav-circle_active
                 .card-room-thumbnail__room-photos-carousel-nav-circle

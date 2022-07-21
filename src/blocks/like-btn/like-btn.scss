@@ -36,8 +36,12 @@
     cursor: pointer;
   }
   &__heart {
-    font-size: 10px !important;
-    line-height: 12px !important;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: none;
     color: $dark25;
     margin-left: 4px;
   }

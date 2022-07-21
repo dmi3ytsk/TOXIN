@@ -27,13 +27,20 @@
       bottom: 101px;
       color: #ffffff;
       &-left {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 15px;
+        text-transform: none;
         visibility: hidden;
         position: absolute;
         display: flex;
         text-align: center;
+        justify-content: center;
         padding-top: 10px;
-        height: 44px;
-        width: 150px;
+        min-height: 44px;
+        min-width: 150px;
         transform: rotate(90deg);
         cursor: pointer;
         left: -53px;
@@ -41,13 +48,20 @@
         border-bottom-left-radius: 4px;
       }
       &-right {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 15px;
+        text-transform: none;
         visibility: hidden;
         position: absolute;
         display: flex;
         text-align: center;
+        justify-content: center;
         padding-top: 10px;
-        height: 44px;
-        width: 150px;
+        min-height: 44px;
+        min-width: 150px;
         transform: rotate(-90deg);
         cursor: pointer;
         left: 173px;

@@ -18,9 +18,12 @@
   }
   &__icon {
     @include gradientText;
-
-    font-size: 48px !important;
-    line-height: 48px !important;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: none;
     margin-bottom: 20px;
   }
 }

@@ -1,3 +1,4 @@
+include ../button/button
 
 mixin header(options)
   -const { isAuth, username } = options
@@ -21,7 +22,7 @@ mixin header(options)
             a(href="../index/index.pug" title="О нас") О нас
           li.header__nav-list-item.header__nav-list-dropdown
             span Услуги
-            span.material-icons expand_more
+            span.header__nav-list-dropdown-icon expand_more
             ul.list-dropdown
               each service in services
                 li.list-dropdown__item 
@@ -32,7 +33,7 @@ mixin header(options)
             a(href="../index/index.pug" title="Новости") Новости
           li.header__nav-list-item.header__nav-list-dropdown
             span Соглашения
-            span.material-icons expand_more
+            span.header__nav-list-dropdown-icon expand_more
             ul.list-dropdown
               each doc in docs
                 li.list-dropdown__item 
@@ -43,12 +44,6 @@ mixin header(options)
             .header__auth-block-username=username
           -else
             .header__auth-block-button
-              a(href="../../pages/login/login.pug") 
-                button(name=`войти`).login-btn
-                  .login-btn__body
-                    .login-btn__title войти
+              +button({ isActive: true, title: "войти", style: "void", page:"../../pages/login/login.pug"})
             .header__auth-block-button
-              a(href="../../pages/registration/registration.pug") 
-                button(name=`зарегистрироваться`).reg-btn
-                  .reg-btn__body
-                    .reg-btn__title зарегистрироваться
+              +button({ isActive: true, title: "зарегистрироваться", style: "fill", page:"../../pages/registration/registration.pug"})

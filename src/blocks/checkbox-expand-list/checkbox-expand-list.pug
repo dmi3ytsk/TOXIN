@@ -7,6 +7,6 @@ mixin checkbox-expand-list(options)
 
       .checkbox-expand-list.js-checkbox-expand-list(class=`${width}-block`)
         .checkbox-expand-list__title.js-checkbox-expand-list__title=title
-          i.material-icons.checkbox-expand-list__icon.js-checkbox-expand-list__icon=icon 
+          i.checkbox-expand-list__icon.js-checkbox-expand-list__icon=icon 
         .checkbox-expand-list__content.js-checkbox-expand-list__content(class=`${contentClass}`)
           +checkbox({list: expandList})
