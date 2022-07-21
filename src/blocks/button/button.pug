@@ -14,6 +14,3 @@ mixin button(attr)
       default 
         - classStyle = "text"
     a(href=`${page}` class=`button${status} button_style_${classStyle} `)=title
-      case style 
-        when "fillArrow"
-          i.button__arrow.button__arrow_style_fill-arrow=arrow

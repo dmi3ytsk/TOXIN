@@ -21,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
   &__roomNumber {
     @extend .font-title;
@@ -70,7 +70,7 @@
     justify-content: space-between;
   }
   &__guests {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     &-title {
       @extend .font-label;
     }

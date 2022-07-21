@@ -1,7 +1,7 @@
 @import "../../vars.scss";
 
 .card-registration {
-  width: 380px;
+  min-width: 380px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -9,7 +9,7 @@
   margin-top: 19px;
   margin-bottom: 19px;
   @media (max-width: 400px) {
-    width: 312px;
+    min-width: 312px;
   }
   &__title {
     @extend .font-title;
@@ -40,5 +40,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    & .button_style_void {
+      padding: 14px 28px 13px 27px;
+    }
   }
 }

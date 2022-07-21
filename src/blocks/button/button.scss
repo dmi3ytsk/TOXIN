@@ -33,13 +33,12 @@
       margin-right: -5px;
     }
     &_void {
-      width: 99px;
-      height: 44px;
+      max-width: 99px;
+      max-height: 44px;
       position: relative;
       @include ovalBtn;
       color: $primary-color;
       background: white;
-      margin-right: -5px;
       box-shadow:
         1px 1px 0px 0.5px rgba(188, 156, 255, 1) inset,
         -1px 1px 0px 0.5px rgba(188, 156, 255, 1) inset,
@@ -62,25 +61,31 @@
     }
     &_fill-arrow {
       display: flex;
-      justify-content: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
       max-height: 44px;
       @include ovalBtn;
       @include byClick;
       color: $white-text;
       background: $primary-gradient;
-
-      padding-left: 37px;
+      padding-right: 11px;
+      line-height: 16px;
+      &::before {
+        content: "bt";
+        order: 2;
+        opacity: 0;
+      }
+      &::after {
+        content: "arrow_forward";
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 15px;
+        text-transform: none;
+        order: -1;
+      }
     }
-  }
-  &__arrow {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 15px;
-    text-transform: none;
-    position: relative;
-    left: 24%;
   }
 }
 .button_disable.button_style_text {
