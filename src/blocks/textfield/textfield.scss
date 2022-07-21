@@ -35,9 +35,21 @@
     right: 9px;
     top: 25%;
     pointer-events: none;
-  }
+    &::after {
+      content: "expand_more";
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+    }
+}
   &__forward-arrow {
     @extend .textfield__down-arrow;
+    &::after {
+      content: "arrow_forward";
+    }
     pointer-events: auto;
     border: 0;
     top: 20%;

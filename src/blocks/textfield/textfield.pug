@@ -4,24 +4,24 @@ mixin textfield(options)
     form(action="" class=`${width}-block`).textfield__form
       case calendar
         when "on"
-          input(type="text", placeholder=placeholder, class="datepicker-here").textfield__input
+          input(type="text", placeholder=placeholder, class="datepicker-here" readonly).textfield__input
           case dropdown
             when 1
-              i.textfield__down-arrow.material-icons expand_more
+              i.textfield__down-arrow
         when "2in1"
-          input(type="text", placeholder=placeholder, class=elId, class="datepicker-here").textfield__input
+          input(type="text", placeholder=placeholder, class=elId, class="datepicker-here" readonly).textfield__input
           case dropdown
             when 1
-              i.textfield__down-arrow.material-icons expand_more
+              i.textfield__down-arrow
         when "on+range"
-          input(type="text", placeholder=placeholder, data-range="true" data-multiple-dates-separator=" - " class="datepicker-here").textfield__input
+          input(type="text", placeholder=placeholder, data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" readonly).textfield__input
           case dropdown
             when 1
-              i.textfield__down-arrow.material-icons expand_more
+              i.textfield__down-arrow
         when "off"
           input(type="text", placeholder=placeholder, class="js-mask-date").textfield__input
         default
           input(type=type, placeholder=placeholder).textfield__input
           case subscribe
             when 1
-              button.textfield__forward-arrow.material-icons arrow_forward
+              button.textfield__forward-arrow
