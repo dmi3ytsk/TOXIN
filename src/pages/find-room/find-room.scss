@@ -50,7 +50,7 @@
     &:first-child {
       margin-top: 0px;
     }
-    &.mt21 {
+    &:nth-child(3) {
       margin-top: 21px;
     }
     &:nth-child(7) {

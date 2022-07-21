@@ -20,7 +20,7 @@ block main
       section.room-search-page__filters
         .room-search-page__filter-header даты пребывания в отеле
         +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", width: "sm", dropdown: 1})
-        .room-search-page__filter-header.mt21 гости
+        .room-search-page__filter-header гости
         +dropdown({ itemList: guests, width: "sm", type: "sum" })
         +range-slider({
           label: "диапазон цены",

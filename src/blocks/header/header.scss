@@ -123,6 +123,7 @@
   opacity: 0;
 }
 .menu__btn {
+  opacity: 0;
   display: flex;
   align-items: center;
   position: absolute;
@@ -132,6 +133,9 @@
   height: 26px;
   cursor: pointer;
   z-index: 9;
+  @media (max-width: 956px) {
+    opacity: 1;
+  }
 }
 
 #menu__toggle:checked + .menu__btn {
