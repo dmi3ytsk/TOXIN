@@ -5,6 +5,7 @@
   padding: 13px 20px 15px 18px;
   border-radius: 22px;
   border: 0;
+  text-decoration: none;
   outline: none;
   -ms-user-select: none;
   -moz-user-select: none;
@@ -60,13 +61,15 @@
       padding-right: 0px;
     }
     &_fill-arrow {
-      width: 100%;
-      height: 44px;
+      display: flex;
+      justify-content: center;
+      max-height: 44px;
       @include ovalBtn;
       @include byClick;
       color: $white-text;
       background: $primary-gradient;
-      padding-left: 95px;
+
+      padding-left: 37px;
     }
   }
   &__arrow {
@@ -76,10 +79,8 @@
     font-size: 24px;
     line-height: 15px;
     text-transform: none;
-    margin-left: 49px;
     position: relative;
-    top: 9px;
-    left: 10px;
+    left: 24%;
   }
 }
 .button_disable.button_style_text {
