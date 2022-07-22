@@ -2,7 +2,7 @@
   (function () {
     let customWidth;
     if (document.querySelector(".room-search-page")) {
-      customWidth = "style='transform: scale(0.835) translateX(-32px) translateY(-52px)'"
+      customWidth = "style='transform: scale(0.835) translateX(-32px) translateY(-44px)'"
     }
     var VERSION = "2.2.3",
       pluginName = "datepicker",
