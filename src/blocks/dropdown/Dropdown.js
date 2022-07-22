@@ -46,9 +46,7 @@ class Dropdown {
       }
     });
     if (isRooms) {
-      // Actions with each row
       row.forEach(function (each) {
-        // For each item vars block
         const id = each.dataset.id;
         const buttons = each.querySelectorAll(".js-counter-btn");
         const counter = each.querySelector(".js-counter");
@@ -66,23 +64,19 @@ class Dropdown {
           ? decr.classList.remove("counter-btn_disable")
           : decr.classList.add("counter-btn_disable");
 
-        // Change counters by incr-decr buttons + write result in selector
         buttons.forEach(function (each) {
           each.addEventListener("click", function (event) {
             const value = event.target;
-            // Principle of operation decr/incr buttons
             if (value.dataset.action == "decrement" && counter.innerHTML > 0) {
               itemQuantity[id] -= 1;
             } else if (value.dataset.action == "increment") {
               itemQuantity[id] += 1;
             }
             counter.innerHTML = itemQuantity[id];
-            // Add/remove disable class to decr button
             counter.innerHTML > 0
               ? decr.classList.remove("counter-btn_disable")
               : decr.classList.add("counter-btn_disable");
-            // Placeholder if all counters = 0
-            let sumValue = Object.values(itemQuantity).reduce((a, b) => a + b);
+            sumValue = Object.values(itemQuantity).reduce((a, b) => a + b);
             //
             let resultSelection = Object.entries(itemQuantity)
               .filter(([, val]) => val > 0)
@@ -100,34 +94,27 @@ class Dropdown {
         });
       });
     } else {
-      // Actions with each row
       row.forEach(function (each) {
-        // For each item vars block
         const id = each.dataset.id;
         const buttons = each.querySelectorAll(".js-counter-btn");
         const counter = each.querySelector(".js-counter");
         const decr = each.querySelector(".js-decr");
-
-        itemQuantity[id] = 0;
-        counter.innerHTML = itemQuantity[id];
-        // Clear all counters by click on clear button
         doc.addEventListener("click", function () {
           const bottomBtn = event.target;
           if (bottomBtn.dataset.action == "clear" && !isRooms) {
             itemQuantity[id] = 0;
             decr.classList.add("counter-btn_disable");
             clearBtn.classList.add("ezdropdown__button_hide");
+            counter.innerHTML = itemQuantity[id];
+            selection.innerHTML = "Сколько гостей"
           }
-          counter.innerHTML = itemQuantity[id];
-          let itemQuantityValues = Object.values(itemQuantity);
-          sumValue = itemQuantityValues.reduce((a, b) => a + b);
-          sumValue == 0
-            ? (selection.innerHTML = "Сколько гостей")
-            : sumValue == 1
-            ? (selection.innerHTML = sumValue + " гость")
-            : (selection.innerHTML = sumValue + " гостей");
         });
-        // Change counters by incr-decr buttons + write result in selector
+        itemQuantity[id] = 0;
+        counter.innerHTML = itemQuantity[id];
+        counter.innerHTML > 0
+          ? decr.classList.remove("counter-btn_disable")
+          : decr.classList.add("counter-btn_disable");
+
         buttons.forEach(function (each) {
           each.addEventListener("click", function (event) {
             const value = event.target;
@@ -140,16 +127,27 @@ class Dropdown {
             counter.innerHTML > 0
               ? decr.classList.remove("counter-btn_disable") &
                 clearBtn.classList.remove("ezdropdown__button_hide")
-              : decr.classList.add("counter-btn_disable");
-            let itemQuantityValues = Object.values(itemQuantity);
-            sumValue = itemQuantityValues.reduce((a, b) => a + b);
-            if (sumValue == 0) {
-              selection.innerHTML = "Сколько гостей";
-              clearBtn.classList.add("ezdropdown__button_hide");
-            } else if (sumValue == 1) {
-              selection.innerHTML = sumValue + " гость";
+              : decr.classList.add("counter-btn_disable")
+            sumValue = Object.values(itemQuantity).reduce(
+              (a, b) => a + b
+            );
+            const guestsValue = Object.values(itemQuantity)[0] + Object.values(itemQuantity)[1];
+            const infantsValue = Object.values(itemQuantity)[2];
+            const guestText = guestsValue === 1 ? " гость" : " гостей";
+            const infantsText = infantsValue === 1 ? " младенец" : " младенцев";
+
+            let resultSelection = "";
+            if (guestsValue > 0 && infantsValue > 0) {
+              resultSelection = `${guestsValue} ${guestText}, ${infantsValue} ${infantsText}`
+            } else if (guestsValue > 0 && !infantsValue > 0) {
+              resultSelection = `${guestsValue} ${guestText}`
+            } else if (!guestsValue > 0 && infantsValue > 0) {
+              resultSelection = `${infantsValue} ${infantsText}`
             }
-            selection.innerHTML = sumValue + " гостей";
+            sumValue === 0
+              ? (selection.innerHTML = "Сколько гостей") &
+              clearBtn.classList.add("ezdropdown__button_hide")
+              : (selection.innerHTML = resultSelection);
           });
         });
       });
