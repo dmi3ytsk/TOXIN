@@ -1,5 +1,9 @@
 (function (window, $, undefined) {
   (function () {
+    let customWidth;
+    if (document.querySelector(".room-search-page")) {
+      customWidth = "style='transform: scale(0.835) translateX(-32px) translateY(-52px)'"
+    }
     var VERSION = "2.2.3",
       pluginName = "datepicker",
       autoInitSelector = ".datepicker-here",
@@ -8,7 +12,7 @@
       containerBuilt = false,
       baseTemplate =
         "" +
-        '<div class="datepicker">' +
+        `<div class="datepicker" ${customWidth}>` +
         '<i class="datepicker--pointer"></i>' +
         '<nav class="datepicker--nav"></nav>' +
         '<div class="datepicker--content"></div>' +

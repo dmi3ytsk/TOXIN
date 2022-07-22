@@ -3,7 +3,7 @@
 .header {
   background: #ffffff;
   box-shadow: 0px 10px 20px $dark5;
-  // min-height: 70px;
+  min-height: 70px;
   position: relative;
   padding: 0 10px;
   &__body {
@@ -30,7 +30,10 @@
   &__nav {
     margin-top: 11px;
     margin-bottom: 11px;
-    &-list {
+    @media (max-width: 956px) {
+      margin-top: 24px;
+    }
+  &-list {
       list-style: none;
       margin-right: 23px;
       @media (max-width: 956px) {
