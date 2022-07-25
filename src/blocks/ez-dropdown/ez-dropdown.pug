@@ -1,0 +1,17 @@
+mixin ez-dropdown(attr)
+  - const { itemList, type } = attr
+    .ezdropdown.js-ezdropdown(data-type=`${type}`)
+      .ezdropdown__selection.js-ezdropdown__selection
+      .ezdropdown__menu.js-ezdropdown__menu
+        each value in itemList
+          .ezdropdown__row.js-ezdropdown__row(data-id=`${value}`)
+            .ezdropdown__row-title=value
+            span.ezdropdown__row-action
+              button.ezdropdown__row-button.js-ezdropdown__row-button.ezdropdown__row-button_disable(data-action="decrement") -
+              span.ezdropdown__row-counter.js-ezdropdown__row-counter 
+              button.ezdropdown__row-button.js-ezdropdown__row-button(data-action="increment") +
+        case type 
+          when "guests"
+            .ezdropdown__buttons
+              span.ezdropdown__button.ezdropdown__button_hide.js-ezdropdown__button-clear(data-action="clear") Очистить
+              span.ezdropdown__button(data-action="accept") Применить
