@@ -12,7 +12,7 @@ import "../../blocks/footer/footer.js";
 import "../../blocks/textfield/textfield.scss";
 
 import "../../blocks/dropdown/dropdown.scss";
-import "../../blocks/dropdown/Dropdown.js";
+import "../../blocks/dropdown/dropdown.js";
 
 import "../../blocks/datepicker/datepicker.scss";
 import "../../blocks/datepicker/datepicker.js";

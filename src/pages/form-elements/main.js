@@ -9,7 +9,7 @@ import "../../blocks/textfield/textfield.scss";
 import "../../blocks/textfield/textfield.js";
 
 import "../../blocks/dropdown/dropdown.scss";
-import "../../blocks/dropdown/Dropdown.js";
+import "../../blocks/dropdown/dropdown.js";
 
 import "../../blocks/datepicker/datepicker.scss";
 import "../../blocks/datepicker/datepicker.js";
