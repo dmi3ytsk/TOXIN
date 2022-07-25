@@ -42,6 +42,11 @@
       margin-bottom: 37px;
       @extend .sm-block;
     }
+    & .dropdown,
+    .textfield__form,
+    .checkbox-expand-list {
+      @extend .sm-block;
+    }
   }
   &__filter-header {
     @extend .font-label;

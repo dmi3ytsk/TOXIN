@@ -58,10 +58,9 @@
   &__in,
   &__out {
     @extend .font-label;
-    .xsm-block {
-      @media (max-width: 390px) {
-        max-width: 143px;
-      }
+    max-width: $xsm-block-width;
+    @media (max-width: 390px) {
+      max-width: 143px;
     }
   }
   &__in-out {

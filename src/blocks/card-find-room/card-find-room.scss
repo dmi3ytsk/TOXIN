@@ -29,6 +29,10 @@
   &__out {
     @extend .font-label;
     margin: 0;
+    max-width: $xsm-block-width;
+    @media (max-width: 390px) {
+      max-width: 143px;
+    }
   }
   &__guests {
     margin-top: 12px;

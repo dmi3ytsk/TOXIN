@@ -19,9 +19,9 @@ block main
     .room-search-page__body
       section.room-search-page__filters
         .room-search-page__filter-header даты пребывания в отеле
-        +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", width: "sm", dropdown: 1})
+        +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", dropdown: 1})
         .room-search-page__filter-header гости
-        +dropdown({ itemList: guests, width: "sm", type: "sum" })
+        +dropdown({ itemList: guests, type: "guests" })
         +range-slider({
           label: "диапазон цены",
           description: "Стоимость за сутки пребывания в номере",
@@ -35,8 +35,8 @@ block main
         .room-search-page__filter-header доступность
         +rich-checkbox({list: richList})
         .room-search-page__filter-header удобства номера
-        +dropdown({ itemList: apartment, width: "sm", type: "each" })
-        +checkbox-expand-list({title: "дополнительные удобства", expandList: expandableList, width: "sm"})
+        +dropdown({ itemList: apartment, type: "rooms" })
+        +checkbox-expand-list({title: "дополнительные удобства", expandList: expandableList})
 
       section.room-search-page__rooms
         h1.room-search-page__rooms-header Номера, которые мы для вас подобрали

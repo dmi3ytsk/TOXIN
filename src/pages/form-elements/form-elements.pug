@@ -33,22 +33,22 @@ block content
           .form-elements__element-title
             span.form-elements__main-title text field
             span.form-elements__sub-title default
-          +textfield({ type: "email", placeholder: "Email", width: "def"})
+          +textfield({ type: "email", placeholder: "Email", })
 
           .form-elements__element-title
             span.form-elements__main-title text field
             span.form-elements__sub-title Hover / Focus
-          +textfield({ type: "text", placeholder: "This is pretty awesome", width: "def"})
+          +textfield({ type: "text", placeholder: "This is pretty awesome"})
 
           .form-elements__element-title
             span.form-elements__main-title dropdown
             span.form-elements__sub-title 
-          +dropdown({ itemList: guests, width: "def", type: "sum" })
+          +dropdown({ itemList: guests, type: "guests" })
 
           .form-elements__element-title
             span.form-elements__main-title masked text field
             span.form-elements__sub-title 
-          +textfield({ calendar: "off",placeholder: "ДД-ММ-ГГГГ", width: "def"})
+          +textfield({ calendar: "off",placeholder: "ДД-ММ-ГГГГ"})
 
         .form-elements__column-block
           section.form-elements__element-content
@@ -56,22 +56,22 @@ block content
               .form-elements__element-content-stars
                 span.form-elements__main-title date Dropdown
                 span.form-elements__sub-title 
-              +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1, elId: "js-dd1"})
+              +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1, elId: "js-dd1"})
             span
               .form-elements__element-content-to
                 span.form-elements__main-title date Dropdown
                 span.form-elements__sub-title 
-              +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", width: "xsm", dropdown: 1, elId: "js-dd2"})
+              +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1, elId: "js-dd2"})
         .form-elements__column-block
           .form-elements__element-title
             span.form-elements__main-title filter date dropdown
             span.form-elements__sub-title 
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", width: "sm", dropdown: 1})
+          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on+range", dropdown: 1})
 
         .form-elements__element-title
           span.form-elements__main-title subscription text field
           span.form-elements__sub-title 
-        +textfield({ type: "email", placeholder: "Email", width: "sm", subscribe: 1})
+        +textfield({ type: "email", placeholder: "Email", subscribe: 1})
 
       .form-elements__column
 
@@ -153,36 +153,34 @@ block content
           span.form-elements__main-title dropdown
           span.form-elements__sub-title default
         +dropdown({ itemList: apartment, 
-          width: "sm",
-          type: "each" })
+          type: "rooms" })
 
         .form-elements__element-title.form-elements__element-title_width
           span.form-elements__main-title dropdown
           span.form-elements__sub-title expanded
         +dropdown({ itemList: apartment, 
-          width: "sm",
-          type: "each" })
+          type: "rooms" })
 
       .form-elements__column
 
         .form-elements__element-title
           span.form-elements__main-title dropdown
           span.form-elements__sub-title 
-        +dropdown({ itemList: guests, width: "def", type: "sum" })
+        +dropdown({ itemList: guests, type: "guests" })
 
       .form-elements__column
 
         .form-elements__element-title
           span.form-elements__main-title dropdown
           span.form-elements__sub-title 
-        +dropdown({ itemList: guests, width: "def", type: "sum" })
+        +dropdown({ itemList: guests, type: "guests" })
 
     .form-elements__row
 
       .form-elements__column
 
-        +checkbox-expand-list({title: "expandable checkbox list", width: "sm"})
-        +checkbox-expand-list({title: "expandable checkbox list", expandList: expandableList, isOpen: true, width: "sm"})
+        +checkbox-expand-list({title: "expandable checkbox list"})
+        +checkbox-expand-list({title: "expandable checkbox list", expandList: expandableList, isOpen: true})
 
       .form-elements__column
 
