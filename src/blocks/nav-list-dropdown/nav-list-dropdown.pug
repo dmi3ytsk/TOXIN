@@ -1,0 +1,5 @@
+mixin nav-list-dropdown(list)
+  ul.list-dropdown
+    each item in list
+      li.list-dropdown__item 
+        a(href=item[1] title=item[0]).list-dropdown__item-link=item[0]

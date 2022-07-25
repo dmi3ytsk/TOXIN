@@ -1,5 +1,6 @@
 include ../button/button
 include ../hamburger-menu/hamburger-menu
+include ../nav-list-dropdown/nav-list-dropdown
 
 mixin header(options)
   -const { isAuth, username } = options
@@ -18,10 +19,7 @@ mixin header(options)
           li.header__nav-list-item.header__nav-list-dropdown
             span Услуги
             span.header__nav-list-dropdown-icon expand_more
-            ul.list-dropdown
-              each service in services
-                li.list-dropdown__item 
-                  a(href=service[1] title=service[0])=service[0]
+            +nav-list-dropdown(services)
           li.header__nav-list-item
             a(href="../index/index.pug" title="Вакансии") Вакансии
           li.header__nav-list-item
@@ -29,10 +27,7 @@ mixin header(options)
           li.header__nav-list-item.header__nav-list-dropdown
             span Соглашения
             span.header__nav-list-dropdown-icon expand_more
-            ul.list-dropdown
-              each doc in docs
-                li.list-dropdown__item 
-                  a(href=doc[1] title=doc[0])=doc[0]
+            +nav-list-dropdown(docs)
         .header__auth-block
           -if(isAuth)
             .header__auth-block-pipe
