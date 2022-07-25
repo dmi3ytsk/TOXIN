@@ -1,7 +1,7 @@
 mixin toggle(options)
-  - const { isTurn } = options
+  - const { content, isTurn } = options
     .toggle
-      label.toggle__content Получать спецпредложения
+      label.toggle__content=content
         input(type="checkbox" checked=isTurn).toggle__wrapper
         .toggle__thumb
 

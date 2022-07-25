@@ -16,7 +16,7 @@ mixin card-registration ()
       h3.card-registration__label-login данные для входа в сервис
       +textfield({ type: "email", placeholder: "Email"})
       +textfield({ type: "text", placeholder: "Пароль"})
-      +toggle(0)
+      +toggle({content: "Получать спецпредложения"})
       .card-registration__chose-room-btn
         +button({ isActive: true, title: "зарегистрироваться", style: "fillArrow", page: "../index/index.pug"})
       .card-registration__footer
