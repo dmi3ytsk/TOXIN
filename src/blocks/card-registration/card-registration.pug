@@ -9,7 +9,8 @@ mixin card-registration ()
       h1.card-registration__title Регистрация аккаунта
       +textfield({ type: "text", placeholder: "Имя"})
       +textfield({ type: "text", placeholder: "Фамилия"})
-      +radio()
+      +radio("Мужчина", "gender", true)
+      +radio("Женщина", "gender")
       h3.card-registration__label-birth дата рождения
       +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "on", actionButton: "dropdown"})
       h3.card-registration__label-login данные для входа в сервис

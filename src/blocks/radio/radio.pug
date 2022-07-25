@@ -1,9 +1,6 @@
-mixin radio()
+mixin radio(content, type, isChecked)
+
   span.radio
-    label.radio__content Мужчина
-      input(type="radio" name="gender" checked).radio__wrapper
-      .radio__thumb
-  span.radio
-    label.radio__content Женщина
-      input(type="radio" name="gender" ).radio__wrapper
+    label.radio__content=content
+      input(type="radio" name=`${type}` checked=isChecked).radio__wrapper
       .radio__thumb
