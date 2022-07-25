@@ -2,6 +2,7 @@ extends ../../layouts/base
 
 include ../../blocks/header/header
 include ../../blocks/footer/footer
+include ../../blocks/global-menu-button/global-menu-button
 
 block vars
   -const title = "UI-Kit Headers-Footers";
@@ -13,8 +14,7 @@ block vars
       ]
 
 block content
-  a(href="../index/index.pug").global-menu-button
-    img(src="../../pages/headers-footers/img/watermark-logo.png" alt="global menu") 
+  +global-menu-button()
   section.headers-footers
     +header({isAuth: false})
     +header({isAuth: true, username: "Юлий Цезарь"})

@@ -2,12 +2,12 @@ extends ../../layouts/base
 
 include ../../blocks/color-block/color-block
 include ../../blocks/type-block/type-block
+include ../../blocks/global-menu-button/global-menu-button
 
 block vars
   - const title = "Colors&Type";
 block content
-  a(href="../index/index.pug").global-menu-button
-    img(src="../../pages/colors-type/img/watermark-logo.png" alt="global menu") 
+  +global-menu-button()
   section.colors-type
     .colors-type__row
       .colors-type__colors-column

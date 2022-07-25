@@ -15,15 +15,13 @@ include ../../blocks/bullet-list/bullet-list
 include ../../blocks/about-room/about-room
 include ../../blocks/user-feedback/user-feedback
 include ../../blocks/range-slider/range-slider
-
+include ../../blocks/global-menu-button/global-menu-button
 
 block vars
   include ./const.pug
 
 block content
-  a(href="../index/index.pug").global-menu-button
-    img(src="../../pages/form-elements/img/watermark-logo.png" alt="global menu") 
-
+  +global-menu-button()
   section.form-elements
 
     .form-elements__row

@@ -5,13 +5,13 @@ include ../../blocks/card-registration/card-registration
 include ../../blocks/card-buy-room/card-buy-room
 include ../../blocks/card-login/card-login
 include ../../blocks/card-room-thumbnail/card-room-thumbnail
+include ../../blocks/global-menu-button/global-menu-button
 
 block vars
   include ./const.pug
 
 block content
-  a(href="../index/index.pug").global-menu-button
-    img(src="../../pages/cards/img/watermark-logo.png" alt="global menu") 
+  +global-menu-button()
   section.cards   
     .cards__body 
       .cards__column

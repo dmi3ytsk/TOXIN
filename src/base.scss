@@ -1,5 +1,6 @@
 @import "./vars.scss";
 @import "./mixins.scss";
+@import "./blocks/global-menu-button/global-menu-button.scss";
 
 //-Fonts
 @include font-face("Quicksand", 700, "normal", "fonts/quicksand-bold");
@@ -17,11 +18,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-}
-.global-menu-button {
-  position: absolute;
-  top: 30px;
-  left: 30px;
 }
 .page-wrapper {
   display: flex;
