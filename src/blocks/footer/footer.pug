@@ -2,13 +2,16 @@ include ../textfield/textfield
 
 mixin footer(options)
   -const { isMobile } = options
-    -const smallFooter = isMobile?`-small-footer`:``
-      footer(class=`footer${smallFooter}`)
-        div(class=`footer__full${smallFooter}`)
+  -const mobileFooter = isMobile? "footer_mobile" : ""
+  -const mobileFooterFull = isMobile? "footer__full_mobile" : ""
+  -const mobileFooterCopyright = isMobile? "footer__copyright_mobile" : ""
+  -const mobileFooterLogo = isMobile? "footer__copyright-logo_mobile" : ""
+      footer(class=`${mobileFooter}`).footer
+        div(class=`${mobileFooterFull}`).footer__full
           .footer__body
             .footer__full-block
               a(href="../index/index.pug")
-                img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo`).footer__full-block-item
+                img(src="../../blocks/footer/img/toxin-logo.png" alt="Toxin Hotel Logo").footer__full-block-item
               .footer__full-block-item Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
             each block in footerFullBlocksData
               .footer__full-block 
@@ -24,10 +27,10 @@ mixin footer(options)
                   +textfield({ type: "email", placeholder: "Email", subscribe: 1})
 
 
-        div(class=`footer__copyright${smallFooter}`)
+        div(class=`${mobileFooterCopyright}`).footer__copyright
           .footer__body
-            a(href="../index/index.pug" class=`footer__copyright-logo${smallFooter}`) 
-              img(src=`../../blocks/footer/img/toxin-logo.png` alt=`Toxin Hotel Logo` class=`footer__copyright-logo${smallFooter}`)   
+            a(href="../index/index.pug" class=`${mobileFooterLogo}`).footer__copyright-logo 
+              img(src="../../blocks/footer/img/toxin-logo.png" alt="Toxin Hotel Logo" class=`${mobileFooterLogo}`).footer__copyright-logo   
             .footer__copyright-text Copyright © 2018 Toxin отель. Все права защищены.
             .footer__copyright-socials
               a(href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="fab fa-twitter")
