@@ -1,8 +1,10 @@
 mixin like-btn(options)
   - const { value, isLiked=false } = options
-  - const liked = isLiked? "liked":""
+  - const likedDesign = isLiked? "like-btn__design_liked":""
+  - const likedHeart = isLiked? "like-btn__heart_liked":""
+  - const likedLikes = isLiked? "like-btn__likes_liked":""
   - const heart = isLiked? "favorite":"favorite_border"
   .like-btn.js-like-btn
-    button.like-btn__design.js-like-btn__design(class=`${liked}` class=`js-${liked}`)
-      i.like-btn__heart.js-like-btn__heart(class=`${liked}` class=`js-${liked}`)=heart
-      .like-btn__likes.js-like-btn__likes(class=`${liked}` class=`js-${liked}`)=value
+    button.like-btn__design.js-like-btn__design(class=`${likedDesign}` class=`js-${likedDesign}`)
+      i.like-btn__heart.js-like-btn__heart(class=`${likedHeart}` class=`js-${likedHeart}`)=heart
+      .like-btn__likes.js-like-btn__likes(class=`${likedLikes}` class=`js-${likedLikes}`)=value

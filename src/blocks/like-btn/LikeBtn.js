@@ -11,7 +11,7 @@ class LikeBtn {
     const doc = this.element;
     const btn = doc.querySelector(".js-like-btn__design");
     const likes = doc.querySelector(".js-like-btn__likes");
-    const status = doc.querySelector(".js-liked");
+    const status = doc.querySelector(".js-like-btn__design_liked");
     const heart = doc.querySelector(".js-like-btn__heart");
     const likeProp = {
       isLiked: status ? false : true,
@@ -24,9 +24,9 @@ class LikeBtn {
   btnLiked(likeProp, btn, likes, heart) {
     likeProp.likeCount = likeProp.isLiked ? Number(likeProp.likeCount)+1 : Number(likeProp.likeCount)-1;
     likeProp.heartIcon = likeProp.isLiked ? "favorite" : "favorite_border";
-    btn.classList.toggle("liked");
-    likes.classList.toggle("liked");
-    heart.classList.toggle("liked");
+    btn.classList.toggle("like-btn__design_liked");
+    likes.classList.toggle("like-btn__likes_liked");
+    heart.classList.toggle("like-btn__heart_liked");
 
     likeProp.isLiked = !likeProp.isLiked;
     likes.innerHTML = likeProp.likeCount;

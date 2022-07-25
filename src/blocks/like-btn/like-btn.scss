@@ -34,6 +34,14 @@
     background-color: #ffffff;
     font-family: inherit;
     cursor: pointer;
+    &_liked {
+      @include gradientBorder;
+      $border: 1px;
+      border: solid $border transparent;
+      &:before {
+        margin: -$border;
+      }
+        }
   }
   &__heart {
     font-family: 'Material Icons';
@@ -44,6 +52,9 @@
     text-transform: none;
     color: $dark25;
     margin-left: 4px;
+    &_liked {
+      color: $primary-color;
+    }
   }
   &__likes {
     font-size: 10px;
@@ -51,21 +62,9 @@
     color: $dark25;
     margin-right: 11px;
     line-height: 16px;
-  }
-}
-.liked {
-  color: $primary-color;
-  @include gradientBorder;
-  $border: 1px;
-  border: solid $border transparent;
-  &:before {
-    margin: -$border;
-  }
-  .like-btn__heart {
-    margin-left: 3px;
-  }
-  .like-btn__likes {
-    margin-left: 3px;
+    &_liked {
+      color: $primary-color;
+    }
   }
 }
 .like-btn__box:checked + .like-btn__content:before,
