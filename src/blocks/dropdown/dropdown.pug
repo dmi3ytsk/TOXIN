@@ -1,19 +1,5 @@
+include ../ez-dropdown/ez-dropdown
+
 mixin dropdown(attr)
-  - const { itemList, width, type } = attr
-  - const widthClass = width ? `${width}-block` : "";
   .dropdown
-   .ezdropdown.js-ezdropdown(class=widthClass class=`${type}`)
-      .ezdropdown__selection.js-ezdropdown__selection
-      .ezdropdown__menu.js-ezdropdown__menu
-        each value in itemList
-          .ezdropdown__row.js-ezdropdown__row(data-id=`${value}`)
-            .ezdropdown__row-title=value
-            span.ezdropdown__row-action
-              button.counter-btn.js-counter-btn.decr.js-decr.counter-btn_disable(data-action="decrement") -
-              span.counter.js-counter 
-              button.counter-btn.js-counter-btn.incr(data-action="increment") +
-        case type 
-          when "sum"
-            .ezdropdown__buttons
-              span.ezdropdown__button.ezdropdown__button_hide.js-ezdropdown__button-clear(data-action="clear") Очистить
-              span.ezdropdown__button(data-action="accept") Применить
+    +ez-dropdown(attr)
