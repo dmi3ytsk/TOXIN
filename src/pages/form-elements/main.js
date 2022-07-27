@@ -11,11 +11,6 @@ import "../../blocks/textfield/textfield.js";
 import "../../blocks/dropdown/dropdown.scss";
 import "../../blocks/dropdown/dropdown.js";
 
-import "../../blocks/datepicker/datepicker.scss";
-import "../../blocks/datepicker/datepicker.js";
-import "../../blocks/datepicker/min-max-date.js";
-
-
 import "../../blocks/checkbox/checkbox.scss";
 
 import "../../blocks/radio/radio.scss";

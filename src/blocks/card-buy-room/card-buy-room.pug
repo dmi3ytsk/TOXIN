@@ -14,9 +14,9 @@ mixin card-buy-room ()
           span.card-buy-room__period в сутки 
       .card-buy-room__in-out
         .card-buy-room__in прибытие
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dd1"})
+          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMin"})
         .card-buy-room__out выезд
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dd2"})
+          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMax"})
       .card-buy-room__guests 
         .card-buy-room__guests-title гости
         +dropdown({ itemList: guests, type: "guests" })

@@ -9,9 +9,9 @@ mixin card-find-room ()
       h1.card-find-room__title Найдём номера под ваши пожелания
       .card-find-room__in-out 
         h3.card-find-room__in прибытие
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dd1"})
+          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMin"})
         h3.card-find-room__out выезд
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dd2"})
+          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMax"})
       .card-find-room__guests 
         h3.card-find-room__guests-text гости
         +dropdown({ itemList: guests,type: "guests" })
