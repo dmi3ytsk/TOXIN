@@ -1,6 +1,6 @@
 # TOXIN
 
-[Demo page](https://dmi3ytsk.github.io/TOXIN/public/landing/landing.html)
+[Demo page](https://dmi3ytsk.github.io/TOXIN/public/)
  
 ## Clone
 ```
@@ -23,3 +23,4 @@
 - jquery v3.6.0 [npm](https://www.npmjs.com/package/jquery)
 - paginationjs [npm](https://www.npmjs.com/package/paginationjs)
 - inputmask [npm](https://www.npmjs.com/package/inputmask)
+- air-datepicker [npm](https://www.npmjs.com/package/air-datepicker)
