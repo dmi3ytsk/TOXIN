@@ -23,3 +23,4 @@
 - jquery v3.6.0 [npm](https://www.npmjs.com/package/jquery)
 - paginationjs [npm](https://www.npmjs.com/package/paginationjs)
 - inputmask [npm](https://www.npmjs.com/package/inputmask)
+- air-datepicker [npm](https://www.npmjs.com/package/air-datepicker)
