@@ -25,13 +25,13 @@
     z-index: 9;
     border: 0;
     background: none;
-
+    display: none;
     transition-duration: 0.25s;
+    @media (max-width: 956px) {
+      display: block;
+    }
     &_checked {
       position: fixed;
-    }
-    &_hide {
-      display: none;
     }
   }
   &__box {
