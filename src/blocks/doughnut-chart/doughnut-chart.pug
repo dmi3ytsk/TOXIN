@@ -1,0 +1,21 @@
+mixin doughnut-chart(options)
+  - const { total=0 } = options
+    .doughnut-chart 
+      .doughnut-chart__diagram 
+        .doughnut-chart__diagram-body
+          .doughnut-chart__diagram-wrap
+          .doughnut-chart__diagram-great
+          .doughnut-chart__diagram-good 
+          .doughnut-chart__diagram-norm
+        .doughnut-chart__diagram-counter
+          .doughnut-chart__diagram-counter-value=total 
+          .doughnut-chart__diagram-counter-voice  голосов
+      .doughnut-chart__legend
+        .doughnut-chart__legend-dot
+          .doughnut-chart__legend-content Великолепно
+        .doughnut-chart__legend-dot
+          .doughnut-chart__legend-content Хорошо
+        .doughnut-chart__legend-dot
+          .doughnut-chart__legend-content Удовлетворительно
+        .doughnut-chart__legend-dot
+          .doughnut-chart__legend-content Разочарован
