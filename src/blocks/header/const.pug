@@ -5,16 +5,24 @@
     ["Вакансии", "../index/index.pug"], 
     ["Новости", "../index/index.pug"], 
     ["Соглашения", "../index/index.pug"]
-    ]
+  ]
 -
   const services = [
     ["Услуга 1", "../index/index.pug"], 
     ["Услуга 2", "../index/index.pug"], 
     ["Услуга 3", "../index/index.pug"]
-    ]
+  ]
 -
   const docs = [
     ["Документ 1", "../index/index.pug"], 
     ["Документ 2", "../index/index.pug"], 
     ["Документ 3", "../index/index.pug"]
-    ]
+  ]
+-
+  const nav = [
+    {title: "О нас", link: "../index/index.pug"},
+    {title: "Услуги", expand: services},
+    {title: "Вакансии", link: "../index/index.pug"},
+    {title: "Новости", link: "../index/index.pug"},
+    {title: "Соглашения", expand: services},
+  ]

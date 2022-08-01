@@ -1,0 +1,14 @@
+include ../nav-list-dropdown/nav-list-dropdown
+
+mixin nav-header(nav)
+  ul.header__nav-list
+    each item in nav 
+      if (item.link !== undefined)
+        li.header__nav-list-item
+          a(href=item.link title=item.title)=item.title
+      else if (item.expand !== undefined)
+        li.header__nav-list-item.header__nav-list-dropdown
+          span=item.title
+          span.header__nav-list-dropdown-icon expand_more
+          +nav-list-dropdown(item.expand)
+      

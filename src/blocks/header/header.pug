@@ -1,6 +1,6 @@
 include ../button/button
 include ../hamburger-menu/hamburger-menu
-include ../nav-list-dropdown/nav-list-dropdown
+include ../nav-header/nav-header
 
 mixin header(options)
   -const { isAuth, username } = options
@@ -9,25 +9,11 @@ mixin header(options)
   header.header 
     .header__body 
       a(href="../index/index.pug").header__logo
-        img(src=`../../blocks/header/img/toxin-logo.png` alt=`Toxin Hotel Logo`)
+        img(src="../../blocks/header/img/toxin-logo.png" alt="Toxin Hotel Logo")
       .header__burger.js-header__burger
         +hamburger-menu(burgerList)
       nav.header__nav 
-        ul.header__nav-list
-          li.header__nav-list-item
-            a(href="../index/index.pug" title="О нас") О нас
-          li.header__nav-list-item.header__nav-list-dropdown
-            span Услуги
-            span.header__nav-list-dropdown-icon expand_more
-            +nav-list-dropdown(services)
-          li.header__nav-list-item
-            a(href="../index/index.pug" title="Вакансии") Вакансии
-          li.header__nav-list-item
-            a(href="../index/index.pug" title="Новости") Новости
-          li.header__nav-list-item.header__nav-list-dropdown
-            span Соглашения
-            span.header__nav-list-dropdown-icon expand_more
-            +nav-list-dropdown(docs)
+        +nav-header(nav)
         .header__auth-block
           -if(isAuth)
             .header__auth-block-pipe
