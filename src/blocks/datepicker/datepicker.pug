@@ -1,0 +1,18 @@
+mixin datepicker(options)
+  - const { placeholder, dropdown, calendar, elId } = options
+      case calendar
+        when "on"
+          input(type="text", placeholder=placeholder, class="datepicker-here" readonly).textfield__input
+          case dropdown
+            when 1
+              i.textfield__down-arrow
+        when "2in1"
+          input(type="text", placeholder=placeholder, class=elId, readonly).textfield__input
+          case dropdown
+            when 1
+              i.textfield__down-arrow
+        when "on+range"
+          input(type="text", placeholder=placeholder, data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" readonly).textfield__input
+          case dropdown
+            when 1
+              i.textfield__down-arrow

@@ -1,2 +1,2 @@
 import "./input-mask"
-import "./datepicker"
+import "../datepicker/datepicker"

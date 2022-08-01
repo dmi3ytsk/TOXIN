@@ -1,27 +1,14 @@
+include ../datepicker/datepicker
 mixin textfield(options)
   - const { type, placeholder, dropdown, subscribe, calendar, elId } = options
   .textfield
     form(action="").textfield__form
-      case calendar
-        when "on"
-          input(type="text", placeholder=placeholder, class="datepicker-here" readonly).textfield__input
-          case dropdown
-            when 1
-              i.textfield__down-arrow
-        when "2in1"
-          input(type="text", placeholder=placeholder, class=elId, readonly).textfield__input
-          case dropdown
-            when 1
-              i.textfield__down-arrow
-        when "on+range"
-          input(type="text", placeholder=placeholder, data-range="true" data-multiple-dates-separator=" - " class="datepicker-here" readonly).textfield__input
-          case dropdown
-            when 1
-              i.textfield__down-arrow
-        when "off"
-          input(type="text", placeholder=placeholder, class="js-mask-date").textfield__input
-        default
-          input(type=type, placeholder=placeholder).textfield__input
-          case subscribe
-            when 1
-              button.textfield__forward-arrow
+      if (calendar !== "off" & calendar !== undefined)
+        +datepicker({placeholder, dropdown, calendar, elId})
+      else if (calendar === "off")
+        input(type="text", placeholder=placeholder, class="js-mask-date").textfield__input
+      else
+        input(type=type, placeholder=placeholder).textfield__input
+        case subscribe
+          when 1
+            i.textfield__forward-arrow
