@@ -19,3 +19,4 @@ import "../../blocks/user-feedback/user-feedback.js";
 
 import "../../blocks/like-btn/like-btn.scss";
 
+import "../../blocks/doughnut-chart/doughnut-chart.scss"

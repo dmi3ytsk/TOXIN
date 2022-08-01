@@ -23,6 +23,8 @@
     height: 26px;
     cursor: pointer;
     z-index: 9;
+    border: 0;
+    background: none;
 
     transition-duration: 0.25s;
     &_checked {

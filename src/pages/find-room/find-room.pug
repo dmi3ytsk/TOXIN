@@ -18,9 +18,9 @@ block main
   main.room-search-page
     .room-search-page__body
       section.room-search-page__filters
-        .room-search-page__filter-header даты пребывания в отеле
+        p.room-search-page__filter-header даты пребывания в отеле
         +textfield({ placeholder: "19 авг - 23 авг", calendar: "on+range", dropdown: 1})
-        .room-search-page__filter-header гости
+        p.room-search-page__filter-header гости
         +dropdown({ itemList: guests, type: "guests" })
         +range-slider({
           label: "диапазон цены",
@@ -30,11 +30,11 @@ block main
           from: 5000,
           to: 10000,
           })
-        .room-search-page__filter-header правила дома
+        p.room-search-page__filter-header правила дома
         +checkbox({list: checkboxList})
-        .room-search-page__filter-header доступность
+        p.room-search-page__filter-header доступность
         +rich-checkbox({list: richList})
-        .room-search-page__filter-header удобства номера
+        p.room-search-page__filter-header удобства номера
         +dropdown({ itemList: apartment, type: "rooms" })
         +checkbox-expand-list({title: "дополнительные удобства", expandList: expandableList})
 

@@ -15,6 +15,9 @@
     &-column {
       min-width: 170px;
       border: 1px solid $dark25;
+      list-style: none;
+      margin: 0;
+      padding: 0;
       &:first-child {
         background: $primary-gradient;
       }

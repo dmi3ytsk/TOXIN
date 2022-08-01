@@ -1,20 +1,17 @@
-
 extends ../../layouts/base
 
 block vars
+  include ./const.pug
   - const title = "GLOBAL PROJECT NAV";
 block content
   .root
     .root__header=title 
     .root__nav 
-      .root__nav-column 
-        a(href="./../colors-type/colors-type.pug").root__nav-element Colors&Type
-        a(href="./../form-elements/form-elements.pug").root__nav-element Form elements    
-        a(href="./../cards/cards.pug").root__nav-element Cards
-        a(href="./../headers-footers/headers-footers.pug").root__nav-element Headers&Footers
-      .root__nav-column 
-        a(href="./../landing/landing.pug").root__nav-element Landing page
-        a(href="./../find-room/find-room.pug").root__nav-element Search room
-        a(href="./../room-details/room-details.pug").root__nav-element Room details
-        a(href="./../registration/registration.pug").root__nav-element Registration
-        a(href="./../login/login.pug").root__nav-element Sign in
+      ul.root__nav-column 
+        each ui in uiPages
+          li 
+            a(href=`${ui.link}`).root__nav-element=ui.title
+      ul.root__nav-column 
+        each page in webPages 
+          li 
+            a(href=`${page.link}`).root__nav-element=page.title
