@@ -6,6 +6,7 @@
     src:
       url("#{$file}.woff") format("woff"),
       url("#{$file}.woff") format("truetype"),
+      url("#{$file}.woff2") format("truetype"),
       url("#{$file}.svg") format("svg");
   }
 }
