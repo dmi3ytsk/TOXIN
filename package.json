@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/dmi3ytsk/TOXIN#readme",
   "devDependencies": {
-    "parcel": "^2.0.0-beta.3.1"
+    "parcel": "^2.0.0-beta.3.1",
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "@parcel/transformer-pug": "^2.0.0-beta.3.1"
   },
   "dependencies": {
     "air-datepicker": "^3.2.0",
