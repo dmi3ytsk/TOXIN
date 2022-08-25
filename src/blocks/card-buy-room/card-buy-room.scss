@@ -119,19 +119,20 @@
     @extend .font-subtitle;
     margin-bottom: 22px;
   }
-  &__dash-line {
-    position: relative;
-    top: -5px;
-    margin-left: 4px;
-    margin-right: 5px;
-    padding-right: 173px;
-    border-bottom: 1px dashed $dark25;
-    @media (max-width: 390px) {
-      padding-right: 143px;
-    }
-  }
   &__ultra-sum {
     position: absolute;
     min-width: 77px;
+    &::before {
+      content: "";
+      position: relative;
+      top: -5px;
+      margin-left: 4px;
+      margin-right: 5px;
+      padding-right: 173px;
+      border-bottom: 1px dashed $dark25;
+      @media (max-width: 390px) {
+        padding-right: 143px;
+      }
+    }
   }
 }
