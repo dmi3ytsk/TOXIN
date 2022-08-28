@@ -1,5 +1,25 @@
 -
-  const title = "Подробнее о номере №888люкс";
+  const number = "888"
+-
+  const isLuxe = true 
+-
+  const cost = "9 990"
+-
+  const duration = "4"
+-
+  const tax = "0"
+-
+  const discount = "2 179"
+-
+  const extra = "300"
+-
+  const sum = "39 960"
+-
+  const result = "38 081"
+-
+  const roomTitle = isLuxe? `${number}люкс` : `${number}`
+-
+  const title = `Подробнее о номере №${roomTitle}`;
 -
   const guests = ["Взрослые", "Дети", "Младенцы"]
 -
@@ -34,3 +54,4 @@
     ["Служба поддержки", "Соглашения", "Сообщества","Связь с нами"]
   ]
 
+//- number: "888", isLuxe: true, cost: "9 990", duration: "4", tax: "0", discount: "2 179", extra: "300", sum: "39 960", result: "38 081"
