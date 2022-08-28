@@ -10,3 +10,27 @@
       url("#{$file}.svg") format("svg");
   }
 }
+@mixin gradient-text {
+  background: $primary-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: $primary-color;
+}
+@mixin gradient-border {
+  position: relative;
+  color: $primary-color;
+  background: #ffffff;
+  background-clip: padding-box;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: $primary-gradient;
+  }
+}

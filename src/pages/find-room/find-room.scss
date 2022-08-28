@@ -1,4 +1,5 @@
 @import "../../vars.scss";
+@import "../../text-presets.scss";
 
 .room-search-page {
   flex: 1 0 auto;
@@ -40,12 +41,12 @@
     & .range-slider {
       margin-top: 27px;
       margin-bottom: 37px;
-      @extend .sm-block;
+      width: $sm-block-width;
     }
     & .dropdown,
     .textfield__form,
     .checkbox-expand-list {
-      @extend .sm-block;
+      width: $sm-block-width;
     }
   }
   &__filter-header {

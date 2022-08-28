@@ -1,11 +1,10 @@
 @import "../../vars.scss";
+@import "../../text-presets.scss";
 
 .doughnut-chart {
   display: flex;
   &__diagram {
     position: relative;
-    &-body {
-    }
     &-wrap {
       position: absolute;
       z-index: 5;
