@@ -12,13 +12,13 @@ $primary-gradient05: linear-gradient(rgba(188, 156, 255, 0.5), rgba(139, 164, 24
 $secondary-gradient: linear-gradient(#6fcf97, #66d2ea);
 $white-text: #ffffff;
 
-@mixin gradientText {
+@mixin gradient-text {
   background: $primary-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: $primary-color;
 }
-@mixin gradientBorder {
+@mixin gradient-border {
   position: relative;
   color: $primary-color;
   background: #ffffff;

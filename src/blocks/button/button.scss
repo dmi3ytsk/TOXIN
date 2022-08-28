@@ -1,6 +1,6 @@
 @import "../../vars.scss";
 
-@mixin ovalBtn {
+@mixin oval-button {
   @extend .font-label;
   padding: 13px 20px 15px 18px;
   border-radius: 22px;
@@ -13,7 +13,7 @@
   -webkit-user-select: none;
 }
 
-@mixin byClick {
+@mixin by-click {
   &:active {
     opacity: 0.85;
   }
@@ -26,8 +26,8 @@
   }
   &_style {
     &_fill {
-      @include ovalBtn;
-      @include byClick;
+      @include oval-button;
+      @include by-click;
       background: $primary-gradient;
       color: $white-text;
       margin-right: -5px;
@@ -36,7 +36,7 @@
       max-width: 99px;
       max-height: 44px;
       position: relative;
-      @include ovalBtn;
+      @include oval-button;
       color: $primary-color;
       background: white;
       box-shadow:
@@ -53,7 +53,7 @@
       -khtml-user-select: none;
       -webkit-user-select: none;
       @extend .font-label;
-      @include byClick;
+      @include by-click;
       background: transparent;
       color: $primary-color;
       padding-left: 0px;
@@ -64,8 +64,8 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       max-height: 44px;
-      @include ovalBtn;
-      @include byClick;
+      @include oval-button;
+      @include by-click;
       color: $white-text;
       background: $primary-gradient;
       padding-right: 11px;

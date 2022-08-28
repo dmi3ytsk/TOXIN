@@ -17,7 +17,7 @@
     font-weight: 400;
   }
   &__icon {
-    @include gradientText;
+    @include gradient-text;
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;

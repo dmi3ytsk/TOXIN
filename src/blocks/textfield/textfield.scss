@@ -51,7 +51,7 @@
     pointer-events: auto;
     border: 0;
     top: 20%;
-    @include gradientText;
+    @include gradient-text;
     &::after {
       content: "arrow_forward";
     }
