@@ -2,37 +2,39 @@ include ../textfield/textfield
 include ../dropdown/dropdown
 include ../button/button
 
-mixin card-buy-room ()
-  .card-buy-room
-    .card-buy-room__body
-      .card-buy-room__header 
-        div 
-          span.card-buy-room__roomNumber 888
-          span.card-buy-room__luxeRoom люкс
-        div
-          span.card-buy-room__cost  9 990₽ 
-          span.card-buy-room__period в сутки 
-      .card-buy-room__in-out
-        .card-buy-room__in прибытие
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMin"})
-        .card-buy-room__out выезд
-          +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMax"})
-      .card-buy-room__guests 
-        .card-buy-room__guests-title гости
-        +dropdown({ itemList: guests, type: "guests" })
-      .card-buy-room__cost-list 
-        .card-buy-room__cost-list-row 
-          span 9 990₽ х 4 суток
-          span 39 960₽
-        .card-buy-room__cost-list-row  
-          span Сбор за услуги: скидка 2 179₽
-          span.card-buy-room__cost-list-info-button
-          span.card-buy-room__cost-list-item 0₽
-        .card-buy-room__cost-list-row 
-          span.card-buy-room__cost-list-row-ultra-item Сбор за дополнительные услуги
-          span.card-buy-room__cost-list-info-button
-          span 300₽
-      .card-buy-room__result-row
-        span Итого
-        span.card-buy-room__ultra-sum 38 081₽ 
-      +button({ isActive: true, title: "забронировать", style: "fillArrow", page: "../index/index.pug"})
+mixin card-buy-room (options)
+  - const { number, isLuxe, cost, duration, tax, discount, extra, sum, result } = options || {}
+    - const luxe= isLuxe ? "люкс" : ""
+    .card-buy-room
+      .card-buy-room__body
+        .card-buy-room__header 
+          div 
+            span.card-buy-room__room-number=number
+            span.card-buy-room__luxe-room=luxe
+          div
+            span.card-buy-room__cost= `${cost}₽ `
+            span.card-buy-room__period в сутки 
+        .card-buy-room__in-out
+          .card-buy-room__in прибытие
+            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMin"})
+          .card-buy-room__out выезд
+            +textfield({ placeholder: "ДД.ММ.ГГГГ", calendar: "2in1", dropdown: 1,  elId: "js-dpMax"})
+        .card-buy-room__guests 
+          .card-buy-room__guests-title гости
+          +dropdown({ itemList: guests, type: "guests" })
+        .card-buy-room__cost-list 
+          .card-buy-room__cost-list-row 
+            span=`${cost}₽ х ${duration} суток`
+            span=`${sum}₽`
+          .card-buy-room__cost-list-row  
+            span=`Сбор за услуги: скидка ${discount}₽`
+            span.card-buy-room__cost-list-info-button
+            span.card-buy-room__cost-list-item=`${tax}₽`
+          .card-buy-room__cost-list-row 
+            span.card-buy-room__cost-list-row-ultra-item Сбор за дополнительные услуги
+            span.card-buy-room__cost-list-info-button
+            span=`${extra}₽`
+        .card-buy-room__result-row
+          span Итого
+          span.card-buy-room__ultra-sum=`${result}₽` 
+        +button({ isActive: true, title: "забронировать", style: "fillArrow", page: "../index/index.pug"})

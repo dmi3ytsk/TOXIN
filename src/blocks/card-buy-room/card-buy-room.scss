@@ -23,7 +23,7 @@
     align-items: flex-end;
     margin-bottom: 20px;
   }
-  &__roomNumber {
+  &__room-number {
     @extend .font-title;
     position: relative;
 
@@ -34,7 +34,7 @@
       line-height: 17px;
     }
   }
-  &__luxeRoom {
+  &__luxe-room {
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
